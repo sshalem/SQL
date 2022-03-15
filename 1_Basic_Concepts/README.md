@@ -6,7 +6,7 @@
 |:---:|:------------------------------| 
 |  1  |[Data Types](#1)   | 
 |  2  |[Primary Key [PK]](#2)   | 
-|  3  |[a](#3)   | 
+|  3  |[Composite Key [CK]](#3)   | 
 |  4  |[a](#4)   | 
 |  5  |[a](#5)   | 
 
@@ -61,25 +61,10 @@ Primary Key can be composed of set of columns :
 
 ###### 3
 
-<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
-
-Composite Key means, we composite a primary key from 2 FK columns .
-In the exapmle below we have 3 tables:
-
-	1. Employee Table - has PK of emp_id and 2 FK of branch_id & super_id 
-	2. Client table - has PK of client_id and FK of branch_id
-	3. Works_With table - has composed key mad of 2 FK columns  emp_id & client_id 
-
-Question:
-	Why we compose 2 primary keys ?
-Answer:
-	Because Only together they uniquely identify the sup
-
-
-We can see in the table Works_With , that the primary key is composed of 2 columns 
-
+<img src="https://img.shields.io/badge/-3. Composite Key [CK] %20-blue" height=40px>
 
 ![image](https://user-images.githubusercontent.com/36256986/158467407-75e97642-ec35-4f2b-add5-5af0b39894d8.png)
+
 
 
 
