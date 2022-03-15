@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/-Basic Concepts%20-brightgreen" height=70px>
+<img src="https://img.shields.io/badge/-Basic Concepts%20-blue" height=60px>
 
 |     |  Subject           |
 |:---:|:------------------------------| 
