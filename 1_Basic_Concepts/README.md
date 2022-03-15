@@ -5,7 +5,7 @@
 |     |  Subject           |
 |:---:|:------------------------------| 
 |  1  |[Data Types](#1)   | 
-|  2  |[a](#2)   | 
+|  2  |[Keys](#2)   | 
 |  3  |[a](#3)   | 
 |  4  |[a](#4)   | 
 |  5  |[a](#5)   | 
@@ -47,9 +47,9 @@ VARCHAR(l)  - String  , l -maximum length</br>
 
 ###### 2
 
-<img src="https://img.shields.io/badge/-22 %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2. Keys %20-blue" height=40px>
 
-```java
+```sql
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
