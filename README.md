@@ -2,7 +2,7 @@
 
 |     |  Subject           |
 |:---:|:------------------------------| 
-|  1  |[Basic Concepts](#-)   | 
+|  1  |[Basic Concepts](https://github.com/sshalem/SQL/tree/main/1_Basic_Concepts)   | 
 |  2  |[DB , Table ,INSERT, UPDATE , DELETE](#-)   | 
 |  3  |[Operator Statements](#-)   | 
 |  4  |[JOIN](#-)   | 
