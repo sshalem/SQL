@@ -78,7 +78,9 @@ Answer:
 
 We can see in the table Works_With , that the primary key is composed of 2 columns 
 
-![image](https://user-images.githubusercontent.com/36256986/158467204-1a835763-4826-4821-95fa-a220aea83856.png)
+
+![image](https://user-images.githubusercontent.com/36256986/158467407-75e97642-ec35-4f2b-add5-5af0b39894d8.png)
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
