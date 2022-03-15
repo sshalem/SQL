@@ -28,3 +28,33 @@ Answer:
 ![image](https://user-images.githubusercontent.com/36256986/158462553-3b3750aa-8f66-4926-b6a0-b0d642470ac4.png)
 
 
+###### 1
+
+<img src="https://img.shields.io/badge/-21 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 2
+
+<img src="https://img.shields.io/badge/-22 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 3
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
