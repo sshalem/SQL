@@ -49,6 +49,8 @@ VARCHAR(l)  - String  , l -maximum length</br>
 
 <img src="https://img.shields.io/badge/-2. Keys %20-blue" height=40px>
 
+![image](https://user-images.githubusercontent.com/36256986/158466169-67013ee3-7a11-434a-b72e-c62b5e444083.png)
+
 ```sql
 ```
 
