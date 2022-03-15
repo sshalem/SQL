@@ -47,7 +47,7 @@ VARCHAR(l)  - String  , l -maximum length</br>
 
 ###### 2
 
-<img src="https://img.shields.io/badge/-2. Keys %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2. Primary Key [PK] %20-blue" height=40px>
 
 ![image](https://user-images.githubusercontent.com/36256986/158466392-e0a7b9bb-cead-4d18-a8fa-d56404f07731.png)
 
@@ -66,6 +66,83 @@ Primary Key can be composed of set of columns :
 --------------------------------------------------------------------------------------------------
 
 ###### 3
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 4
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 5
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 6
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 7
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 8
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 9
+
+<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+
+```java
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 10
 
 <img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
 
