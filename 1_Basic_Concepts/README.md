@@ -63,8 +63,23 @@ Primary Key can be composed of set of columns :
 
 <img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
 
-```java
-```
+Composite Key means, we composite a primary key from 2 FK columns .
+In the exapmle below we have 3 tables:
+
+	1. Employee Table - has PK of emp_id and 2 FK of branch_id & super_id 
+	2. Client table - has PK of client_id and FK of branch_id
+	3. Works_With table - has composed key mad of 2 FK columns  emp_id & client_id 
+
+Question:
+	Why we compose 2 primary keys ?
+Answer:
+	Because Only together they uniquely identify the sup
+
+
+We can see in the table Works_With , that the primary key is composed of 2 columns 
+
+![image](https://user-images.githubusercontent.com/36256986/158467204-1a835763-4826-4821-95fa-a220aea83856.png)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
