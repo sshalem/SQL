@@ -65,8 +65,7 @@ Primary Key can be composed of set of columns :
 
 ![image](https://user-images.githubusercontent.com/36256986/158467407-75e97642-ec35-4f2b-add5-5af0b39894d8.png)
 
-
-
+![CK](https://user-images.githubusercontent.com/36256986/158467721-2aff78e2-7f95-454d-acf5-608344880b06.PNG)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
