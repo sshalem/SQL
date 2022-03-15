@@ -49,7 +49,14 @@ VARCHAR(l)  - String  , l -maximum length</br>
 
 <img src="https://img.shields.io/badge/-2. Keys %20-blue" height=40px>
 
-![image](https://user-images.githubusercontent.com/36256986/158466169-67013ee3-7a11-434a-b72e-c62b5e444083.png)
+![image](https://user-images.githubusercontent.com/36256986/158466392-e0a7b9bb-cead-4d18-a8fa-d56404f07731.png)
+
+Primary Key can be composed of set of columns :
+
+![image](https://user-images.githubusercontent.com/36256986/158466486-d56c6d70-2fe4-4d4c-9731-953f060b4501.png)
+
+![image](https://user-images.githubusercontent.com/36256986/158466515-196a424c-68a6-43e9-a0aa-a8f7ecc583e9.png)
+
 
 ```sql
 ```
