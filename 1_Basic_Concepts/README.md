@@ -14,12 +14,6 @@
 
 <img src="https://img.shields.io/badge/-1. Data Types %20-blue" height=40px>
 
-```java
-```
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
-
 ![dataTypes](https://user-images.githubusercontent.com/36256986/158463506-c95ccea7-e00b-4b3f-be5b-fab4d909a601.png)
 
 INT - whole Number</br>
@@ -41,7 +35,7 @@ VARCHAR(l)  - String  , l -maximum length</br>
 	CHAR(50) -  if I have a String less than 50 characters, the MySql engine completes it to 50 which is a waist </br>
 
 
-
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
