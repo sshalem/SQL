@@ -4,40 +4,44 @@
 
 |     |  Subject           |
 |:---:|:------------------------------| 
-|  1  |[a](#-)   | 
-|  2  |[a](#-)   | 
-|  3  |[a](#-)   | 
-|  4  |[a](#-)   | 
-|  5  |[a](#-)   | 
-
-
-INT - whole Number
-	INT(11)  - number in length of 11 numbers
-	
-DECIMAL(M,N) - DECIMAL Numbers
-	DECIMAL(3,6) - 465.789465  
-	
-VARCHAR(l)  - String  , l -maximum length
-	VARCHAR(50) - Max length of 50 characters 
-	
-
-
-Question :
-	What the differnece between VARCHAR (50) and CHAR(50)?
-Answer:
-	VARCHAR(50) - if I have a String less than 50 characters, the MySql engine won't complete it to 50
-	CHAR(50) -  if I have a String less than 50 characters, the MySql engine completes it to 50 which is a waist
-![image](https://user-images.githubusercontent.com/36256986/158462553-3b3750aa-8f66-4926-b6a0-b0d642470ac4.png)
-
+|  1  |[a](#1)   | 
+|  2  |[a](#2)   | 
+|  3  |[a](#3)   | 
+|  4  |[a](#4)   | 
+|  5  |[a](#5)   | 
 
 ###### 1
 
-<img src="https://img.shields.io/badge/-21 %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. Data Types %20-blue" height=40px>
 
 ```java
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+![dataTypes](https://user-images.githubusercontent.com/36256986/158463506-c95ccea7-e00b-4b3f-be5b-fab4d909a601.png)
+
+INT - whole Number</br>
+	INT(11)  - number in length of 11 numbers</br>
+	
+DECIMAL(M,N) - DECIMAL Numbers</br>
+	DECIMAL(3,6) - 465.789465  </br>
+	
+VARCHAR(l)  - String  , l -maximum length</br>
+	VARCHAR(50) - Max length of 50 characters </br>
+	
+
+
+[Question:](#-)</br>
+	What the differnece between VARCHAR (50) and CHAR(50)?
+
+[Answer:](#-)</br>
+	VARCHAR(50) - if I have a String less than 50 characters, the MySql engine won't complete it to 50
+	CHAR(50) -  if I have a String less than 50 characters, the MySql engine completes it to 50 which is a waist
+
+
+
 
 --------------------------------------------------------------------------------------------------
 
