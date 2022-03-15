@@ -37,8 +37,8 @@ VARCHAR(l)  - String  , l -maximum length</br>
 	What the differnece between VARCHAR (50) and CHAR(50)?
 
 [Answer:](#-)</br>
-	VARCHAR(50) - if I have a String less than 50 characters, the MySql engine won't complete it to 50
-	CHAR(50) -  if I have a String less than 50 characters, the MySql engine completes it to 50 which is a waist
+	VARCHAR(50) - if I have a String less than 50 characters, the MySql engine won't complete it to 50 </br>
+	CHAR(50) -  if I have a String less than 50 characters, the MySql engine completes it to 50 which is a waist </br>
 
 
 
