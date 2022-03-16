@@ -38,6 +38,7 @@ USE orders_tb;
 
 ```sql
 CREATE DATABASE orders_tb;
+USE orders_tb;
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/158583497-9fe9feb8-fd27-4634-8c0c-6b22587ff71a.png)
