@@ -83,64 +83,12 @@ Primary Key can be composed of set of columns :
 
 ###### 5
 
-<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-5. %20-blue" height=40px>
 
 ```java
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
---------------------------------------------------------------------------------------------------
 
-###### 6
 
-<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
-
-```java
-```
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
---------------------------------------------------------------------------------------------------
-
-###### 7
-
-<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
-
-```java
-```
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
---------------------------------------------------------------------------------------------------
-
-###### 8
-
-<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
-
-```java
-```
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
---------------------------------------------------------------------------------------------------
-
-###### 9
-
-<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
-
-```java
-```
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
---------------------------------------------------------------------------------------------------
-
-###### 10
-
-<img src="https://img.shields.io/badge/-23 %20-blue" height=40px>
-
-```java
-```
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
