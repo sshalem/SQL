@@ -30,8 +30,6 @@ create database order;
 
 <img src="https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png" width=300px height=150px>
 
-![image](https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png)
-
 ```sql
 CREATE TABLE student(
     student_id INT PRIMARY KEY,
