@@ -17,7 +17,7 @@
 Command for **_creating DB_**:
 
 ```sql
-CREATE DATABASE order;
+CREATE DATABASE orders_tb;
 ```
 
 
