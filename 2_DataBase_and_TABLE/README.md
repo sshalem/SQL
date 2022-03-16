@@ -32,12 +32,7 @@ CREATE DATABASE orders_tb;
 The keyword USE chooses the DB we want to work with.</br>
 this command will highlight the DB we chose.</br>
 
-```sql
-USE orders_tb;
-```
-
-```sql
-CREATE DATABASE orders_tb;
+```java
 USE orders_tb;
 ```
 
