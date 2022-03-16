@@ -3,7 +3,7 @@
 |     |  Subject           |
 |:---:|:------------------------------| 
 |  1  |[create DB](#1)   | 
-|  2  |[a](#-)   | 
+|  2  |[create Table](#2)   | 
 |  3  |[a](#-)   | 
 |  4  |[a](#-)   | 
 |  5  |[a](#-)   | 
@@ -26,12 +26,30 @@ create database order;
 
 ###### 2
 
-<img src="https://img.shields.io/badge/-2. Primary Key [PK] %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2. create Table %20-blue" height=40px>
 
 
+![image](https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png)
 
 ```sql
+CREATE TABLE student(
+    student_id INT PRIMARY KEY,
+    name VARCHAR(20),
+    major VARCHAR(20)    
+);
 ```
+
+Another way to define the PRIMARY KEY:
+
+```
+CREATE TABLE student(
+    student_id INT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY (student_id)
+);
+```
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
