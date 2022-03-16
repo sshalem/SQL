@@ -2,21 +2,21 @@
 
 |     |  Subject           |
 |:---:|:------------------------------| 
-|  1  |[create DB](#1)   | 
-|  2  |[create Table](#2)   | 
-|  3  |[a](#-)   | 
+|  1  |[CREATE DATABASE](#1)   | 
+|  2  |[USE keyword](#2)   | 
+|  3  |[CREATE TABLE](#3)   | 
 |  4  |[a](#-)   | 
 |  5  |[a](#-)   | 
 
 
 ###### 1
 
-<img src="https://img.shields.io/badge/-1. create DB %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. CREATE DATABASE %20-blue" height=40px>
 
 Command for **_creating DB_**:
 
 ```sql
-create database order;
+CREATE DATABASE order;
 ```
 
 
@@ -26,7 +26,18 @@ create database order;
 
 ###### 2
 
-<img src="https://img.shields.io/badge/-2. create Table %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2. USE keyword  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 3
+
+<img src="https://img.shields.io/badge/-3. create Table %20-blue" height=40px>
+
+Let's create the following table in DB:
 
 <img src="https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png" width=300px height=150px>
 
@@ -38,7 +49,7 @@ CREATE TABLE student(
 );
 ```
 
-Another way to define the PRIMARY KEY:
+### Another way to define the [PRIMARY KEY](#-):
 
 ```sql
 CREATE TABLE student(
@@ -48,15 +59,6 @@ CREATE TABLE student(
     PRIMARY KEY (student_id)
 );
 ```
-
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
---------------------------------------------------------------------------------------------------
-
-###### 3
-
-<img src="https://img.shields.io/badge/-3. Composite Key [CK] %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
