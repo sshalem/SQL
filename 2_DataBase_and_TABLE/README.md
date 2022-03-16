@@ -29,6 +29,15 @@ CREATE DATABASE orders_tb;
 
 <img src="https://img.shields.io/badge/-2. USE keyword  %20-blue" height=40px>
 
+The keyword USE chooses the DB we want to work with.
+this command will highlight the DB we chose.
+
+```sql
+USE orders_tb;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/158583497-9fe9feb8-fd27-4634-8c0c-6b22587ff71a.png)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
