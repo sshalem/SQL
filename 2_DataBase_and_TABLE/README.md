@@ -1,13 +1,14 @@
 ###### _
 <img src="https://img.shields.io/badge/-2_DataBase_and_TABLE %20-blue" height=60px>
 
-|     |  Subject           |
+|     |  Subject           |          |
 |:---:|:------------------------------| 
 |  1  |[CREATE DATABASE](#1)   | 
-|  2  |[USE keyword](#2)   | 
-|  3  |[CREATE TABLE](#3)   | 
-|  4  |[a](#-)   | 
-|  5  |[a](#-)   | 
+|  2  |[USE keyword](#2)       | 
+|  3  |[CREATE TABLE](#3)      | 
+|     |                        |  TABLE constraints | (#3.1) 
+|  4  |[a](#-)                 |  
+|  5  |[a](#-)                 | 
 
 
 ###### 1
@@ -75,9 +76,9 @@ CREATE TABLE student(
 
 --------------------------------------------------------------------------------------------------
 
-###### 4
+###### 3.1
 
-<img src="https://img.shields.io/badge/-4. Foreign key [FK] %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3.1 TABLE constrains %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
