@@ -2,7 +2,7 @@
 <img src="https://img.shields.io/badge/-2_DataBase_and_TABLE %20-blue" height=60px>
 
 |     |  Subject           |          |
-|:---:|:------------------------------| 
+|:---:|:------------------------------|:-------| 
 |  1  |[CREATE DATABASE](#1)   | 
 |  2  |[USE keyword](#2)       | 
 |  3  |[CREATE TABLE](#3)      | 
