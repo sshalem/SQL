@@ -29,8 +29,8 @@ CREATE DATABASE orders_tb;
 
 <img src="https://img.shields.io/badge/-2. USE keyword  %20-blue" height=40px>
 
-The keyword USE chooses the DB we want to work with.
-this command will highlight the DB we chose.
+The keyword USE chooses the DB we want to work with.</br>
+this command will highlight the DB we chose.</br>
 
 ```sql
 USE orders_tb;
