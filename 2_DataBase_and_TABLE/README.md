@@ -28,7 +28,7 @@ create database order;
 
 <img src="https://img.shields.io/badge/-2. create Table %20-blue" height=40px>
 
-<img src="https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png" width=200px height=200px>
+<img src="https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png" width=400px height=200px>
 
 ![image](https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png)
 
