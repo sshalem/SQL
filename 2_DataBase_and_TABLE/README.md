@@ -6,7 +6,7 @@
 |  1  |[CREATE DATABASE](#1)   | 
 |  2  |[USE keyword](#2)       | 
 |  3  |[CREATE TABLE](#3)      | 
-|     |                        |  TABLE constraints | (#3-1)  |
+|     |                        |  [TABLE constraints](#3-1)  |
 |  4  |[a](#-)                 |  
 |  5  |[a](#-)                 | 
 
