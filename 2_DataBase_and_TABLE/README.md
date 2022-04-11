@@ -10,7 +10,10 @@
 |  4  |[DESCRIBE command](#4)  |  
 |  5  |[DROP (delete)](#5)    | 
 |  6  |[ALTER TABLE … ADD/DROP](#6)    | 
-|  7  |[](#7)    | 
+|  7  |[INSERT](#7)    | 
+|     |                        |  [INSERT constraints](#7-1)  |
+|     |                        |  [INSERT constraints](#7-2)  |
+|     |                        |  [INSERT constraints](#7-3)  |
 
 
 ###### 1
