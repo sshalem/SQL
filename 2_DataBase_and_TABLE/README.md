@@ -80,6 +80,38 @@ CREATE TABLE student(
 
 <img src="https://img.shields.io/badge/-3.1 TABLE constrains %20-blue" height=40px>
 
+Let's see the following table without constraints: </br>
+
+```sql
+CREATE TABLE student(
+    student_id INT,
+    name VARCHAR(20),
+    city VARCHAR(20),
+    address VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY (student_id)
+);
+```
+
+Now we add constraints to it:
+
+Constraints words are: 
+- AUTO_INCREMENT (For primary key)
+- NOT NULL
+- UNIQUE
+- DEFAULT
+
+```sql
+CREATE TABLE student(
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL,
+    city VARCHAR(20),
+    address VARCHAR(20) UNIQUE,
+    major VARCHAR(20) DEFAULT 'undecided',
+    PRIMARY KEY (student_id)
+);
+```
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
