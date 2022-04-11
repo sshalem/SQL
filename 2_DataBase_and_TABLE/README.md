@@ -7,7 +7,7 @@
 |  2  |[USE keyword](#2)       | 
 |  3  |[CREATE TABLE](#3)      | 
 |     |                        |  [TABLE constraints](#3-1)  |
-|  4  |[a](#-)                 |  
+|  4  |[DESCRIBE command](#4)  |  
 |  5  |[a](#-)                 | 
 
 
@@ -117,11 +117,77 @@ CREATE TABLE student(
 
 --------------------------------------------------------------------------------------------------
 
+###### 4
+
+<img src="https://img.shields.io/badge/-4. DESCRIBE command %20-blue" height=40px>
+
+```sql
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
 ###### 5
 
 <img src="https://img.shields.io/badge/-5. %20-blue" height=40px>
 
-```java
+```sql
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 6
+
+<img src="https://img.shields.io/badge/-6. %20-blue" height=40px>
+
+```sql
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 7
+
+<img src="https://img.shields.io/badge/-7. %20-blue" height=40px>
+
+```sql
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 8
+
+<img src="https://img.shields.io/badge/-8. %20-blue" height=40px>
+
+```sql
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 9
+
+<img src="https://img.shields.io/badge/-9. %20-blue" height=40px>
+
+```sql
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 10
+
+<img src="https://img.shields.io/badge/-10. %20-blue" height=40px>
+
+```sql
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
