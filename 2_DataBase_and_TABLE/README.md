@@ -8,7 +8,9 @@
 |  3  |[CREATE TABLE](#3)      | 
 |     |                        |  [TABLE constraints](#3-1)  |
 |  4  |[DESCRIBE command](#4)  |  
-|  5  |[a](#-)                 | 
+|  5  |[DROP (delete)](#-5)    | 
+|  6  |[ALTER TABLE … ADD/DROP](#-6)    | 
+|  7  |[](#-7)    | 
 
 
 ###### 1
@@ -156,10 +158,16 @@ DESCRIBE student;
 
 ###### 5
 
-<img src="https://img.shields.io/badge/-5. %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-5. DROP (delete) %20-blue" height=40px>
+
+DROP command is actually deleting the table.
 
 ```sql
+DROP TABLE student;
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/162806657-55d36206-98cc-430e-9e40-5a9227e06330.png)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
@@ -167,9 +175,40 @@ DESCRIBE student;
 
 ###### 6
 
-<img src="https://img.shields.io/badge/-6. %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-6. ALTER TABLE … ADD/DROP %20-blue" height=40px>
+
+With **ALTER** command we can add a new field to an existing table. </br>
+Let say we created the following table:
 
 ```sql
+CREATE TABLE student(
+    student_id INT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY (student_id)
+);
+```
+
+**DESCRIBE** shows us following fields:
+
+```sql
+DESCRIBE student;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/162807137-b95b50be-02b8-44d0-bc30-dca7e1d7460d.png)
+
+```sql
+ALTER TABLE student ADD gpa DECIMAL(3,2);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/162807204-55cd37b9-0075-4153-9cc8-7fc21d054f82.png)
+
+We can see the gpa Field is added to table.
+
+To remove a column from table we use following command:
+
+```sql
+ALTER TABLE student DROP gpa;
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
