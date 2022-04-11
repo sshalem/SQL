@@ -121,8 +121,34 @@ CREATE TABLE student(
 
 <img src="https://img.shields.io/badge/-4. DESCRIBE command %20-blue" height=40px>
 
+With **DESCRIBE** command we can see the definition of each column .
+
+Let's look at the table we created:
+
 ```sql
+CREATE TABLE student(
+    student_id INT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY (student_id)
+)
 ```
+
+The following select command will show us the data in the table:
+
+```sql
+SELECT * FROM student;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/162806197-60be545f-8296-4682-8394-b49e48bbed9d.png)
+
+The **_DESCRIBE_** command will show us the definition of each column.
+
+```sql
+DESCRIBE student;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/162806296-ed159600-7347-4acb-8659-a853a594b384.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
