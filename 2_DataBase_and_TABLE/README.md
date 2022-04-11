@@ -8,9 +8,9 @@
 |  3  |[CREATE TABLE](#3)      | 
 |     |                        |  [TABLE constraints](#3-1)  |
 |  4  |[DESCRIBE command](#4)  |  
-|  5  |[DROP (delete)](#-5)    | 
-|  6  |[ALTER TABLE … ADD/DROP](#-6)    | 
-|  7  |[](#-7)    | 
+|  5  |[DROP (delete)](#5)    | 
+|  6  |[ALTER TABLE … ADD/DROP](#6)    | 
+|  7  |[](#7)    | 
 
 
 ###### 1
