@@ -6,7 +6,7 @@
 |  1  |[CREATE DATABASE](#1)   | 
 |  2  |[USE keyword](#2)       | 
 |  3  |[CREATE TABLE](#3)      | 
-|     |                        |  TABLE constraints | (#3.1) 
+|     |                        |  TABLE constraints | (#3-1)  |
 |  4  |[a](#-)                 |  
 |  5  |[a](#-)                 | 
 
@@ -76,7 +76,7 @@ CREATE TABLE student(
 
 --------------------------------------------------------------------------------------------------
 
-###### 3.1
+###### 3-1
 
 <img src="https://img.shields.io/badge/-3.1 TABLE constrains %20-blue" height=40px>
 
