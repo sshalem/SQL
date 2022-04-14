@@ -225,7 +225,7 @@ ALTER TABLE student DROP gpa;
 
 Let's look in the following tables and see how the keys are define:
 
-### [Customer table](#-)
+### [Table with [PK] only](#-)
 
 We can see that customers table has only PK (1 PK not composite)
 
@@ -238,6 +238,20 @@ DESCRIBE customers;
 ![image](https://user-images.githubusercontent.com/36256986/163399507-c13b9c48-1ea9-4d23-ae65-38a52cdc62db.png)
 
 ![image](https://user-images.githubusercontent.com/36256986/163399519-a5047fe7-43f4-49bf-b0a0-90009ee2dae1.png)
+
+
+### [Table with [PK] and [FK's]](#-)
+
+We can see that customers table has :
+
+- order_id  :  [PK](#-)
+- customer_id  : [FK](#-)
+- status   :  [FK](#-)
+- shipper_id   :  [FK](#-)
+
+![image](https://user-images.githubusercontent.com/36256986/163400468-5a32f815-2868-462d-a054-c3db7b6e67ff.png)
+
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
