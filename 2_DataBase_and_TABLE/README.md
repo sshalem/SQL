@@ -15,7 +15,7 @@
 |     |                        |  [INSERT Single row](#8-1)  |
 |     |                        |  [INSERT multiple rows](#8-2)  |
 |     |                        |  [INSERT hierarchical rows](#8-3)  |
-
+|  9  |[copy of TABLE](#9)    | 
 
 ###### 1
 
@@ -404,9 +404,49 @@ The new Tables as follows:
 
 ###### 9
 
-<img src="https://img.shields.io/badge/-9. %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-9. copy of TABLE %20-blue" height=40px>
+
+We can create a copy of a table .
+Let's see 2 different approach for creating copy of orders table.
+
+### [Approch 1](#-)
+
+We use the following command:
 
 ```sql
+CREATE TABLE orders_archived AS (SELECT * FROM orders);
+```
+
+It means :
+1. Create table with name of orders_archived
+2. We run a Sub query to select all records from orders table
+
+Let's Refresh the DB , we can see that a new Table created :
+
+![image](https://user-images.githubusercontent.com/36256986/163406968-d070b211-d609-4945-9f9d-55f35d9b9bb0.png)
+
+![image](https://user-images.githubusercontent.com/36256986/163407024-ce8eaa1f-2e06-4abe-8e33-0a3d5d44bf05.png)
+
+![image](https://user-images.githubusercontent.com/36256986/163407055-b688704a-6358-4a14-af97-2f96442b6311.png)
+
+```sql
+CREATE TABLE orders_archived AS 
+(SELECT * FROM orders WHERE order_date <= '2019-01-01');
+```
+
+### [Approch 2](#-)
+
+Let's [Truncate](#-) the orders_archived table (**Truncate** deletes all records from Table but Doesn't Drop the table)
+
+```sql
+INSERT INTO orders_archived (SELECT * FROM orders);
+```
+
+In this Approach , we can INSERT into orders_archived only the values we want 
+
+```sql
+INSERT INTO orders_archived
+(SELECT * FROM orders  WHERE order_date <= '2019-01-01');
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
