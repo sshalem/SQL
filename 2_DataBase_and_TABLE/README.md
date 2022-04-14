@@ -12,9 +12,9 @@
 |  6  |[ALTER TABLE … ADD/DROP](#6)    | 
 |  7  |[Keys - Tables with MySql](#7)    | 
 |  8  |[INSERT](#8)    | 
-|     |                        |  [INSERT constraints](#8-1)  |
-|     |                        |  [INSERT constraints](#8-2)  |
-|     |                        |  [INSERT constraints](#8-3)  |
+|     |                        |  [INSERT Single row](#8-1)  |
+|     |                        |  [INSERT multiple rows](#8-2)  |
+|     |                        |  [INSERT hierarchical rows](#8-3)  |
 
 
 ###### 1
@@ -283,8 +283,11 @@ Only together the compose a PK.
 
 ###### 8
 
-<img src="https://img.shields.io/badge/-8. %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-8.1 INSERT %20-blue" height=40px>
 
+###### 8-1
+
+<img src="https://img.shields.io/badge/-8. INSERT %20-yellowgreen" height=40px>
 ```sql
 ```
 
