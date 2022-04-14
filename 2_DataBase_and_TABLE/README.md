@@ -338,8 +338,22 @@ VALUES (
 
 <img src="https://img.shields.io/badge/-8.2 INSERT multiple rows %20-yellow" height=30px>
 
+Let's use the shippers table to see how to add multiple rows. </br>
+Has AI PK (AUTO INCREMENT) </br>
+No default value for the name field. </br>
+
+![image](https://user-images.githubusercontent.com/36256986/163404017-4b8f5096-ba48-4295-b0df-b16010a87e60.png)
+
 ```sql
+INSERT INTO shippers(name)
+VALUES ('shippers1'),
+       ('shippers2'),
+       ('Shippers3'),
+       ('Shippers4'),
+       ('Shippers5');
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/163404277-0b0ae02b-8ba6-4d43-a12a-da806400c49c.png)
 
 ###### 8-3
 
