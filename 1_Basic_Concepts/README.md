@@ -8,7 +8,7 @@
 |  2  |[Primary Key [PK]](#2)   | 
 |  3  |[Composite Key [CK]](#3)   | 
 |  4  |[Foreign key [FK]](#4)   | 
-|  5  |[a](#5)   | 
+|  5  |[Schema](#5)   | 
 
 ###### 1
 
@@ -84,10 +84,10 @@ Primary Key can be composed of set of columns :
 
 ###### 5
 
-<img src="https://img.shields.io/badge/-5. %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-5. Schema  %20-blue" height=40px>
 
-```java
-```
+![image](https://user-images.githubusercontent.com/36256986/163391760-984ba233-77e0-4d53-9665-92c84731f221.png)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
