@@ -287,7 +287,22 @@ Only together the compose a PK.
 
 ###### 8-1
 
-<img src="https://img.shields.io/badge/-8. INSERT %20-yellowgreen" height=40px>
+<img src="https://img.shields.io/badge/-8. INSERT single row %15-yellow" height=40px>
+
+```sql
+```
+
+###### 8-2
+
+<img src="https://img.shields.io/badge/-8. INSERT multiple rows %15-yellow" height=40px>
+
+```sql
+```
+
+###### 8-3
+
+<img src="https://img.shields.io/badge/-8. INSERT hierarchical rows %15-yellow" height=40px>
+
 ```sql
 ```
 
