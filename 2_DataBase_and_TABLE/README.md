@@ -16,6 +16,9 @@
 |     |                        |  [INSERT multiple rows](#8-2)  |
 |     |                        |  [INSERT hierarchical rows](#8-3)  |
 |  9  |[copy of TABLE](#9)    | 
+|  10 |[UPDATE](#10)    | 
+|     |                     |  [UPDATE Single row](#10-1)  |
+|     |                     |  [UPDATE multiple rows](#10-2)  |
 
 ###### 1
 
@@ -455,9 +458,68 @@ INSERT INTO orders_archived
 
 ###### 10
 
-<img src="https://img.shields.io/badge/-10. %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-10. UPDATE %20-blue" height=40px>
+
+###### 10-1
+
+<img src="https://img.shields.io/badge/-10.1 UPDATE single row %20-yellow" height=30px>
+
+Let's see how to update a Single row with data.</br>
+We want to update 2 columns in a Table of Invoice 
+	1. payment_total 
+	2. payment_date
+	
+Before Update:
+
+![image](https://user-images.githubusercontent.com/36256986/163468664-4c538cf2-5f09-4a64-ae83-09e90b8b2728.png)
+
+
+UPDATE :
 
 ```sql
+UPDATE invoices
+SET
+	payment_total = 10 , 
+	payment_date = '2020-01-29'
+WHERE invoice_id = 1;
+```
+
+After Update:
+
+![image](https://user-images.githubusercontent.com/36256986/163468750-a46ad5cc-a7ab-4067-86ac-9b6999e2184a.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+###### 10-2
+
+<img src="https://img.shields.io/badge/-10.2 multiple rows %20-yellow" height=30px>
+
+Let's say we want to change multiple records for client_id number 3 :
+
+![image](https://user-images.githubusercontent.com/36256986/163468861-e3f225be-9d54-49b0-ac3d-ac5d7611594e.png)
+
+We need to change in MySql workbench the following feature.
+
+Why? </br>
+Because MySql workbench works in a safe mode , so it will only update a single record.
+
+So need to change this safe mode, so it will be able to update multiple records. </br>
+
+Disable the Safe Update: </br>
+	EDIT -> Preferences -> SQL Editor -> Disable safe update
+
+![image](https://user-images.githubusercontent.com/36256986/163469017-789e72b3-f36d-4069-9a47-1c6bf3ec453a.png)
+
+Disable the Safe Update
+
+![image](https://user-images.githubusercontent.com/36256986/163469047-783f8186-e4ea-4537-b197-fb8ce5581c96.png)
+
+```sql
+UPDATE invoices
+SET
+	payment_total = invoice_total * 0.5, 
+	payment_date = due_date
+WHERE client_id = 3;
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
