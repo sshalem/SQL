@@ -231,7 +231,9 @@ We can see that customers table has only PK (1 PK not composite)
 
 ![image](https://user-images.githubusercontent.com/36256986/163399417-e93f1777-8689-4cc0-ba2d-a64f00a7bfb4.png)
 
-```	DESCRIBE customers;```
+```sql
+DESCRIBE customers;
+```
 
 ![image](https://user-images.githubusercontent.com/36256986/163399507-c13b9c48-1ea9-4d23-ae65-38a52cdc62db.png)
 
