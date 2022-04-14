@@ -10,10 +10,11 @@
 |  4  |[DESCRIBE command](#4)  |  
 |  5  |[DROP (delete)](#5)    | 
 |  6  |[ALTER TABLE … ADD/DROP](#6)    | 
-|  7  |[INSERT](#7)    | 
-|     |                        |  [INSERT constraints](#7-1)  |
-|     |                        |  [INSERT constraints](#7-2)  |
-|     |                        |  [INSERT constraints](#7-3)  |
+|  7  |[Keys - Tables with MySql](#7)    | 
+|  8  |[INSERT](#8)    | 
+|     |                        |  [INSERT constraints](#8-1)  |
+|     |                        |  [INSERT constraints](#8-2)  |
+|     |                        |  [INSERT constraints](#8-3)  |
 
 
 ###### 1
@@ -220,10 +221,20 @@ ALTER TABLE student DROP gpa;
 
 ###### 7
 
-<img src="https://img.shields.io/badge/-7. %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. Keys - Tables with MySql %20-blue" height=40px>
 
-```sql
-```
+Let's look in the following tables and see how the keys are define:
+
+### [Customer table](#-)
+
+We can see that customers table has only PK (1 PK not composite)
+
+![image](https://user-images.githubusercontent.com/36256986/163399417-e93f1777-8689-4cc0-ba2d-a64f00a7bfb4.png)
+
+```	DESCRIBE customers;```
+![image](https://user-images.githubusercontent.com/36256986/163399507-c13b9c48-1ea9-4d23-ae65-38a52cdc62db.png)
+![image](https://user-images.githubusercontent.com/36256986/163399519-a5047fe7-43f4-49bf-b0a0-90009ee2dae1.png)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
