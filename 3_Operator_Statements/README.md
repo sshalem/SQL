@@ -2,9 +2,9 @@
 
 |     |  Subject           |
 |:---:|:------------------------------| 
-|  1  |[USE](#-)   | 
-|  2  |[SELECT](#-)   | 
-|  3  |[ALIAS](#-)   | 
+|  1  |[USE](#1)   | 
+|  2  |[SELECT](#2)   | 
+|  3  |[ALIAS](#3)   | 
 |  4  |[DISTINCT](#-)   | 
 |  5  |[WHERE](#-)   | 
 |  6  |[Logical Operators AND, OR, NOT](#-)   | 
