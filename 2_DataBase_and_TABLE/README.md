@@ -19,6 +19,7 @@
 |  10 |[UPDATE](#10)    | 
 |     |                     |  [UPDATE Single row](#10-1)  |
 |     |                     |  [UPDATE multiple rows](#10-2)  |
+|     |                     |  [UPDATE with SubQuery](#10-3)  |
 
 ###### 1
 
@@ -492,7 +493,7 @@ After Update:
 
 ###### 10-2
 
-<img src="https://img.shields.io/badge/-10.2 multiple rows %20-yellow" height=30px>
+<img src="https://img.shields.io/badge/-10.2 UPDATE multiple rows %20-yellow" height=30px>
 
 Let's say we want to change multiple records for client_id number 3 :
 
@@ -521,5 +522,13 @@ SET
 	payment_date = due_date
 WHERE client_id = 3;
 ```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+###### 10-3
+
+<img src="https://img.shields.io/badge/-10.3 UPDATE with SubQuery %20-yellow" height=30px>
+
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
