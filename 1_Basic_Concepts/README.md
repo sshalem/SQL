@@ -16,13 +16,13 @@
 
 ![dataTypes](https://user-images.githubusercontent.com/36256986/158463506-c95ccea7-e00b-4b3f-be5b-fab4d909a601.png)
 
-INT - whole Number</br>
-	INT(11)  - number in length of 11 numbers</br>
+[INT](#-) - whole Number</br>
+	INT(11) - number in length of 11 numbers</br>
 	
-DECIMAL(M,N) - DECIMAL Numbers</br>
+[DECIMAL(M,N)](#-) - DECIMAL Numbers</br>
 	DECIMAL(3,6) - 465.789465  </br>
 	
-VARCHAR(l)  - String  , l -maximum length</br>
+[VARCHAR(l)](#-)  - String  , l -maximum length</br>
 	VARCHAR(50) - Max length of 50 characters </br>
 	
 
