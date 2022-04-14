@@ -229,6 +229,8 @@ Let's look in the following tables and see how the keys are define:
 
 We can see that customers table has only PK (1 PK not composite)
 
+[Customer table:](#-)
+
 ![image](https://user-images.githubusercontent.com/36256986/163399417-e93f1777-8689-4cc0-ba2d-a64f00a7bfb4.png)
 
 ```sql
@@ -241,6 +243,8 @@ DESCRIBE customers;
 
 
 ### [Table with [PK] and [FK's]](#-)
+
+[Orders table:](#-)
 
 We can see that customers table has :
 
