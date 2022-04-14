@@ -289,6 +289,8 @@ Only together the compose a PK.
 
 <img src="https://img.shields.io/badge/-8.1 INSERT single row %15-yellow" height=40px>
 
+<img src="https://img.shields.io/badge/-8. INSERT %20-yellow" height=40px>
+
 ```sql
 ```
 
