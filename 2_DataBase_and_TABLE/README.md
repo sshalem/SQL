@@ -367,13 +367,36 @@ Let's look in the following tables:
 ![image](https://user-images.githubusercontent.com/36256986/163405529-24dede87-f7fa-4f1c-918a-4c12bb4e2042.png)
 
 
-### [Order_items](#-) </br>
+### [Order_items](#-)
+
 ![image](https://user-images.githubusercontent.com/36256986/163405557-2687337a-05e3-4daa-8a1a-ccf3c6ae3917.png)
 
-
-
+We assign to : </br>
+	customer_id  (There is already customer_id =1 , we just add to it another Order_id)</br>
+	order_date, </br>
+	status </br>
+	
 ```sql
+INSERT INTO orders(customer_id, order_date, status) 
+VALUES (1, '2019-01-27', 1);
+
+INSERT INTO order_items 
+VALUES 
+	(LAST_INSERT_ID() , 1, 1, 3.95),
+	(LAST_INSERT_ID() , 2, 1, 3.95);
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/163406054-70dd0f70-f6ea-47b9-aeaf-a397bfdd77bc.png)
+
+The new Tables as follows:
+
+### [Order Table](#-)
+
+![image](https://user-images.githubusercontent.com/36256986/163406145-fddde294-da32-4896-b5ab-ae0d9bce560b.png)
+
+### [Order_items_Table](#-)
+
+![image](https://user-images.githubusercontent.com/36256986/163406253-10a040ac-427d-4232-a369-9483e6d80ec1.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
