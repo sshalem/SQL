@@ -362,14 +362,14 @@ Let's look in the following tables:
 1. Orders
 2. Order_items
 
-[Order](#-)
+### [Order](#-)
 
 ![image](https://user-images.githubusercontent.com/36256986/163405529-24dede87-f7fa-4f1c-918a-4c12bb4e2042.png)
 
 
-[Order_items](#-) </br>
-
+### [Order_items](#-) </br>
 ![image](https://user-images.githubusercontent.com/36256986/163405557-2687337a-05e3-4daa-8a1a-ccf3c6ae3917.png)
+
 
 
 ```sql
