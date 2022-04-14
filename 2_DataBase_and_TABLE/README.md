@@ -289,7 +289,49 @@ Only together the compose a PK.
 
 <img src="https://img.shields.io/badge/-8.1 INSERT single row %20-yellow" height=30px>
 
+Let's see the attributes of our Customer Table:
+
+![image](https://user-images.githubusercontent.com/36256986/163402962-a013163e-5fb9-4006-8e60-abf874502d38.png)
+
+If we want to ISERT a row in DB we do the following: </br>
+Since the first Field is a **PK** of the table and it is **_AI (Auto Increment)_** , best practice is to set it as DEFAULT:
+
 ```sql
+INSERT INTO customers
+VALUES (DEFAULT, 'shabtay' , 'shalem' , '1977-01-29' , '052-8855371' , 'Menachem begin 15' , 'HOLON' , 'IL' , 654798);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163403202-03ad58a3-0576-4feb-b7c9-dcb0d5373294.png)
+
+We can also make the following INSERT because the birth_date & phone can have a default value of NULL and points default value of 0.
+
+```sql
+INSERT INTO customers
+VALUES (DEFAULT, 'temp', 'temp', DEFAULT, DEFAULT , 'Menachem begin 15' , 'HOLON' , 'IL' , DEFAULT);
+```
+
+Or we can write it following way , which INSERT the same record to Table.
+
+```sql
+INSERT INTO customers
+VALUES (DEFAULT, 'temp', 'temp', NULL , NULL , 'Menachem begin 15' , 'HOLON' , 'IL' , 0);
+```
+
+Since we have DEFAULT values , we can write INSERT statement in a shorter way:
+
+```sql
+INSERT INTO customers (
+	first_name,
+	last_name,
+	address,
+	city ,
+	state)
+VALUES (
+	'temp' ,
+	'temp' ,  
+	'Menachem begin 15' , 
+	'HOLON', 
+	'IL');
 ```
 
 ###### 8-2
