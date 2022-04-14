@@ -75,6 +75,7 @@ Primary Key can be composed of set of columns :
 
 <img src="https://img.shields.io/badge/-4. Foreign key [FK] %20-blue" height=40px>
 
+[Foreign key [FK]](#-) - is a key in some table which uniquely identifies rows in another table – or, in other words, a key that tracks to a primary key in another table.
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
