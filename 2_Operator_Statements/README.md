@@ -16,9 +16,7 @@
 |  10  |[REGEX](#-)   | 
 |  11  |[IS NULL](#-)   | 
 |  12  |[ORDER BY](#-)   | 
-|  13  |[LIMT](#-)   | 
-|  14  |[CONCAT](#-)   | 
-|  15  |[COUNT](#-)   | 
+|  13  |[LIMIT](#-)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -27,8 +25,17 @@
 
 <img src="https://img.shields.io/badge/-1. USE %20-blue" height=40px>
 
+The keyword USE chooses the DB we want to work with
+
+Example:
+
 ```sql
+USE sql_store;
 ```
+
+This command will highlight the DB we chose
+
+![image](https://user-images.githubusercontent.com/36256986/163691861-1c80e6ec-4e76-43b3-b23c-1df84fb30f03.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
