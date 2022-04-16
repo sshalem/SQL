@@ -20,6 +20,7 @@
 |     |                     |  [UPDATE Single row](#10-1)  |
 |     |                     |  [UPDATE multiple rows](#10-2)  |
 |     |                     |  [UPDATE with SubQuery](#10-3)  |
+|  11 |[DELETE](#11)    | 
 
 ###### 1
 
@@ -544,5 +545,30 @@ WHERE client_id = (
 	WHERE name = 'Myworks');
 ```
 
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+----------------------------------------------------------------------------------
+
+###### 11
+
+<img src="https://img.shields.io/badge/-11. DELETE %20-yellow" height=30px>
+
+DELETE command:
+
+```sql
+DELETE FROM invoices WHERE client_id = 2;
+```
+
+Using Subquery:
+
+```sql
+DELETE FROM invoices 
+WHERE client_id = 
+	(SELECT client_id 
+	 FROM clients 
+	 WHERE name='Myworks');
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
