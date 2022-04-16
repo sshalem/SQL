@@ -529,6 +529,20 @@ WHERE client_id = 3;
 
 <img src="https://img.shields.io/badge/-10.3 UPDATE with SubQuery %20-yellow" height=30px>
 
+A SubQuery s a SELECT statement that is inside another SQL statement.</br>
+Instead of Hard code of client_id=3, I runSQL query on clients table to search for the client_id. </br>
+For that I use a Subquery as in the example below:
+
+```sql
+UPDATE invoices
+SET
+	payment_total = invoice_total * 0.5,
+	payment_date = due_date
+WHERE client_id = (
+	SELECT client_id 
+	FROM clients
+	WHERE name = 'Myworks');
+```
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
