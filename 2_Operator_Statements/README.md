@@ -6,7 +6,7 @@
 |:---:|:------------------------------|:------| 
 |  1  |[USE](#1)   |    |
 |  2  |[SELECT](#2)   |     |
-|     |            |[SELECT with Arithmetic *  /  +  -  %](#2.1) |
+|     |            |[SELECT with Arithmetic *  /  +  -  %](#2-1) |
 |  3  |[ALIAS](#3)   |           |
 |  4  |[DISTINCT](#-)   |        |
 |  5  |[WHERE](#-)   |     |
@@ -76,9 +76,9 @@ FROM customers;
 
 --------------------------------------------------------------------------------------------------
 
-###### 2.1
+###### 2-1
 
-<img src="https://img.shields.io/badge/-2.1. SELECT with Arithmetic "*  /  +  -  %" %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.1. SELECT with Arithmetic % %20-blue" height=40px>
 
 ```sql
 ```
