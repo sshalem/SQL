@@ -45,8 +45,31 @@ This command will highlight the DB we chose
 
 <img src="https://img.shields.io/badge/-2. SELECT %20-blue" height=40px>
 
+Let's take A look at customers table.
+
+![image](https://user-images.githubusercontent.com/36256986/163691948-e5f97405-bd62-4717-ac22-5f97ea4deb72.png)
+
 ```sql
+SELECT * FROM customers;
 ```
+
+Will give the same table as we see above.
+
+```sql
+SELECT customer_id 
+FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163691986-bd647e40-d97f-4006-a4d1-81a57013c409.png)
+
+
+```sql
+SELECT customer_id, last_name, city 
+FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163692013-16c4d403-0501-4989-8469-e076b8a985c1.png)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
