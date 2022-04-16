@@ -35,7 +35,7 @@ USE sql_store;
 
 This command will highlight the DB we chose
 
-![image](https://user-images.githubusercontent.com/36256986/163691861-1c80e6ec-4e76-43b3-b23c-1df84fb30f03.png)
+![image](https://user-images.githubusercontent.com/36256986/163691895-9b96ef16-b5ba-4a3f-b2b5-10331231e681.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
