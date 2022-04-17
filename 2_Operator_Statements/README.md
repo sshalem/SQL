@@ -12,8 +12,8 @@
 |  5  |[WHERE](#5)   |     |
 |  6  |[Logical Operators AND, OR, NOT](#6)   |     |
 |  7  |[IN operator](#7)   |    |
-|  8  |[BETWEEN](#8)   |     |
-|  9  |[LIKE](#9)   |      |
+|  8  |[BETWEEN operator](#8)   |     |
+|  9  |[LIKE operator](#9)   |      |
 |  10  |[REGEX](#10)   |    |
 |  11  |[IS NULL](#11)   |   |
 |  12  |[ORDER BY](#12)   |    |
@@ -359,15 +359,35 @@ SELECT * FROM customers WHERE state NOT IN ('VA', 'NY', 'CA');
 --------------------------------------------------------------------------------------------------
 
 
-###### 
+###### 8
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-8. BETWEEN operator %20-blue" height=40px>
 
-Example:
+### Let's see how we can use the [*BETWEEN*](#-) operator.
+
+Let's look in the following example :
 
 ```sql
+SELECT * FROM customers WHERE points >= 1000 AND points <= 3000;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163732038-1ecdc3d8-0170-4357-9e79-271f8e619b24.png)
+
+Instead we can use BETWEEN operator which is shorter:
+
+BETWEEN - can be Greater or equal , or can be Less or Equal
+
+```sql
+SELECT * FROM customers WHERE points BETWEEN  1000 AND 3000;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732091-f28c5909-51a4-4d1b-a977-2f8046961ad6.png)
+
+```sql
+SELECT * FROM customers WHERE birth_date BETWEEN '1970-01-01' AND '1980-01-01';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732102-b95635c9-6fd2-497f-8979-d663135b1297.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
