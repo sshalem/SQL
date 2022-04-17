@@ -394,14 +394,73 @@ SELECT * FROM customers WHERE birth_date BETWEEN '1970-01-01' AND '1980-01-01';
 --------------------------------------------------------------------------------------------------
 
 
-###### 
+###### 9
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-9. LIKE operator %20-blue" height=40px>
 
-Example:
+LIKE Operator (we use it as if a value contains the description we looking for) </br>
+
+* %b       :   any number of characters after first letter b
+* b%       :   any number of characters before last letter b
+* %b%    :   any number of characters before letter b and after
+			Doesn't matter if b is in the beginning or at the end of the string
+* _       :   one underscore means exactly one character 
+* __     :   2 underscores means exactly 2 characters (and so on) 
+
 
 ```sql
+SELECT * FROM customers WHERE last_name LIKE 'b%';
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/163732233-f21fc4cd-c0f5-43e1-9ae7-5c930759e9d1.png)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE 'brush%';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732264-a163657c-7b95-4e1b-84aa-9f7872231e15.png)
+
+![image](https://user-images.githubusercontent.com/36256986/163732271-1673eae9-6b76-4749-86f6-cdd8a3345468.png)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE '%y';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732286-6e1f4453-ec18-4266-bb56-f29b10746997.png)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE '%g%';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732352-eba5fb0c-e079-4c47-be9f-b0ecab9ede0a.png)
+
+### [Exact number of characters](#-)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE 'm_'; 
+```
+One letter after 'm' letter we have no results.
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE 'm_____';
+```
+
+When we search for a word that starts with an 'm' and has 5 more letters we got 'Mynett'
+
+![image](https://user-images.githubusercontent.com/36256986/163732471-f990da84-0cdb-434a-a3a8-b24d46dcb607.png)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE '___ch___';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732500-da64ece9-a869-4e2a-a3d2-a735f6d7b9d3.png)
+
+![image](https://user-images.githubusercontent.com/36256986/163732512-44a92dd9-c2e5-46f8-8ae5-66cf513adb7a.png)
+
+___ch___ return the last_name of Betchley
+
+
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
