@@ -268,16 +268,61 @@ SELECT * FROM customers WHERE birth_date > '1990-01-01';
 
 <img src="https://img.shields.io/badge/-6. Logical Operators AND, OR, NOT  %20-blue" height=40px>
 
-
+### [AND operator](#-)
 
 ```sql
+SELECT * 
+FROM customers 
+WHERE birth_date > '1990-01-01' AND points > 1000;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163731743-444454b4-6713-4c18-b4a8-0def86ea83a2.png)
+
+### [AND with NOT operator](#-)
+
+```sql
+SELECT * 
+FROM customers 
+WHERE NOT (birth_date > '1990-01-01' AND points > 1000);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163731768-ec151146-55aa-4058-bfe7-a8532114ee26.png)
+
+### [OR operator](#-)
+
+```sql
+SELECT * 
+FROM customers 
+WHERE birth_date > '1990-01-01' OR points > 3000;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163731804-62c86a0c-a68c-49e2-9d4b-650fccf37117.png)
+
+
+### [OR with NOT operator](#-)
+
+```sql
+SELECT * 
+FROM customers 
+WHERE NOT ( birth_date > '1990-01-01' OR points > 3000);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163731818-13b0b7f0-f56a-4a13-8b0f-7d1faeff8ecd.png)
+
+### [MULTI operators](#-)
+
+```sql
+	SELECT * 
+	FROM customers 
+	WHERE birth_date > '1990-01-01' OR
+		  (points > 3000 AND state = 'VA');
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163731842-d1ded73b-931e-40e1-bd47-87fb049fa5ac.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
-
 
 ###### 
 
