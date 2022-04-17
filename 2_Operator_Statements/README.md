@@ -140,7 +140,31 @@ FROM customers;
 
 <img src="https://img.shields.io/badge/-3. ALIAS %20-blue" height=40px>
 
+### With [ALIAS](#-) (כינוי) we can give a name to our new COLUMN for exapmle : 
+* We have the following  Query, the new column added is [(points+10)*100](#-)
+
 ```sql
+SELECT 
+    last_name, 
+    first_name, 
+    points , 
+    (points+10 ) * 100
+FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163716581-48f25a4e-1b20-4fe0-91de-d0cd01d2d890.png)
+
+Let's give it an [ALIAS](#-) , as follows:
+
+```sql
+SELECT 
+    last_name, 
+    first_name, 
+    points , 
+    (points +10) * 100 AS discount_factor
+FROM customers;
+![image](https://user-images.githubusercontent.com/36256986/163716599-b3369f4d-bcb6-4205-a3a2-a1a7f9cee605.png)
+
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
