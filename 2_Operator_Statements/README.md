@@ -503,13 +503,83 @@ REGEXP is very powerful when it comes to searching of Strings, with complex patt
 	•  [abc] : match any single characters 
 	•  [a-d] : any characters from a to d 
 	
-![image](https://user-images.githubusercontent.com/36256986/163732935-2441b8b0-232d-42e3-8337-c1edc3820db5.png)
+Take a look at both queries below. </br>
+Both Query's below are the same, but with REGEXP we don’t have the % :
 
+```sql
+SELECT * FROM customers WHERE last_name LIKE '%fie%';
+SELECT * FROM customers WHERE last_name REGEXP 'fie';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733034-12f6a3a6-2dc6-4c75-8c23-b27ca8ae1753.png)
+
+### [$ : end of a string](#-)
+
+```sql
+SELECT * FROM customers WHERE last_name REGEXP 'field$';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733088-5f03cad3-78ae-4565-adf8-96a72d6fe828.png)
+
+### [^ : beginning of a string](#-)
+
+```sql
+SELECT * FROM customers WHERE last_name REGEXP '^do';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733140-1deee68f-4c0c-4b5c-8a23-b109b775f2b5.png)
+
+### [| : logical OR](#-)
+
+```sql
+SELECT * FROM customers WHERE last_name REGEXP 'fie|mac';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733237-f067ac44-4ce0-457a-9613-c52f684030fd.png)
+
+
+```sql
+SELECT * FROM customers WHERE last_name REGEXP  'fie|mac|ros|chl';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733245-b114841b-d778-406a-95a9-44338ac34e16.png)
+
+### [[abc] : match any single characters ](#-)
+
+```sql
+	SELECT * FROM customers WHERE last_name REGEXP  '[gim]e';
+```
+
+This [gim]e means : any lastname that contain 
+* 'ge' 
+* or  'ie' 
+* or 'me' 
+
+![image](https://user-images.githubusercontent.com/36256986/163733287-aa485b3a-31bb-4009-999a-f6f66b88cb50.png)
+
+```sql
+SELECT * FROM customers WHERE last_name REGEXP 'e[ybt]';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733324-ca02fe58-311c-4e6f-a9fe-06cadaa96593.png)
+
+
+### [](#-)
+
+
+
+
+### [](#-)
 
 ```sql
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163733140-1deee68f-4c0c-4b5c-8a23-b109b775f2b5.png)
 
+### [](#-)
+
+```sql
+```
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
