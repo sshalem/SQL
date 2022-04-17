@@ -81,7 +81,7 @@ FROM customers;
 
 ###### 2-1
 
-<img src="https://img.shields.io/badge/-2.1. SELECT with Arithmetic % %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.1. [SELECT with Arithmetic *  /  +  -  %](#-) % %20-blue" height=40px>
 
 ```sql
 ```
