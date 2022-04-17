@@ -48,13 +48,15 @@ This command will highlight the DB we chose
 
 Let's take A look at customers table.
 
-![image](https://user-images.githubusercontent.com/36256986/163691948-e5f97405-bd62-4717-ac22-5f97ea4deb72.png)
-
 ```sql
 SELECT * FROM customers;
 ```
 
-Will give the same table as we see above.
+Will give the same table as we see below.
+
+![image](https://user-images.githubusercontent.com/36256986/163691948-e5f97405-bd62-4717-ac22-5f97ea4deb72.png)
+
+Following query will give a table with custmer_id field only.
 
 ```sql
 SELECT customer_id 
@@ -63,6 +65,7 @@ FROM customers;
 
 ![image](https://user-images.githubusercontent.com/36256986/163691986-bd647e40-d97f-4006-a4d1-81a57013c409.png)
 
+The query will give a table with fields of : custmer_id , last_name,& city.
 
 ```sql
 SELECT customer_id, last_name, city 
