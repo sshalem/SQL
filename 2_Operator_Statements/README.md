@@ -393,7 +393,6 @@ SELECT * FROM customers WHERE birth_date BETWEEN '1970-01-01' AND '1980-01-01';
 
 --------------------------------------------------------------------------------------------------
 
-
 ###### 9
 
 <img src="https://img.shields.io/badge/-9. LIKE operator %20-blue" height=40px>
@@ -439,7 +438,11 @@ SELECT * FROM customers WHERE last_name LIKE '%g%';
 ```sql
 SELECT * FROM customers WHERE last_name LIKE 'm_'; 
 ```
+
 One letter after 'm' letter we have no results.
+
+![image](https://user-images.githubusercontent.com/36256986/163732585-1c7e1bbe-fdfa-4d03-b378-38babe6274ad.png)
+
 
 ```sql
 SELECT * FROM customers WHERE last_name LIKE 'm_____';
@@ -447,20 +450,15 @@ SELECT * FROM customers WHERE last_name LIKE 'm_____';
 
 When we search for a word that starts with an 'm' and has 5 more letters we got 'Mynett'
 
-![image](https://user-images.githubusercontent.com/36256986/163732471-f990da84-0cdb-434a-a3a8-b24d46dcb607.png)
+![image](https://user-images.githubusercontent.com/36256986/163732614-cce5de9f-2dce-43d0-9760-abf728938b2e.png)
 
 ```sql
 SELECT * FROM customers WHERE last_name LIKE '___ch___';
 ```
 
-![image](https://user-images.githubusercontent.com/36256986/163732500-da64ece9-a869-4e2a-a3d2-a735f6d7b9d3.png)
-
-![image](https://user-images.githubusercontent.com/36256986/163732512-44a92dd9-c2e5-46f8-8ae5-66cf513adb7a.png)
-
 ___ch___ return the last_name of Betchley
 
-
-
+![image](https://user-images.githubusercontent.com/36256986/163732645-7de9125d-080a-4776-9a04-a94561ba4f12.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
@@ -468,11 +466,10 @@ ___ch___ return the last_name of Betchley
 --------------------------------------------------------------------------------------------------
 
 
-###### 
+###### 10
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-10.  %20-blue" height=40px>
 
-Example:
 
 ```sql
 ```
