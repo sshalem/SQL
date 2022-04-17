@@ -181,24 +181,6 @@ SELECT
 FROM customers;
 ```
 
-```java
-SELECT 
-    last_name, 
-    first_name, 
-    points , 
-    (points +10) * 100 AS 'discount factor'
-FROM customers;
-```
-
-```
-SELECT 
-    last_name, 
-    first_name, 
-    points , 
-    (points +10) * 100 AS 'discount factor'
-FROM customers;
-```
-
 ![image](https://user-images.githubusercontent.com/36256986/163716674-56c045d9-5687-4d98-8208-a6ddd6f394de.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
