@@ -460,6 +460,39 @@ Query will return the last_name of Betchley
 
 ![image](https://user-images.githubusercontent.com/36256986/163732645-7de9125d-080a-4776-9a04-a94561ba4f12.png)
 
+### Let's see the differences between the following:
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE '%sebur%';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732791-207b728a-a314-4b65-b1f4-c084e724edee.png)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE '_sebur_';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732810-52406948-bc57-4ebd-ad70-1dfd25bfab24.png)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE '__sebur__';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732825-402ea28b-3d0f-4f0b-af45-4e7ca203d727.png)
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE '__sebur__';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732838-74e19a4e-a68b-4004-acc6-2ae7f67c8edb.png)
+
+
+```sql
+SELECT * FROM customers WHERE last_name LIKE  '___eb%';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163732850-d0a815e4-3afa-40e9-ae72-6206f03ef36f.png)
+
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
