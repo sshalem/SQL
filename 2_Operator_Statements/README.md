@@ -456,7 +456,7 @@ When we search for a word that starts with an 'm' and has 5 more letters we got 
 SELECT * FROM customers WHERE last_name LIKE '___ch___';
 ```
 
-___ch___ return the last_name of Betchley
+[____ch____](#-) return the last_name of Betchley
 
 ![image](https://user-images.githubusercontent.com/36256986/163732645-7de9125d-080a-4776-9a04-a94561ba4f12.png)
 
