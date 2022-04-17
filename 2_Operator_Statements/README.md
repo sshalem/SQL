@@ -118,6 +118,19 @@ FROM customers;
 
 ![image](https://user-images.githubusercontent.com/36256986/163716327-0b97e964-93fd-4c42-801c-276957cba480.png)
 
+Let's say we want to add to a column  of points the value of 10 and Multiply it by 100.</br>
+The Query below created new column with modified value.
+
+```sql
+SELECT 
+    last_name, 
+    first_name, 
+    points , 
+    (points+10 ) * 100
+FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163716434-83d99e04-138a-4cf7-a2f1-e495af8bbc69.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
