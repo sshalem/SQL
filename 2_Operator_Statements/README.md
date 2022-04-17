@@ -86,14 +86,38 @@ FROM customers;
 This section we will see the use of **SELECT** with **Arithmetic**          
 
 We can use the following : 
-Add : [+](#-)
-Sub:  [-](#-) 
-Div : [/](#-) 
-Mult: [* ](#-) 
-Module: [%](#-) (Residual)
+* Add : [+](#-)
+* Sub:  [-](#-) 
+* Div : [/](#-) 
+* Mult: [* ](#-) 
+* Module: [%](#-) (Residual)
+
+Let's take a look only on the following 3 columns:
 
 ```sql
+SELECT 
+  last_name, 
+  first_name, 
+  points 
+FROM customers;
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/163716276-549fe8d1-71ac-4e0b-ba79-e5ab8dbc1951.png)
+
+Let's say we want to add to a column  of pints the value of 10.</br>
+This Query above created new column with modified value.
+
+```sql
+SELECT 
+  last_name, 
+  first_name, 
+  points, 
+  points+10
+FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163716327-0b97e964-93fd-4c42-801c-276957cba480.png)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
