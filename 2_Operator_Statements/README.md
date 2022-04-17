@@ -10,14 +10,14 @@
 |  3  |[ALIAS](#3)   |           |
 |  4  |[DISTINCT](#4)   |        |
 |  5  |[WHERE](#5)   |     |
-|  6  |[Logical Operators AND, OR, NOT](#-)   |     |
-|  7  |[IN](#-)   |    |
-|  8  |[BETWEEN](#-)   |     |
-|  9  |[LIKE](#-)   |      |
-|  10  |[REGEX](#-)   |    |
-|  11  |[IS NULL](#-)   |   |
-|  12  |[ORDER BY](#-)   |    |
-|  13  |[LIMIT](#-)   |    |
+|  6  |[Logical Operators AND, OR, NOT](#6)   |     |
+|  7  |[IN operator](#7)   |    |
+|  8  |[BETWEEN](#8)   |     |
+|  9  |[LIKE](#9)   |      |
+|  10  |[REGEX](#10)   |    |
+|  11  |[IS NULL](#11)   |   |
+|  12  |[ORDER BY](#12)   |    |
+|  13  |[LIMIT](#13)   |    |
 
 
 --------------------------------------------------------------------------------------------------
@@ -324,15 +324,35 @@ WHERE NOT ( birth_date > '1990-01-01' OR points > 3000);
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 7
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. IN operator %20-blue" height=40px>
 
-Example:
+### [IN operator])#-)
+
+Let's take a look in the followqing query:
 
 ```sql
+SELECT * FROM customers WHERE state='VA' OR state='NY' OR state='CA';
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163731914-283fe9eb-743c-4daa-b75b-a67add3e0dfb.png)
+
+Instead of writing the above Query , we can use the **IN** keyword , which gives same result:
+
+```sql
+SELECT * FROM customers WHERE state IN ('VA', 'NY', 'CA');
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163731929-6af64fd9-9534-4c38-8a9b-cbc588828e35.png)
+
+Example : Using with NOT operator will give all customers out of the mentioned states:
+
+```sql
+SELECT * FROM customers WHERE state NOT IN ('VA', 'NY', 'CA');
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163731944-3f73bc6b-91c4-4f16-bb36-ec465fd0cee7.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
