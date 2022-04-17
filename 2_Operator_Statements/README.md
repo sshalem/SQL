@@ -8,8 +8,8 @@
 |  2  |[SELECT](#2)   |     |
 |     |2.1.            |[SELECT with Arithmetic *  /  +  -  %](#2-1) |
 |  3  |[ALIAS](#3)   |           |
-|  4  |[DISTINCT](#-)   |        |
-|  5  |[WHERE](#-)   |     |
+|  4  |[DISTINCT](#4)   |        |
+|  5  |[WHERE](#5)   |     |
 |  6  |[Logical Operators AND, OR, NOT](#-)   |     |
 |  7  |[IN](#-)   |    |
 |  8  |[BETWEEN](#-)   |     |
@@ -216,25 +216,59 @@ SELECT DISTINCT state FROM customers;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 5
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-. WHERE  %20-blue" height=40px>
 
-Example:
+We use the WHERE clause to filter data.</br>
+Comparison operators: 
+	• Greater than:   [>](#-)
+	• Greater than or equal to:   [>=](#-)
+	• Less than:   [<](#-)
+	• Less than or equal to:   [<=](#-)
+	• Equal:   [=](#-)
+	• Not equal:   [<>](#-)
+	• Not equal:   [!=]](#-)
+
+Let's look at the following examples:
 
 ```sql
+SELECT * FROM customers WHERE points > 3000;
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/163717023-660fbce0-02cf-4dfd-bbc7-9afe78861404.png)
+
+```sql
+SELECT * FROM customers WHERE state = 'VA';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163717058-0daf0397-2b95-4bd1-87e3-3be8175de139.png)
+
+```sql
+SELECT * FROM customers WHERE state != 'VA';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163717078-4c10fdcd-a23a-423c-abd9-f22034931b1f.png)
+
+
+![image](https://user-images.githubusercontent.com/36256986/163717088-792becdc-8d90-4c4b-88f9-2b49010b925f.png)
+
+```sql
+SELECT * FROM customers WHERE birth_date > '1990-01-01';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163717112-e0378bb5-e6d9-4eb5-ba14-0ae886c11a64.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 6
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-6. Logical Operators AND, OR, NOT  %20-blue" height=40px>
 
-Example:
+
 
 ```sql
 ```
