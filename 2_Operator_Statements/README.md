@@ -81,7 +81,16 @@ FROM customers;
 
 ###### 2-1
 
-<img src="https://img.shields.io/badge/-2.1. [SELECT with Arithmetic *  /  +  -  %](#-) % %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.1. SELECT with Arithmetic % %20-blue" height=40px>
+
+This section we will see the use of **SELECT** with **Arithmetic**          
+
+We can use the following : 
+Add : [+](#-)
+Sub:  [-](#-) 
+Div : [/](#-) 
+Mult: [* ](#-) 
+Module: [%](#-) (Residual)
 
 ```sql
 ```
