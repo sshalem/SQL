@@ -460,7 +460,7 @@ Query will return the last_name of Betchley
 
 ![image](https://user-images.githubusercontent.com/36256986/163732645-7de9125d-080a-4776-9a04-a94561ba4f12.png)
 
-### Let's see the differences between the following:
+### [Let's see the differences between the following:](#-)
 
 ```sql
 SELECT * FROM customers WHERE last_name LIKE '%sebur%';
@@ -479,13 +479,6 @@ SELECT * FROM customers WHERE last_name LIKE '__sebur__';
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/163732825-402ea28b-3d0f-4f0b-af45-4e7ca203d727.png)
-
-```sql
-SELECT * FROM customers WHERE last_name LIKE '__sebur__';
-```
-
-![image](https://user-images.githubusercontent.com/36256986/163732838-74e19a4e-a68b-4004-acc6-2ae7f67c8edb.png)
-
 
 ```sql
 SELECT * FROM customers WHERE last_name LIKE  '___eb%';
