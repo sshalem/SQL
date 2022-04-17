@@ -574,8 +574,6 @@ SELECT * FROM customers WHERE last_name REGEXP 'e[ybt]';
 ```sql
 ```
 
-![image](https://user-images.githubusercontent.com/36256986/163733140-1deee68f-4c0c-4b5c-8a23-b109b775f2b5.png)
-
 ### [](#-)
 
 ```sql
