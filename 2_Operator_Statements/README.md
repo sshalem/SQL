@@ -493,7 +493,17 @@ SELECT * FROM customers WHERE last_name LIKE  '___eb%';
 
 ###### 10
 
-<img src="https://img.shields.io/badge/-10.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-10. REGEX %20-blue" height=40px>
+
+REGEXP is very powerful when it comes to searching of Strings, with complex patterns.
+
+	•  ^        : beginning of a string 
+	•  $        : end of a string 
+	•  |        : logical OR 
+	•  [abc] : match any single characters 
+	•  [a-d] : any characters from a to d 
+	
+![image](https://user-images.githubusercontent.com/36256986/163732935-2441b8b0-232d-42e3-8337-c1edc3820db5.png)
 
 
 ```sql
