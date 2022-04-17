@@ -577,21 +577,6 @@ SELECT * FROM customers WHERE last_name REGEXP 'e[a-h]';
 
 ![image](https://user-images.githubusercontent.com/36256986/163733500-13e4012b-c499-4a9b-bb70-922fea8d7a39.png)
 
-
-### [](#-)
-
-
-
-
-### [](#-)
-
-```sql
-```
-
-### [](#-)
-
-```sql
-```
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
