@@ -563,6 +563,20 @@ SELECT * FROM customers WHERE last_name REGEXP 'e[ybt]';
 
 ![image](https://user-images.githubusercontent.com/36256986/163733324-ca02fe58-311c-4e6f-a9fe-06cadaa96593.png)
 
+### [[a-z] : any characters from a to d](#-)
+
+```sql
+SELECT * FROM customers WHERE last_name REGEXP '[a-h]e';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733467-b5ee0a6c-9c28-4cb5-a045-905cd9722b2a.png)
+
+```sql
+SELECT * FROM customers WHERE last_name REGEXP 'e[a-h]';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163733500-13e4012b-c499-4a9b-bb70-922fea8d7a39.png)
+
 
 ### [](#-)
 
