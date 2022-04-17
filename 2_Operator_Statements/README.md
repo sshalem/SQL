@@ -328,7 +328,7 @@ WHERE NOT ( birth_date > '1990-01-01' OR points > 3000);
 
 <img src="https://img.shields.io/badge/-7. IN operator %20-blue" height=40px>
 
-### [IN operator])#-)
+### [IN operator](#-)
 
 Let's take a look in the followqing query:
 
