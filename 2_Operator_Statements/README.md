@@ -228,7 +228,7 @@ Comparison operators:
 * Less than or equal to:   [<=](#-)
 * Equal:   [=](#-)
 * Not equal:   [<>](#-)
-* Not equal:   [!=]](#-)
+* Not equal:   [!=](#-)
 
 Let's look at the following examples:
 
