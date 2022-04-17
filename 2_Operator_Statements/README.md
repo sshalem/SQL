@@ -105,7 +105,7 @@ FROM customers;
 ![image](https://user-images.githubusercontent.com/36256986/163716276-549fe8d1-71ac-4e0b-ba79-e5ab8dbc1951.png)
 
 Let's say we want to add to a column  of pints the value of 10.</br>
-This Query above created new column with modified value.
+The Query below created new column with modified value.
 
 ```sql
 SELECT 
