@@ -186,3 +186,150 @@ FROM customers;
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
+
+###### 4
+
+<img src="https://img.shields.io/badge/-4. DISTINCT %20-blue" height=40px>
+
+With DISTINCT keyword we can remove duplicates.</br>
+Let's look at customers table , we can see we have state 'VA' 3 times :
+
+![image](https://user-images.githubusercontent.com/36256986/163716791-f7f36dff-52a0-4c54-a4b7-b4455202cd98.png)
+
+Let's query only the state :
+
+```sql
+SELECT state FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163716845-dff907cc-97d5-4e49-a7e8-7ba0c4df548d.png)
+
+To remove duplicates we use the keyword DISTINCT :
+
+```sql
+SELECT DISTINCT state FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163716872-9e9e3244-28a4-44da-b789-0b783d1982f3.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
