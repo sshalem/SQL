@@ -222,13 +222,13 @@ SELECT DISTINCT state FROM customers;
 
 We use the WHERE clause to filter data.</br>
 Comparison operators: 
-	• Greater than:   [>](#-)
-	• Greater than or equal to:   [>=](#-)
-	• Less than:   [<](#-)
-	• Less than or equal to:   [<=](#-)
-	• Equal:   [=](#-)
-	• Not equal:   [<>](#-)
-	• Not equal:   [!=]](#-)
+* Greater than:   [>](#-)
+* Greater than or equal to:   [>=](#-)
+* Less than:   [<](#-)
+* Less than or equal to:   [<=](#-)
+* Equal:   [=](#-)
+* Not equal:   [<>](#-)
+* Not equal:   [!=]](#-)
 
 Let's look at the following examples:
 
