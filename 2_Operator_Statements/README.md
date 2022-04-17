@@ -156,6 +156,8 @@ FROM customers;
 
 Let's give it an [ALIAS](#-) , as follows:
 
+![image](https://user-images.githubusercontent.com/36256986/163716599-b3369f4d-bcb6-4205-a3a2-a1a7f9cee605.png)
+
 ```sql
 SELECT 
     last_name, 
@@ -163,9 +165,41 @@ SELECT
     points , 
     (points +10) * 100 AS discount_factor
 FROM customers;
-![image](https://user-images.githubusercontent.com/36256986/163716599-b3369f4d-bcb6-4205-a3a2-a1a7f9cee605.png)
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163716625-abb97057-6aa8-440e-b51f-0b6e6f439fb2.png)
+
+Let's give it an [ALIAS](#-)  **w/o underscore** , as follows:
+* We need to add quotes to it (Can be single quote or double quotes)
+
+```sql
+SELECT 
+    last_name, 
+    first_name, 
+    points , 
+    (points +10) * 100 AS 'discount factor'
+FROM customers;
+```
+
+```java
+SELECT 
+    last_name, 
+    first_name, 
+    points , 
+    (points +10) * 100 AS 'discount factor'
+FROM customers;
+```
 
 ```
+SELECT 
+    last_name, 
+    first_name, 
+    points , 
+    (points +10) * 100 AS 'discount factor'
+FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163716674-56c045d9-5687-4d98-8208-a6ddd6f394de.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
