@@ -3,13 +3,13 @@
 <img src="https://img.shields.io/badge/-3. JOIN UNION USING clause %20-blue" height=60px>
 
 
-|     |  Subject           |
-|:---:|:------------------------------| 
-|  1  |[Retrieving Data From Multiple Tables](#1)   | 
-|  2  |[INNER JOIN (or Just JOIN)](#2)   | 
-|  2.1|[JOIN](#2-1)   | 
-|  2.2|[ALIAS with JOIN](#2-2)   | 
-|  2.3|[JOIN across Database's](#2-3)   | 
+|     |  Subject           |		|
+|:---:|:------------------------------|:----------|  
+|  1  |[Retrieving Data From Multiple Tables](#1)   |	     |
+|  2  |[INNER JOIN (or Just JOIN)](#2)   |		     |
+|     |2.1                               |[JOIN](#2-1)       |
+|     |2.2				 |[ALIAS with JOIN](#2-2)    |
+|     |2.3				 |[JOIN across Database's](#2-3)   |
 |  2.4|[JOIN](#2-4)   | 
 |  2.5|[JOIN](#2-5)   | 
 |  2.6|[JOIN](#2-6)   |
@@ -72,7 +72,7 @@ I will show examples using the tables , customers and order.
 
 ###### 2-1
 
-<img src="https://img.shields.io/badge/-2.1. JOIN %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.1. JOIN %20-yellow" height=30px>
 
 Let's run the following query.
 
@@ -126,7 +126,7 @@ JOIN customers
 
 ###### 2-2
 
-<img src="https://img.shields.io/badge/-2.2. ALIAS with JOIN  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.2. ALIAS with JOIN  %20-yellow" height=30px>
 
 We can add ALIAS when doing JOIN in the query. </br>
 By convention we **_abbreviate the tables_** name.
@@ -174,7 +174,7 @@ This is much cleaner code. It simplifies the presentation of the code.
 
 ###### 2-3
 
-<img src="https://img.shields.io/badge/-2.3. JOIN across Database's %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.3. JOIN across Database's %20-yellow" height=30px>
 
 Let's see how we can combine columns form different Database's.</br>
 We want to join from 2 different databases.
@@ -193,18 +193,16 @@ JOIN sql_inventory.products p
 
 **Answer:**
 * It's because the current DB used is **sql_store**.
-* since we define it as current DB with command of **USE sql_store**;
-That’s why we add it to sql_inventory.products because it is outside the scope of current DB which is sql_store.
-![image](https://user-images.githubusercontent.com/36256986/163829691-6695a5dc-85bf-4696-9936-b36f8575cc68.png)
-
+* since we define it as current DB with command of **USE sql_store;**
+That’s why we add it to **sql_inventory.products** because it is **outside the scope** of current DB which is **sql_store**.
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 2-4
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.4.  %20-yellow" height=30px>
 
 
 ```sql
