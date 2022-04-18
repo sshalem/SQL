@@ -581,27 +581,34 @@ SELECT * FROM customers WHERE last_name REGEXP 'e[a-h]';
 
 --------------------------------------------------------------------------------------------------
 
-
 ###### 11
 
 <img src="https://img.shields.io/badge/-11. IS NULL %20-blue" height=40px>
 
+### [IS NULL](#-) - Return true if value of field IS NULL.
+
 ```sql
+SELECT * FROM customers WHERE phone  IS NULL;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163814838-ca9f2c26-09a2-4524-a8ab-ec3b06e4204d.png)
+
+```sql
+SELECT * FROM customers WHERE phone  IS NOT NULL;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163814903-69a46408-6c9c-4aa2-b6a8-03e9647414b4.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 12
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
+<img src="https://img.shields.io/badge/-12. ORDER BY %20-blue" height=40px>
 
 ```sql
 ```
-
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
