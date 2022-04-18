@@ -18,7 +18,7 @@
 |     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
 |     |3.3				 |[LEFT JOIN](#3-3)   | 
 |     |3.4				 |[RIGHT JOIN](#3-4)   | 
-|     |3.5				 |[JOIN](#3-5)   | 
+|     |3.5				 |[OUTER JOIN more than 2 tables](#3-5)   | 
 |     |3.6 				 |[JOIN](#3-6)   |
 |  5  |[UNION](#)   | 
 |  3  |[USING CLAUSE](#-)   | 
@@ -263,7 +263,7 @@ JOIN employees m
 
 ###### 2-5
 
-<img src="https://img.shields.io/badge/-2.5. JOIN more the 2 tables %20-yellow" height=30px>
+<img src="https://img.shields.io/badge/-2.5. INNER JOIN more the 2 tables %20-yellow" height=30px>
 
 Let's look at the **_orders , customers & order_statuses_** tables from **_sql_store_** DB.
 
@@ -573,13 +573,48 @@ whether the condition [**ON c.customer_id = o.customer_id**](#-) is true or not
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3-5
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3.5. OUTER JOIN more than 2 tables %20-blue" height=40px>
 
+Let's look at the **_orders , customers & order_statuses_** tables from **_sql_store_** DB.
+
+### [orders](#-)
+![image](https://user-images.githubusercontent.com/36256986/163835157-604e636b-9e28-42c0-a06e-f123b191c653.png)
+
+### [customers](#-)
+![image](https://user-images.githubusercontent.com/36256986/163836832-6d8756e1-b601-4633-acc8-facf99eb8ff9.png)
+
+### [Shippers](#-)
+![image](https://user-images.githubusercontent.com/36256986/163850967-b5eb440e-809c-471e-9a73-708a006195eb.png)
+
+**_orders_** table  has the following keys:
+1. order_id - [PK](#-)
+2. customer_id - [FK](#-)
+3. status - [FK](#-)
+4. shipper_id - [FK](#-)
+
+Let's see how to OUTER JOIN from 3 tables:
+1. Order
+2. Customers
+3. Shippers
 
 ```sql
+SELECT 
+    c.customer_id,
+    c.first_name,
+    o.order_id,
+    sh.shipper_id,
+    sh.name AS shipper_name
+FROM customers c 
+LEFT JOIN orders o 
+	ON c.customer_id = o.customer_id
+LEFT JOIN shippers sh
+	ON o.shipper_id = sh.shipper_id
+ORDER BY c.customer_id;
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/163851136-e4055158-9b15-4773-bd11-0a3a30e810c1.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
