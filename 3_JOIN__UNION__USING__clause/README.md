@@ -10,8 +10,8 @@
 |     |2.1                               |[JOIN](#2-1)       |
 |     |2.2				 |[ALIAS with JOIN](#2-2)    |
 |     |2.3				 |[JOIN across Database's](#2-3)   |
-|  2.4|[JOIN](#2-4)   | 
-|  2.5|[JOIN](#2-5)   | 
+|     |2.4				 |[SELF JOINS (INNER)](#2-4)   | 
+|     |2.5				 |[JOIN more the 2 tables](#2-5)   | 
 |  2.6|[JOIN](#2-6)   |
 |  3  |[OUTER JOIN (or Just JOIN)](#3)   | 
 |  3.1|[JOIN](#3-1)   | 
@@ -202,21 +202,62 @@ That’s why we add it to **sql_inventory.products** because it is **outside the
 
 ###### 2-4
 
-<img src="https://img.shields.io/badge/-2.4.  %20-yellow" height=30px>
+<img src="https://img.shields.io/badge/-2.4. SELF JOINS (INNER)  %20-yellow" height=30px>
 
+In SQL we can JOIN a table with itself.</br>
+Example, let's look at sql_hr DB.</br>
+It has 2 tables.</br>
+
+![image](https://user-images.githubusercontent.com/36256986/163833827-b4957983-562e-44c6-b532-ae96681dff79.png)
+
+First Let's look at the table of employees and explained how it's possible to make **SELF JOIN**.</br>
+We have **employee_id** column and we also have **reports_to** column.
+
+The **reports_to** column is actually the manager .</br>
+In the table below all employee's reports to the same manager which is **37270**</br>
+The manager itself is an [employee](#-) in that organization.</br>
+
+The managers **employee_id** is **37270** and he reports to **NULL** which means he is the [CEO](#-)
+
+![image](https://user-images.githubusercontent.com/36256986/163834113-96e67237-9e72-49a7-9d94-2d23d2a7638b.png)
+
+### SO let's write a Query to JOIN the table with itself </br>
+### So that we will have for each employee its direct manager
 
 ```sql
+USE sql_hr;
+
+SELECT * 
+FROM employees e
+JOIN employees m
+	ON e.reports_to = m.employee_id;
 ```
 
+SELF JOIN table shows there is only one manager in the table.
+
+![image](https://user-images.githubusercontent.com/36256986/163834367-7b4f85e9-a219-41d2-9f6b-720062127d56.png)
+
+This query selects specific fields from the table.
+
+```sql
+SELECT 
+	e.employee_id, 
+	e.first_name AS employee_first_name, 
+	m.first_name AS manager_first_name
+FROM employees e
+JOIN employees m
+	ON e.reports_to = m.employee_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163834558-6ba33407-d0ba-4092-83bf-c392c4a151d1.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 2-5
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
+<img src="https://img.shields.io/badge/-2.5. JOIN more the 2 tables %20-blue" height=40px>
 
 ```sql
 ```
