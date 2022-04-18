@@ -8,8 +8,8 @@ When we are Retrieving Data From Multiple Tables, we will use JOIN's, UNION's
 |:---:|:------------------------------| 
 |  1  |[JOIN](#1)   | 
 |  2  |[INNER JOIN (or Just JOIN)](#2)   | 
-|  2.1|[JOIN](#2-1)   | 
-|  2.2|[JOIN](#2-2)   | 
+|  2.1|[JOIN(or INNER JOIN](#2-1)   | 
+|  2.2|[ALIAS with JOIN](#2-2)   | 
 |  2.3|[JOIN](#2-3)   | 
 |  2.4|[JOIN](#2-4)   | 
 |  2.5|[JOIN](#2-5)   | 
@@ -119,6 +119,145 @@ JOIN customers
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/163827557-54618407-c896-4bd2-81ce-74bbe8044c72.png)
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 2-2
+
+<img src="https://img.shields.io/badge/-2.2. ALIAS with JOIN  %20-blue" height=40px>
+
+We can add ALIAS when doing JOIN in the query. </br>
+By convention we **_abbreviate the tables_** name.
+
+Let's take the following query and add it ALIAS by convention:
+
+code w/o ALIAS:
+
+```sql
+SELECT 
+	order_id, 
+	orders.customer_id, 
+	first_name, 
+	last_name  
+FROM orders 
+JOIN customers 
+	ON orders.customer_id = customers.customer_id;
+```
+
+same code with ALIAS:
+
+```sql
+SELECT 
+	order_id, 
+	o.customer_id, 
+	first_name, 
+	last_name 
+FROM orders o
+JOIN customers c
+	ON o.customer_id = c.customer_id;
+```
+
+This is much cleaner code. It simplifies the presentation of the code.
+
+**Question:**
+* What's the difference between the **ALIAS** in section 3 to the **ALIAS we do here in the JOIN**?
+
+**Answer:**
+* In section 3 we do ALIAS to a column by adding the key AS
+* Here we do ALIAS to the tables name w/o the AS key
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
