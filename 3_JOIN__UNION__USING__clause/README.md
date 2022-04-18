@@ -15,7 +15,7 @@
 |     |2.6				 |[JOIN from table with CK](#2-6)   |
 |  3  |[OUTER JOIN](#3)   		 | 
 |     |3.1				 |[OUTER JOIN syntax with LEFT/RIGHT](#3-1)   | 
-|     |3.2				 |[JOIN](#3-2)   | 
+|     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
 |     |3.3				 |[JOIN](#3-3)   | 
 |     |3.4				 |[JOIN](#3-4)   | 
 |     |3.5				 |[JOIN](#3-5)   | 
@@ -443,6 +443,17 @@ ORDER BY c.customer_id;
 
 --------------------------------------------------------------------------------------------------
 
+###### 3-2
+
+<img src="https://img.shields.io/badge/-3.2. LEFT JOIN best practice  %20-blue" height=40px>
+
+Since we can **_JOIN_** multiple tables , we can get **_confused_** when doing **_LEFT and RIGHT_** at the same table, </br>
+Thus best practice is to [ALWAYS use **_LEFT JOIN_**](#-)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
 ###### 
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
@@ -466,3 +477,46 @@ ORDER BY c.customer_id;
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
