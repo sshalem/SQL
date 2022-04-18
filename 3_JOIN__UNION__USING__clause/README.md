@@ -458,8 +458,7 @@ Thus best practice is to [ALWAYS use **_LEFT JOIN_**](#-)
 
 <img src="https://img.shields.io/badge/-3.3. LEFT JOIN %20-blue" height=40px>
 
-The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). </br>
-The result is 0 records from the right side, if there is no match.
+The LEFT JOIN keyword returns all records from the left table (table1), even if there are no matches in the right table (table2).
 
 ```sql
 SELECT column_name(s)
@@ -485,10 +484,20 @@ In the Query below the :
 1. LEFT TABLE refers to customers (will return all records from the left table)
 2. RIGHT TABLE refers to orders (the matching records from the right table)
 
-
 ```sql
+SELECT 
+     c.customer_id,
+     c.first_name,
+     o.order_id
+FROM customers c 
+LEFT JOIN orders o 
+	ON c.customer_id = o.customer_id 
+ORDER BY c.customer_id;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163847071-3227bb53-cb29-412a-8fa3-db44c9c5c7dd.png)
+
+The LEFT JOIN keyword returns all records from the left table (customers), even if there are no matches in the right table (orders).
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
