@@ -535,8 +535,8 @@ even if there are no matches in the right table (customers).
 
 <img src="https://img.shields.io/badge/-3.4. RIGHT JOIN %20-blue" height=40px>
 
-The RIGHT JOIN keyword returns all records from the right table (table2),
-even if there are no matches in the left table (table1).
+The RIGHT JOIN keyword returns all records from the right table (**table2**), </br>
+even if there are no matches in the left table (**table1**).
 
 ![image](https://user-images.githubusercontent.com/36256986/163849878-ad9c1e0e-913f-45de-b269-8efc9629de72.png)
 
