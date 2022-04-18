@@ -553,7 +553,7 @@ WHERE client_id = (
 
 ###### 11
 
-<img src="https://img.shields.io/badge/-11. DELETE %20-yellow" height=30px>
+<img src="https://img.shields.io/badge/-11. DELETE %20-blue" height=40px>
 
 DELETE command:
 
