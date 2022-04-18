@@ -16,7 +16,7 @@
 |  3  |[OUTER JOIN](#3)   		 | 
 |     |3.1				 |[OUTER JOIN syntax with LEFT/RIGHT](#3-1)   | 
 |     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
-|     |3.3				 |[JOIN](#3-3)   | 
+|     |3.3				 |[LEFT JOIN](#3-3)   | 
 |     |3.4				 |[JOIN](#3-4)   | 
 |     |3.5				 |[JOIN](#3-5)   | 
 |     |3.6 				 |[JOIN](#3-6)   |
@@ -454,9 +454,36 @@ Thus best practice is to [ALWAYS use **_LEFT JOIN_**](#-)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3-3
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3.3. LEFT JOIN %20-blue" height=40px>
+
+The LEFT JOIN keyword returns all records from the left table (table1), and the matching records from the right table (table2). </br>
+The result is 0 records from the right side, if there is no match.
+
+```sql
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163844655-6493e34c-1bd8-4c18-8c0d-7d8489478fe5.png)
+
+Let's see an example. </br>
+To get all customers who **have** or **don't have** an order we will use OUTER JOIN.
+
+Question:
+* why OUTER LEFT JOIN ?
+
+Answer:
+* It depends how we define the order of the tables in the query.
+
+In the query below we use FROM customers and LEFT JOIN orders
+
+In the Query below the :
+1. LEFT TABLE refers to customers (will return all records from the left table)
+2. RIGHT TABLE refers to orders (the matching records from the right table)
 
 
 ```sql
