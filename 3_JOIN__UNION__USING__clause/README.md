@@ -409,6 +409,8 @@ LEFT OUTER JOIN orders o
 	ON c.customer_id = o.customer_id
 ORDER BY c.customer_id;
 
+-- now w/o the OUTER keyword
+
 SELECT 
     c.customer_id,
     c.first_name,
@@ -428,6 +430,8 @@ FROM customers c
 RIGHT OUTER JOIN orders o
 	ON c.customer_id = o.customer_id
 ORDER BY c.customer_id;
+
+-- now w/o the OUTER keyword
 
 SELECT 
      c.customer_id,
