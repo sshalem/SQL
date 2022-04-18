@@ -8,7 +8,7 @@ When we are Retrieving Data From Multiple Tables, we will use JOIN's, UNION's
 |:---:|:------------------------------| 
 |  1  |[JOIN](#1)   | 
 |  2  |[INNER JOIN (or Just JOIN)](#2)   | 
-|  2.1|[JOIN(or INNER JOIN](#2-1)   | 
+|  2.1|[JOIN(INNER JOIN)](#2-1)   | 
 |  2.2|[ALIAS with JOIN](#2-2)   | 
 |  2.3|[JOIN across Database's](#2-3)   | 
 |  2.4|[JOIN](#2-4)   | 
