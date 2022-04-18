@@ -637,20 +637,6 @@ SELECT * FROM customers ORDER BY first_name DESC;
 ### Sort by multiple columns
 
 ```sql
-```
-
-
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
---------------------------------------------------------------------------------------------------
-
-###### 
-
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
-
-```sql
 SELECT * 
 FROM customers 
 ORDER BY state, first_name;
@@ -667,6 +653,18 @@ For example:
 3. Ines.
 	 
 ![image](https://user-images.githubusercontent.com/36256986/163815462-a390402f-699e-4c1e-aa9a-850e80decc36.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+```sql
+```
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
