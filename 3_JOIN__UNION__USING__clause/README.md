@@ -790,13 +790,37 @@ Returns all combinations possible for the given tables
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 7
 
-<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. UNION %20-blue" height=40px>
 
+By using **_UNION_** we can combine multiple queries from :
+1. Same table
+2. Form different tables
+
+* Note: </br>
+Number of columns on queries **_must be the same_**, otherwise we ge an error.
+
+Example:
+* Let's run **UNION** on the same table:
 
 ```sql
+SELECT 
+    order_id,
+    order_date,
+    'ACTIVE' AS status
+FROM orders
+	WHERE order_date >= '2019-01-01'
+UNION
+SELECT 
+    order_id,
+    order_date,
+    'not active' AS status
+FROM orders
+	WHERE order_date < '2019-01-01';
 ```
+
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
