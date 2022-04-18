@@ -73,7 +73,7 @@ I will show examples using the tables , customers and order.
 
 ###### 2-1
 
-<img src="https://img.shields.io/badge/-2.1. JOIN  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.1. JOIN (or INNER JOIN) %20-blue" height=40px>
 
 Let's run the following query.
 
