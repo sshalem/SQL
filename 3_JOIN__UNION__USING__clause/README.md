@@ -264,15 +264,28 @@ Let's look at the **_orders_** table from **_sql_store_** DB.
 ![image](https://user-images.githubusercontent.com/36256986/163835157-604e636b-9e28-42c0-a06e-f123b191c653.png)
 
 It has the following keys:
-1. order_id -    [PK](#-)
+1. order_id - [PK](#-)
 2. customer_id - [FK](#-)
-3. status -      [FK](#-)
-4. shipper_id -  [FK](#-)
+3. status - [FK](#-)
+4. shipper_id - [FK](#-)
 
+Let's run a query to join data form **_3 tables_**:
 
 ```sql
+SELECT 
+	o.order_id,
+	o.order_date,
+	c.first_name,
+	c.last_name,
+	os.name AS status
+FROM orders o 
+	JOIN customers c
+		ON c.customer_id = o.customer_id
+	JOIN order_statuses os
+		ON o.status = os.order_status_id;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163836015-08b84978-e7d0-40ea-948f-ad30c1f7ccaa.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
