@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/-4. JOIN%20-blue" height=60px>
+<img src="https://img.shields.io/badge/-3. JOIN UNION USING clause %20-blue" height=60px>
 
 |     |  Subject           |
 |:---:|:------------------------------| 
