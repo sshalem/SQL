@@ -21,7 +21,7 @@
 |     |3.5				 |[OUTER JOIN more than 2 tables](#3-5)   | 
 |     |3.6 				 |[SELF OUTER JOIN](#3-6)   |
 |  4  |[USING CLAUSE](#4)   |  
-|     |4.1				 |[USING clause on CK](#4)   |  
+|     |4.1				 |[USING clause on CK](#4-1)   |  
 |  5  |[UNION](#5)   | 
 
 
