@@ -10,7 +10,7 @@ When we are Retrieving Data From Multiple Tables, we will use JOIN's, UNION's
 |  2  |[INNER JOIN (or Just JOIN)](#2)   | 
 |  2.1|[JOIN(or INNER JOIN](#2-1)   | 
 |  2.2|[ALIAS with JOIN](#2-2)   | 
-|  2.3|[JOIN](#2-3)   | 
+|  2.3|[JOIN across Database's](#2-3)   | 
 |  2.4|[JOIN](#2-4)   | 
 |  2.5|[JOIN](#2-5)   | 
 |  2.6|[JOIN](#2-6)   |
@@ -173,13 +173,30 @@ This is much cleaner code. It simplifies the presentation of the code.
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 2-3
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.3. JOIN across Database's %20-blue" height=40px>
 
+Let's see how we can combine columns form different Database's.</br>
+We want to join from 2 different databases.
+
+![image](https://user-images.githubusercontent.com/36256986/163829556-38236937-6462-4765-9e06-f21c6892e536.png)
 
 ```sql
+SELECT * 
+FROM order_items oi
+JOIN sql_inventory.products p
+	ON oi.product_id = p.product_id;
 ```
+
+**Question:**
+* Why we are doing **_sql_inventory.products_** and not **sql_store.order_items**?
+
+**Answer:**
+* It's because the current DB used is **sql_store**.
+* since we define it as current DB with command of **USE sql_store**;
+That’s why we add it to sql_inventory.products because it is outside the scope of current DB which is sql_store.
+![image](https://user-images.githubusercontent.com/36256986/163829691-6695a5dc-85bf-4696-9936-b36f8575cc68.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
