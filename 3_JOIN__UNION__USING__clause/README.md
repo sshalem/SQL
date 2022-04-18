@@ -382,7 +382,7 @@ Question:
 	what if we want to see also the customers who didn't make order?
 	
 Answer:
-	We use OUTER join to get it .![image](https://user-images.githubusercontent.com/36256986/163842244-6a23c3be-b7b7-4e89-ae0a-9bb40eaca4c6.png)
+	We use OUTER join to get it .
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
