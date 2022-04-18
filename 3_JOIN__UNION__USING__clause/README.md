@@ -20,7 +20,8 @@
 |     |3.4				 |[RIGHT JOIN](#3-4)   | 
 |     |3.5				 |[OUTER JOIN more than 2 tables](#3-5)   | 
 |     |3.6 				 |[SELF OUTER JOIN](#3-6)   |
-|  4  |[USING CLAUSE](#4)   | 
+|  4  |[USING CLAUSE](#4)   |  
+|     |4.1				 |[USING clause on CK](#4)   |  
 |  5  |[UNION](#5)   | 
 
 
@@ -713,14 +714,28 @@ ORDER BY c.customer_id;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 4-1
 
-<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-4.1. USING clause on CK %20-blue" height=40px>
 
+Instead of using the following query :
 
 ```sql
+SELECT *
+FROM order_items oi
+JOIN order_item_notes oin
+	ON oi.order_id = oin.order_id
+		AND oi.product_id = oin.product_id;
 ```
 
+Let's use the USING clause :
+
+```sql
+SELECT *
+FROM order_items oi
+JOIN order_item_notes oin
+	USING (order_id, product_id);
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
