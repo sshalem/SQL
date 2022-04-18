@@ -20,8 +20,8 @@
 |     |3.4				 |[RIGHT JOIN](#3-4)   | 
 |     |3.5				 |[OUTER JOIN more than 2 tables](#3-5)   | 
 |     |3.6 				 |[SELF OUTER JOIN](#3-6)   |
-|  3  |[USING CLAUSE](#-)   | 
-|  5  |[UNION](#)   | 
+|  4  |[USING CLAUSE](#4)   | 
+|  5  |[UNION](#5)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -678,9 +678,48 @@ LEFT JOIN employees m
 
 --------------------------------------------------------------------------------------------------
 
+###### 4
+
+<img src="https://img.shields.io/badge/-4. USING CLAUSE  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
 ###### 
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
 
 
 ```sql
