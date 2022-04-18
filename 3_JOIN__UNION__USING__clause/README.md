@@ -458,7 +458,8 @@ Thus best practice is to [ALWAYS use **_LEFT JOIN_**](#-)
 
 <img src="https://img.shields.io/badge/-3.3. LEFT JOIN %20-blue" height=40px>
 
-The LEFT JOIN keyword returns all records from the left table (table1), even if there are no matches in the right table (table2).
+The LEFT JOIN keyword returns all records from the left table (**table1**),
+even if there are no matches in the right table (**table2**).
 
 ```sql
 SELECT column_name(s)
@@ -534,14 +535,41 @@ even if there are no matches in the right table (customers).
 
 <img src="https://img.shields.io/badge/-3.4. RIGHT JOIN %20-blue" height=40px>
 
+The RIGHT JOIN keyword returns all records from the right table (table2),
+even if there are no matches in the left table (table1).
 
+![image](https://user-images.githubusercontent.com/36256986/163849878-ad9c1e0e-913f-45de-b269-8efc9629de72.png)
 
 ```sql
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
 ```
 
+let's see example. </br>
+RIGHT JOIN same as LEFT JOIN , it depends on the order of the tables in the QUERY.
+In the Query below the :
+1. LEFT TABLE refers to orders
+2. RIGHT TABLE refers to customers
+
+```sql
+SELECT 
+     c.customer_id,
+     c.first_name,
+     o.order_id
+FROM orders  o
+RIGHT JOIN customers  c 
+	ON c.customer_id = o.customer_id 
+ORDER BY c.customer_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163850212-053905b8-f3e1-485b-b6a3-99e5bacba138.png)
+
+All the records from the RIGHT table (customers) returned , </br>
+whether the condition [**ON c.customer_id = o.customer_id**](#-) is true or not
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
 
 --------------------------------------------------------------------------------------------------
 
