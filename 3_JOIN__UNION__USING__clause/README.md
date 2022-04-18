@@ -80,9 +80,7 @@ I will show examples using the tables , customers and order.
 
 <img src="https://img.shields.io/badge/-2.1. JOIN %20-yellow" height=30px>
 
-Let's run the following query.
-
-on tables of orders & customers FROM section 2).
+Let's run the following query , on tables of orders & customers FROM section 2.
 
 ```sql
 SELECT * 
@@ -91,7 +89,9 @@ JOIN customers
 	ON orders.customer_id = customers.customer_id;
 ```
 
-We got a joined table with all the columns of of both tables (orders & customers).
+We got a joined table with all the columns of of both tables (orders & customers). </br>
+Also, since It's an [**INNER JOIN**](#-) , </br>
+### [only the matching values in both tables are shown (We dont see customer_id 1,3 since they don't have orders)](#-)
 
 ![image](https://user-images.githubusercontent.com/36256986/163826955-41e078bc-e47e-4341-a3c8-d692753fc780.png)
 
