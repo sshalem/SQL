@@ -582,11 +582,9 @@ SELECT * FROM customers WHERE last_name REGEXP 'e[a-h]';
 --------------------------------------------------------------------------------------------------
 
 
-###### 
+###### 11
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
-Example:
+<img src="https://img.shields.io/badge/-11. IS NULL %20-blue" height=40px>
 
 ```sql
 ```
@@ -596,12 +594,49 @@ Example:
 
 --------------------------------------------------------------------------------------------------
 
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
 
 ###### 
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
 
-Example:
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
 
 ```sql
 ```
