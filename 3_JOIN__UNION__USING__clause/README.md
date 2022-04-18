@@ -50,9 +50,10 @@ There are several type of JOIN:
 <img src="https://img.shields.io/badge/-2. INNER JOIN (or Just JOIN) %20-blue" height=40px>
 
 The **_INNER JOIN_** keyword selects records that have **_matching values in both tables_**.
+
 ![image](https://user-images.githubusercontent.com/36256986/163840831-2644071b-3209-4229-9ac6-cb9f0f4ac1b5.png)
 
-(see the difference in LFET/RIGHT JOIN)
+(see the difference from LEFT/RIGHT JOIN)
 
 **Question:**</br>
 * What's the difference between **_INNER JOIN_** and **_JOIN_** in MySql?</br>
