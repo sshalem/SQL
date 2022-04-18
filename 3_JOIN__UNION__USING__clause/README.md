@@ -204,8 +204,8 @@ That’s why we add it to **sql_inventory.products** because it is **outside the
 
 <img src="https://img.shields.io/badge/-2.4. SELF JOINS (INNER)  %20-yellow" height=30px>
 
-In SQL we can JOIN a table with itself.</br>
-Example, let's look at sql_hr DB.</br>
+In SQL we can **_JOIN a table with itself_**.</br>
+Example, let's look at **sql_hr** DB.</br>
 It has 2 tables.</br>
 
 ![image](https://user-images.githubusercontent.com/36256986/163833827-b4957983-562e-44c6-b532-ae96681dff79.png)
