@@ -19,7 +19,7 @@
 |     |3.3				 |[LEFT JOIN](#3-3)   | 
 |     |3.4				 |[RIGHT JOIN](#3-4)   | 
 |     |3.5				 |[OUTER JOIN more than 2 tables](#3-5)   | 
-|     |3.6 				 |[JOIN](#3-6)   |
+|     |3.6 				 |[SELF OUTER JOIN](#3-6)   |
 |  5  |[UNION](#)   | 
 |  3  |[USING CLAUSE](#-)   | 
 
@@ -622,17 +622,59 @@ ORDER BY c.customer_id;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3-6
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3.6. SELF OUTER JOIN %20-blue" height=40px>
 
+In SQL we can JOIN a table with itself.
+
+Example, let's look at **sql_hr** DB.
+It has 2 tables.
+
+![image](https://user-images.githubusercontent.com/36256986/163851536-a31280e3-737c-4c4c-b8f5-fd9f4484a13b.png)
+
+First Let's look at the table of employees and explained how it's possible to make **_SELF JOIN_**.</br>
+We have **_employee_id_** column and we also have **_reports_to_** column.
+
+The **_reports_to_** column is actually the manager .</br>
+In the table below all employee's reports to the same manager which is **_37270_** </br>
+The manager itself is an employee in that organization. </br>
+The managers **_employee_id_** is **_37270_** and he reports to **_NULL_** which means he is the **_CEO_** </br>
+
+![image](https://user-images.githubusercontent.com/36256986/163851853-d0e6a662-a84c-4239-a679-59af3021173d.png)
 
 ```sql
+SELECT 
+	e.employee_id, 
+	e.first_name AS employee_first_name, 
+	m.first_name AS manager_first_name
+FROM employees e
+JOIN employees m
+	ON e.reports_to = m.employee_id;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163851919-faeb5683-2559-49b8-a7cf-dfdc2fcb594a.png)
+
+
+[**_Question_**:](#-)
+* Yovonnda is also an employee in the company , we also want to see who she reports too?
+
+[**_Answer_**:](#-)
+* By doing [**_LEFT JOIN_**:](#-)
+
+```sql
+SELECT 
+	e.employee_id, 
+	e.first_name AS employee_first_name, 
+	m.first_name AS manager_first_name
+FROM employees e
+LEFT JOIN employees m
+	ON e.reports_to = m.employee_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163852219-634605c9-3d3f-4749-8520-07b32a0ccd44.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
 
 --------------------------------------------------------------------------------------------------
 
