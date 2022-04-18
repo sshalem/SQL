@@ -802,7 +802,9 @@ By using **_UNION_** we can combine multiple queries from :
 Number of columns on queries **_must be the same_**, otherwise we ge an error.
 
 Example:
-* Let's run **UNION** on the same table:
+* Let's run **UNION** on the same table (orders table):
+
+![image](https://user-images.githubusercontent.com/36256986/163855409-fba8281a-2c64-4e1f-b0f5-f47cc63c5115.png)
 
 ```sql
 SELECT 
@@ -820,6 +822,7 @@ FROM orders
 	WHERE order_date < '2019-01-01';
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163855328-893564ad-9227-404e-a17f-add721a4e563.png)
 
 
 
