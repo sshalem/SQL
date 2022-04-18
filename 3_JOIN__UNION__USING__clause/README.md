@@ -26,7 +26,7 @@
 |  6  |[CROSS JOIN](#6)   |  
 |  7  |[UNION](#7)   | 
 |     |7.1				  |[UNION same table](#7-1)   | 
-|     |7.2				  |[UNION different table](#7-1)   | 
+|     |7.2				  |[UNION different table](#7-2)   | 
 
 
 
