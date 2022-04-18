@@ -682,10 +682,32 @@ LEFT JOIN employees m
 
 <img src="https://img.shields.io/badge/-4. USING CLAUSE  %20-blue" height=40px>
 
+The USING clause is a **shorthand** that allows you to take advantage of the specific situation, </br>
+[**_ONLY_**](#-) when both sides of the **_JOIN_** use the same name for the joining column(s)
+
+For Example , **_customer_id_** is the same name in both sides of the **_JOIN_**
 
 ```sql
-```
+SELECT 
+	c.customer_id,
+        c.first_name,
+        o.order_id
+FROM orders  o 
+LEFT JOIN customers  c 
+	ON c.customer_id = o.customer_id 
+ORDER BY c.customer_id;
+	
+-- Now when using the USING clause it looks much cleaner:
 
+SELECT 
+	c.customer_id,
+        c.first_name,
+	o.order_id
+FROM orders  o
+LEFT JOIN customers  c 
+	USING(customer_id)
+ORDER BY c.customer_id;
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
