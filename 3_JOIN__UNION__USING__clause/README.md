@@ -379,10 +379,10 @@ So [INNER JOIN](#-) returns only customer who have orders (selects records that 
 
 
 Question:
-	what if we want to see also the customers who didn't make order?
+	* what if we want to see also the customers who didn't make order?
 	
 Answer:
-	We use OUTER join to get it .
+	* We use OUTER join to get it .
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
