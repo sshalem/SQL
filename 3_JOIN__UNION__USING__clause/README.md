@@ -22,7 +22,9 @@
 |     |3.6 				 |[SELF OUTER JOIN](#3-6)   |
 |  4  |[USING CLAUSE](#4)   |  
 |     |4.1				 |[USING clause on CK](#4-1)   |  
-|  5  |[UNION](#5)   | 
+|  5  |[NATURAL JOIN](#5)   |  
+|  6  |[CROSS JOIN](#6)   |  
+|  7  |[UNION](#7)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -739,6 +741,74 @@ FROM order_items oi
 JOIN order_item_notes oin
 	USING (order_id, product_id);
 ```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 5
+
+<img src="https://img.shields.io/badge/-5. NATURAL JOIN  %20-blue" height=40px>
+
+NATURAL JOINS , joins the tables according there common columns.
+
+### Better [**_NOT_**](#-) to use them
+
+```sql
+SELECT *
+FROM customers
+NATURAL JOIN orders;
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 6
+
+<img src="https://img.shields.io/badge/-6. CROSS JOIN  %20-blue" height=40px>
+
+Returns all combinations possible for the given tables
+
+```sql
+SELECT 
+      c.first_name,
+      p.name
+FROM customers c
+CROSS JOIN products p;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163854606-a7375fe3-c658-4377-8832-7034067694c6.png)  ![image](https://user-images.githubusercontent.com/36256986/163854625-53f47be8-c137-4bea-a520-de53c9051180.png)
+
+Returns all combinations possible for the given tables
+
+![image](https://user-images.githubusercontent.com/36256986/163854674-e3380df4-e3da-485d-85a4-6ad56a50aedd.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+
+
+```sql
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+
+
+```sql
+```
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
