@@ -205,19 +205,19 @@ That’s why we add it to **sql_inventory.products** because it is **outside the
 <img src="https://img.shields.io/badge/-2.4. SELF JOINS (INNER)  %20-yellow" height=30px>
 
 In SQL we can **_JOIN a table with itself_**.</br>
-Example, let's look at **sql_hr** DB.</br>
+Example, let's look at **_sql_hr_** DB.</br>
 It has 2 tables.</br>
 
 ![image](https://user-images.githubusercontent.com/36256986/163833827-b4957983-562e-44c6-b532-ae96681dff79.png)
 
-First Let's look at the table of employees and explained how it's possible to make **SELF JOIN**.</br>
-We have **employee_id** column and we also have **reports_to** column.
+First Let's look at the table of employees and explained how it's possible to make **_SELF JOIN_**.</br>
+We have **_employee_id_** column and we also have **_reports_to_** column.
 
-The **reports_to** column is actually the manager .</br>
-In the table below all employee's reports to the same manager which is **37270**</br>
-The manager itself is an [employee](#-) in that organization.</br>
+The **_reports_to_** column is actually the manager .</br>
+In the table below all employee's reports to the same manager which is **_37270_**</br>
+The manager itself is an [_employee_](#-) in that organization.</br>
 
-The managers **employee_id** is **37270** and he reports to **NULL** which means he is the [CEO](#-)
+The managers **_employee_id_** is **_37270_** and he reports to **_NULL_** which means he is the [_CEO_](#-)
 
 ![image](https://user-images.githubusercontent.com/36256986/163834113-96e67237-9e72-49a7-9d94-2d23d2a7638b.png)
 
