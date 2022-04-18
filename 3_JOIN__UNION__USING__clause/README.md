@@ -51,10 +51,10 @@ There are several type of JOIN:
 <img src="https://img.shields.io/badge/-2. INNER JOIN (or Just JOIN) %20-blue" height=40px>
 
 **Question:**</br>
-* What's the difference between INNER JOIN and JOIN in MySql?</br>
+* What's the difference between **_INNER JOIN_** and **_JOIN_** in MySql?</br>
 
 **Answer:**</br>
-* There is no difference , the INNER key is optional so we don't have to type it.</br>
+* **There is no difference** , the **INNER** key is optional so we don't have to type it.</br>
 
 I will show examples using the tables , customers and order.
 
