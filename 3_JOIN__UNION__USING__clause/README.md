@@ -52,6 +52,7 @@ There are several type of JOIN:
 
 **Question:**</br>
 * What's the difference between INNER JOIN and JOIN in MySql?</br>
+
 **Answer:**</br>
 * There is no difference , the INNER key is optional so we don't have to type it.</br>
 
