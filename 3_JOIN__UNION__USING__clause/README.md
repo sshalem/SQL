@@ -25,6 +25,9 @@
 |  5  |[NATURAL JOIN](#5)   |  
 |  6  |[CROSS JOIN](#6)   |  
 |  7  |[UNION](#7)   | 
+|     |7.1				  |[UNION same table](#7-1)   | 
+|     |7.2				  |[UNION different table](#7-1)   | 
+
 
 
 --------------------------------------------------------------------------------------------------
@@ -832,27 +835,70 @@ FROM orders
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 7-1
 
-<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. UNION same table %20-blue" height=40px>
 
+### [UNION same table](#-)
+
+* Note: </br>
+Number of columns on queries **_must be the same_**, otherwise we ge an error.
+
+Example:
+* Let's run **UNION** on the same table (orders table):
+
+![image](https://user-images.githubusercontent.com/36256986/163855409-fba8281a-2c64-4e1f-b0f5-f47cc63c5115.png)
 
 ```sql
+SELECT 
+    order_id,
+    order_date,
+    -- this will add a new field (status) with label of 'ACTIVE' if WHERE clause is true
+    -- Number of columns on queries must be the same on the UNION thus we add it in the next Query after the UNION
+    'ACTIVE' AS status
+FROM orders
+	WHERE order_date >= '2019-01-01'
+UNION
+SELECT 
+    order_id,
+    order_date,
+    -- this will add a new field (status) with label of 'not active' if WHERE clause is true
+    -- Number of columns on queries must be the same on the UNION same as above query
+    'not active' AS status 
+FROM orders
+	WHERE order_date < '2019-01-01';
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163855328-893564ad-9227-404e-a17f-add721a4e563.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 7-2
 
-<img src="https://img.shields.io/badge/-X.   %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. UNION different table %20-blue" height=40px>
 
+### [UNION Different table](#-)
+
+* Note: </br>
+Number of columns on queries **_must be the same_**, otherwise we ge an error.
+
+Example:
+* Let's run **UNION** on different tables. (customers & shippers)
 
 ```sql
+SELECT first_name 
+FROM customers
+UNION
+SELECT name
+FROM shippers;
 ```
 
+we can see that the name of the column is **first_name**. </br>
+whatever we have in the first query , is used to determine the name of the column.
+
+![image](https://user-images.githubusercontent.com/36256986/163858048-41b49bdd-c141-4733-af63-33c97bab8bb6.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
