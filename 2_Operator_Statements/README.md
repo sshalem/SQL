@@ -642,8 +642,8 @@ FROM customers
 ORDER BY state, first_name;
 ```
 
-First it sort by state .
-If there is state more than once, then it will sort (Internally) by its first_name.
+First it sort by state .  </br>
+If there is state more than once, then it will sort (Internally) by its first_name. </br>
 For example:
 * The state column is sorted first .
 * Then we can see we have VA 3 times.
