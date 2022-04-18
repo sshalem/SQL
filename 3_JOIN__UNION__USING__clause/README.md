@@ -49,6 +49,11 @@ There are several type of JOIN:
 
 <img src="https://img.shields.io/badge/-2. INNER JOIN (or Just JOIN) %20-blue" height=40px>
 
+The **_INNER JOIN_** keyword selects records that have **_matching values in both tables_**.
+![image](https://user-images.githubusercontent.com/36256986/163840831-2644071b-3209-4229-9ac6-cb9f0f4ac1b5.png)
+
+(see the difference in LFET/RIGHT JOIN)
+
 **Question:**</br>
 * What's the difference between **_INNER JOIN_** and **_JOIN_** in MySql?</br>
 
@@ -343,9 +348,17 @@ Let's look at the tables of :
 	1. customers
 	2. orders
 
-![image](https://user-images.githubusercontent.com/36256986/163839291-9620e86f-6646-4e9d-9589-e4ba34a898e8.png)
+### [Customers](#-)
+![image](https://user-images.githubusercontent.com/36256986/163839542-debb4ad5-137a-4750-a5a3-69bd673f3543.png)
+
+### [Orders](#-)
+
+We can see in this table that [**some of the customers don't have orders**](#-).
+
+![image](https://user-images.githubusercontent.com/36256986/163839555-1a8f4526-ce8b-46aa-bfdb-b1004e64bf44.png)
 
 ```sql
+
 ```
 
 
