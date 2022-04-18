@@ -358,9 +358,31 @@ We can see in this table that [**some of the customers don't have orders**](#-).
 
 ![image](https://user-images.githubusercontent.com/36256986/163839555-1a8f4526-ce8b-46aa-bfdb-b1004e64bf44.png)
 
-```sql
+Let's run the query below (Which is an INNER JOIN)
 
+```sql
+SELECT 
+    c.customer_id,
+    c.first_name,
+    o.order_id
+FROM customers c
+JOIN orders o
+	ON c.customer_id = o.customer_id
+ORDER BY c.customer_id;
 ```
+
+The table we got only shows customers who made orders.
+
+![image](https://user-images.githubusercontent.com/36256986/163842072-e1c8105d-01af-440b-8a74-1e590be384b9.png)
+
+So [INNER JOIN](#-) returns only customer who have orders (selects records that have **_matching values in both tables_**).
+
+
+Question:
+	what if we want to see also the customers who didn't make order?
+	
+Answer:
+	We use OUTER join to get it .![image](https://user-images.githubusercontent.com/36256986/163842244-6a23c3be-b7b7-4e89-ae0a-9bb40eaca4c6.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
