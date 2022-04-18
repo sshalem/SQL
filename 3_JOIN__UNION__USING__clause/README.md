@@ -778,7 +778,9 @@ FROM customers c
 CROSS JOIN products p;
 ```
 
-![image](https://user-images.githubusercontent.com/36256986/163854606-a7375fe3-c658-4377-8832-7034067694c6.png)  ![image](https://user-images.githubusercontent.com/36256986/163854625-53f47be8-c137-4bea-a520-de53c9051180.png)
+![image](https://user-images.githubusercontent.com/36256986/163854606-a7375fe3-c658-4377-8832-7034067694c6.png) 
+
+![image](https://user-images.githubusercontent.com/36256986/163854625-53f47be8-c137-4bea-a520-de53c9051180.png)
 
 Returns all combinations possible for the given tables
 
