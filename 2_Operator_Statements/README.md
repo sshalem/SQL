@@ -658,13 +658,27 @@ For example:
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 13
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-13. LIMIT  %20-blue" height=40px>
+
+LIMIT number of records returned from a Query. </br>
+LIMIT is good for paginating.
 
 ```sql
+SELECT * FROM customers LIMIT 3;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163820748-5c6b5ca2-faa3-4c46-a3d8-2504702ca0f9.png)
+
+```sql
+SELECT * FROM customers LIMIT 6,3;
+```
+
+6: Starting Offset from first row </br>
+3:  that’s the actual LIMIT
+
+![image](https://user-images.githubusercontent.com/36256986/163820968-329dd5f6-f4f5-4e79-992c-fc7d4ad1a6d6.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
