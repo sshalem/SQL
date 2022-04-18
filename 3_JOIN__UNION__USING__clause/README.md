@@ -462,7 +462,7 @@ Thus best practice is to [ALWAYS use **_LEFT JOIN_**](#-)
 
 <img src="https://img.shields.io/badge/-3.3. LEFT JOIN %20-blue" height=40px>
 
-The LEFT JOIN keyword returns all records from the left table (**table1**),
+The LEFT JOIN keyword returns all records from the left table (**table1**), </br>
 even if there are no matches in the right table (**table2**).
 
 ```sql
