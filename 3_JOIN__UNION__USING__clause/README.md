@@ -497,7 +497,34 @@ ORDER BY c.customer_id;
 
 ![image](https://user-images.githubusercontent.com/36256986/163847071-3227bb53-cb29-412a-8fa3-db44c9c5c7dd.png)
 
-The LEFT JOIN keyword returns all records from the left table (customers), even if there are no matches in the right table (orders).
+The **LEFT JOIN** keyword returns all records from the left table (customers), </br>
+even if there are no matches in the right table (orders).
+(whether the condition [**ON c.customer_id = o.customer_id**](#-) is true or not)
+
+### Let's change the order of the tables in the Query as follows, and keep it [LEFT JOIN](#-):
+
+In the Query below the :
+1. LEFT TABLE now will refer to orders table
+2. RIGHT TABLE now will refer to customers table
+
+```sql
+SELECT 
+	c.customer_id,
+        c.first_name,
+        o.order_id
+FROM orders o 
+LEFT JOIN customers c 
+	ON c.customer_id = o.customer_id 
+ORDER BY c.customer_id;
+```
+
+We got results like an **INNER JOIN**  , so there is [**_significance_**](#-) for the order of the tables when doing **OUTER JOIN**.
+
+![image](https://user-images.githubusercontent.com/36256986/163848812-cbb35089-799f-4319-903a-8f85c0e8e0c6.png)
+
+The **LEFT JOIN** keyword returns all records from the left table (orders), </br>
+even if there are no matches in the right table (customers).
+(whether the condition [**ON c.customer_id = o.customer_id**](#-) is true or not)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
