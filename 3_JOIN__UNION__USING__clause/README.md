@@ -166,8 +166,8 @@ This is much cleaner code. It simplifies the presentation of the code.
 * What's the difference between the **ALIAS** in section 3 to the **ALIAS we do here in the JOIN**?
 
 **Answer:**
-* In section 3 we do ALIAS to a column by adding the key AS
-* Here we do ALIAS to the tables name w/o the AS key
+* In section [Operator section](https://github.com/sshalem/SQL/tree/main/2_Operator_Statements#3) we do ALIAS to a column by adding the key AS
+* Here we do [ALIAS](#-) to the tables name w/o the **_AS_** key
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
