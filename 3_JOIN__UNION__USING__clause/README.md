@@ -2,13 +2,12 @@
 
 <img src="https://img.shields.io/badge/-3. JOIN UNION USING clause %20-blue" height=60px>
 
-When we are Retrieving Data From Multiple Tables, we will use JOIN's, UNION's
 
 |     |  Subject           |
 |:---:|:------------------------------| 
-|  1  |[JOIN](#1)   | 
+|  1  |[Retrieving Data From Multiple Tables](#1)   | 
 |  2  |[INNER JOIN (or Just JOIN)](#2)   | 
-|  2.1|[JOIN(INNER JOIN)](#2-1)   | 
+|  2.1|[JOIN](#2-1)   | 
 |  2.2|[ALIAS with JOIN](#2-2)   | 
 |  2.3|[JOIN across Database's](#2-3)   | 
 |  2.4|[JOIN](#2-4)   | 
@@ -29,7 +28,7 @@ When we are Retrieving Data From Multiple Tables, we will use JOIN's, UNION's
 
 ###### 1
 
-<img src="https://img.shields.io/badge/-JOIN.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-Retrieving Data From Multiple Tables.  %20-blue" height=40px>
 
 Most of time we query columns from **multiple tables**. </br>
 There are several type of JOIN:
@@ -73,7 +72,7 @@ I will show examples using the tables , customers and order.
 
 ###### 2-1
 
-<img src="https://img.shields.io/badge/-2.1. JOIN (or INNER JOIN) %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.1. JOIN %20-blue" height=40px>
 
 Let's run the following query.
 
