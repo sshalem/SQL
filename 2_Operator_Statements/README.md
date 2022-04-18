@@ -607,6 +607,8 @@ SELECT * FROM customers WHERE phone  IS NOT NULL;
 
 <img src="https://img.shields.io/badge/-12. ORDER BY %20-blue" height=40px>
 
+### [ORDER BY](#-) sorts data.
+
 ```sql
 ```
 
@@ -618,9 +620,25 @@ SELECT * FROM customers WHERE phone  IS NOT NULL;
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
 
+Query sorts first_name by Ascending order
+
+```sql
+SELECT * FROM customers ORDER BY first_name;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/163815136-7b042173-9841-40c3-a58e-a13af49bd09e.png)
+
+Query sorts first_name by Descending order.
+
+```sql
+SELECT * FROM customers ORDER BY first_name DESC;
+```
+
+### Sort by multiple columns
 
 ```sql
 ```
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
@@ -633,8 +651,22 @@ SELECT * FROM customers WHERE phone  IS NOT NULL;
 
 
 ```sql
+SELECT * 
+FROM customers 
+ORDER BY state, first_name;
 ```
 
+First it sort by state .
+If there is state more than once, then it will sort (Internally) by its first_name.
+For example:
+* The state column is sorted first .
+* Then we can see we have VA 3 times.
+* Thus, the next sort (Internal SORT) will be by first_name , that’s why we see 
+1. Barabara
+2. Freddi
+3. Ines.
+	 
+![image](https://user-images.githubusercontent.com/36256986/163815462-a390402f-699e-4c1e-aa9a-850e80decc36.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
