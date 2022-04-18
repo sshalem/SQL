@@ -13,7 +13,7 @@
 |     |2.4				 |[SELF JOINS (INNER)](#2-4)   | 
 |     |2.5				 |[JOIN more the 2 tables](#2-5)   | 
 |     |2.6				 |[JOIN from table with CK](#2-6)   |
-|  3  |[OUTER JOIN (or Just JOIN)](#3)   | 
+|  3  |[OUTER JOIN](#3)   | 
 |  3.1|[JOIN](#3-1)   | 
 |  3.2|[JOIN](#3-2)   | 
 |  3.3|[JOIN](#3-3)   | 
@@ -332,10 +332,18 @@ FROM order_items oi
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3. OUTER JOIN %20-blue" height=40px>
 
+Let’s first understand what we get from INNER JOIN.
+
+Let's look at the tables of :
+
+	1. customers
+	2. orders
+
+![image](https://user-images.githubusercontent.com/36256986/163839291-9620e86f-6646-4e9d-9589-e4ba34a898e8.png)
 
 ```sql
 ```
