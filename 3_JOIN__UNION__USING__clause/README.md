@@ -17,7 +17,7 @@
 |     |3.1				 |[OUTER JOIN syntax with LEFT/RIGHT](#3-1)   | 
 |     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
 |     |3.3				 |[LEFT JOIN](#3-3)   | 
-|     |3.4				 |[JOIN](#3-4)   | 
+|     |3.4				 |[RIGHT JOIN](#3-4)   | 
 |     |3.5				 |[JOIN](#3-5)   | 
 |     |3.6 				 |[JOIN](#3-6)   |
 |  5  |[UNION](#)   | 
@@ -503,9 +503,10 @@ The LEFT JOIN keyword returns all records from the left table (customers), even 
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3-4
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3.4. RIGHT JOIN %20-blue" height=40px>
+
 
 
 ```sql
