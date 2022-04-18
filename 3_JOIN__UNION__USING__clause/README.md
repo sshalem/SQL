@@ -12,7 +12,7 @@
 |     |2.3				 |[JOIN across Database's](#2-3)   |
 |     |2.4				 |[SELF JOINS (INNER)](#2-4)   | 
 |     |2.5				 |[JOIN more the 2 tables](#2-5)   | 
-|  2.6|[JOIN](#2-6)   |
+|     |2.6				 |[JOIN from table with CK](#2-6)   |
 |  3  |[OUTER JOIN (or Just JOIN)](#3)   | 
 |  3.1|[JOIN](#3-1)   | 
 |  3.2|[JOIN](#3-2)   | 
@@ -298,14 +298,35 @@ FROM orders o
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 2-6
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.6. JOIN from table with CK %20-blue" height=40px>
 
+Let's see how to JOIN a table that has a **_CK_**. </br>
+The **_order_items_** table has a **_CK_** . </br>
+The CK is composite of 2 FK wich are:
+1) order_id
+2) product_id
+
+![image](https://user-images.githubusercontent.com/36256986/163837872-b7b1be50-e8d9-4dd3-b6e9-f63183f6d357.png)
+
+Let's look at the **_order_item_notes_** table:
+
+(**_note_id_** is the PK in this table)
+
+![image](https://user-images.githubusercontent.com/36256986/163838561-12f43ddb-f4bf-4893-8370-522fc4fbecda.png)
+
+This query uses the compound key of the table 
 
 ```sql
+SELECT *
+FROM order_items oi
+	JOIN order_item_notes oin
+		ON oi.order_id = oin.order_id
+		AND oi.product_id = oin.product_id;
 ```
 
+![image](https://user-images.githubusercontent.com/36256986/163838859-8becae00-8c0e-40e6-b584-65af5c0e2a2e.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
