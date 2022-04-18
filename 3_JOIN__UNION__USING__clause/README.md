@@ -810,7 +810,8 @@ Example:
 SELECT 
     order_id,
     order_date,
-    -- 	this will add a new field (status) with label of 'ACTIVE' if WHERE clause is true
+    -- this will add a new field (status) with label of 'ACTIVE' if WHERE clause is true
+    -- Number of columns on queries must be the same on the UNION thus we add it in the next Query after the UNION
     'ACTIVE' AS status
 FROM orders
 	WHERE order_date >= '2019-01-01'
@@ -818,15 +819,14 @@ UNION
 SELECT 
     order_id,
     order_date,
-    -- 	this will add a new field (status) with label of 'not active' if WHERE clause is true
+    -- this will add a new field (status) with label of 'not active' if WHERE clause is true
+    -- Number of columns on queries must be the same on the UNION same as above query
     'not active' AS status 
 FROM orders
 	WHERE order_date < '2019-01-01';
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/163855328-893564ad-9227-404e-a17f-add721a4e563.png)
-
-
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
