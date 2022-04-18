@@ -259,17 +259,21 @@ JOIN employees m
 
 <img src="https://img.shields.io/badge/-2.5. JOIN more the 2 tables %20-yellow" height=30px>
 
-Let's look at the **_orders_** table from **_sql_store_** DB.
+Let's look at the **_orders , customers & order_statuses_** tables from **_sql_store_** DB.
 
 ![image](https://user-images.githubusercontent.com/36256986/163835157-604e636b-9e28-42c0-a06e-f123b191c653.png)
 
-It has the following keys:
+![image](https://user-images.githubusercontent.com/36256986/163836832-6d8756e1-b601-4633-acc8-facf99eb8ff9.png)
+
+![image](https://user-images.githubusercontent.com/36256986/163836884-63f1b202-7c7a-4efa-91c7-5002800b4cf3.png)
+
+**_orders_** table  has the following keys:
 1. order_id - [PK](#-)
 2. customer_id - [FK](#-)
 3. status - [FK](#-)
 4. shipper_id - [FK](#-)
 
-Let's run a query to join data form **_3 tables_**:
+Let's run a query to join data from **_3 tables_**:
 
 ```sql
 SELECT 
