@@ -343,12 +343,11 @@ FROM order_items oi
 
 <img src="https://img.shields.io/badge/-3. OUTER JOIN %20-blue" height=40px>
 
-Let’s first understand what we get from INNER JOIN.
+Let’s first understand what we get from **_INNER JOIN_**.
 
 Let's look at the tables of :
-
-	1. customers
-	2. orders
+1. customers
+2. orders
 
 ### [Customers](#-)
 ![image](https://user-images.githubusercontent.com/36256986/163839542-debb4ad5-137a-4750-a5a3-69bd673f3543.png)
@@ -383,7 +382,7 @@ Question:
 * what if we want to see also the customers who didn't make order?
 	
 Answer:
-* We use OUTER join to get it .
+* We use **_OUTER join_** to get it .
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
