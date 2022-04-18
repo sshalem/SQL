@@ -257,7 +257,18 @@ JOIN employees m
 
 ###### 2-5
 
-<img src="https://img.shields.io/badge/-2.5. JOIN more the 2 tables %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2.5. JOIN more the 2 tables %20-yellow" height=30px>
+
+Let's look at the **_orders_** table from **_sql_store_** DB.
+
+![image](https://user-images.githubusercontent.com/36256986/163835157-604e636b-9e28-42c0-a06e-f123b191c653.png)
+
+It has the following keys:
+1. order_id -    [PK](#-)
+2. customer_id - [FK](#-)
+3. status -      [FK](#-)
+4. shipper_id -  [FK](#-)
+
 
 ```sql
 ```
