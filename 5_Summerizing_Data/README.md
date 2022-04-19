@@ -5,15 +5,13 @@
 
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
-|  1  |[Retrieving Data From Multiple Tables](#1)   |	     |
-|  2  |[INNER JOIN (or Just JOIN)](#2)   |		     |
-|     |2.1                               |[JOIN](#2-1)       |
-|     |2.2				 |[ALIAS with JOIN](#2-2)    |
-|     |2.3				 |[JOIN across Database's](#2-3)   |
-|     |2.4				 |[SELF JOINS (INNER)](#2-4)   | 
-|     |2.5				 |[JOIN more the 2 tables](#2-5)   | 
-|     |2.6				 |[JOIN from table with CK](#2-6)   |
-|  3  |[OUTER JOIN](#3)   		 | 
+|  1  |[AGGREGATE Functions](#1)   |		     |
+|     |1.1               |[MAX()](#1-1)       |
+|     |1.2				 |[MIN()](#1-2)    |
+|     |1.3				 |[AVG()](#1-3)   |
+|     |1.4				 |[SUM()](#1-4)   | 
+|     |1.5				 |[COUNT()](#1-5)   | 
+|  2  |[OUTER JOIN](#3)   		 | 
 |     |3.1				 |[OUTER JOIN syntax with LEFT/RIGHT](#3-1)   | 
 |     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
 |     |3.3				 |[LEFT JOIN](#3-3)   | 
@@ -34,7 +32,7 @@
 
 ###### 1
 
-<img src="https://img.shields.io/badge/-Retrieving Data From Multiple Tables.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. AGGREGATE Functions %20-blue" height=40px>
 
 ```sql
 ```
