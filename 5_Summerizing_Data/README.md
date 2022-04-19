@@ -41,7 +41,7 @@ These are useful Aggregate functions:
 * SUM()
 * COUNT()
 
-In this section I will use for the demo the DB of [sql_invoicing](#-)
+In this section I will use for the demo the DB of [sql_invoicing](#-) from table [invoices](#-)
 
 ![image](https://user-images.githubusercontent.com/36256986/164080490-1e96f6b3-fdcb-43b3-adbf-4fea1278f318.png)
 
@@ -50,6 +50,7 @@ We can use Aggregate functions on:
 2. String
 3. Dates
 4. They [only](#-) operate on [Non Null](#-) values
+5. By Default , all the functions take duplicate values
 
 
 ### [example 1](#-)
@@ -117,6 +118,75 @@ In the **SUM(invoice_total * 1.1)** fuction:
 
 ![image](https://user-images.githubusercontent.com/36256986/164084240-aa5625bb-6c3c-4f80-ba84-c1bc7cab397c.png)
 
+### [example 5](#-)
+
+Since by default all functions take duplicate vlaues we can use the DISTINCT clause.</br>
+This query below will give duplicate values since we have same client_id in the [invoices](#-) 
+
+```sql
+SELECT 
+    MAX(invoice_total) AS highest,
+    MIN(invoice_total) AS lowest,
+    AVG(invoice_total) AS average,
+    SUM(invoice_total * 1.1) AS total,
+    COUNT(DISTINCT client_id) AS total_records   
+FROM invoices
+WHERE invoice_date > '2019-07-01';
+```
+
+We have 7 records since there are duplications.
+
+![image](https://user-images.githubusercontent.com/36256986/164086230-9f944c34-76e6-4c12-abba-f6ea3ab39630.png)
+
+Lets run same query , but now , Iadd the DISTINCT clause:
+
+```sql
+SELECT 
+    MAX(invoice_total) AS highest,
+    MIN(invoice_total) AS lowest,
+    AVG(invoice_total) AS average,
+    SUM(invoice_total * 1.1) AS total,
+    COUNT(DISTINCT client_id) AS total_records   
+FROM invoices
+WHERE invoice_date > '2019-07-01';
+```
+
+Now we have 3 records and not 7.
+
+![image](https://user-images.githubusercontent.com/36256986/164086053-65ce2838-8516-45b8-93ef-072066db9fd6.png)
+
+
+### [example 6](#-)
+
+Write a Query that gives the following result:
+
+![image](https://user-images.githubusercontent.com/36256986/164089100-2c29e697-3cfd-4e41-a599-98699206f52b.png)
+
+```sql
+SELECT 
+	'First half of 2019' AS date_range,
+    SUM(invoice_total) AS total_sales,
+    SUM(payment_total) AS total_payment,
+    SUM(invoice_total - payment_total) AS what_we_expect
+FROM invoices
+WHERE invoice_date BETWEEN '2019-01-01' AND '2019-06-30'
+UNION
+SELECT 
+	'Second half of 2019' AS date_range,   
+    SUM(invoice_total) AS total_sales,
+    SUM(payment_total) AS total_payment,
+    SUM(invoice_total - payment_total) AS what_we_expect
+FROM invoices
+WHERE invoice_date BETWEEN '2019-07-01' AND '2019-12-31'
+UNION
+SELECT 
+	'Total' AS date_range,
+    SUM(invoice_total) AS total_sales,
+    SUM(payment_total) AS total_payment,
+    SUM(invoice_total - payment_total) AS what_we_expect
+FROM invoices
+WHERE invoice_date BETWEEN '2019-01-01' AND '2019-12-31';
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
