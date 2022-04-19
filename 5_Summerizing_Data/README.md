@@ -254,13 +254,22 @@ we don't have multiple Cities for each state , so check for beter example to und
 
 ### [example 3](#-) [**_GROUP BY_** Excersize](#-)
 
-WE have a query that generates this report:
+WE have this generated report:
 
+![image](https://user-images.githubusercontent.com/36256986/164104621-1a1cce3d-da40-4420-b7fc-3a4caed7754b.png)
 
-Write a query to generate the report.
+Write a query to generate the report. from tables : **payments** and **payment_methods**
 
 ```sql
-
+SELECT
+    p.date,
+    pm.name AS payment_method,
+    SUM(p.amount) AS total_payments
+FROM payments p
+JOIN payment_methods pm
+	ON p.payment_method = pm.payment_method_id    
+GROUP BY payment_method ,date
+ORDER BY date;
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
@@ -302,20 +311,4 @@ Write a query to generate the report.
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
---------------------------------------------------------------------------------------------------
 
-###### 
-
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
---------------------------------------------------------------------------------------------------
-
-###### 
-
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
