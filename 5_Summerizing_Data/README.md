@@ -192,9 +192,102 @@ WHERE invoice_date
 
 ###### 2
 
-<img src="https://img.shields.io/badge/-2. INNER JOIN (or Just JOIN) %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2. GROUP BY clasue %20-blue" height=40px>
+
+So far we saw 
+
+```sql
+SELECT SUM(invoice_total) FROM invoices;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164090238-4e67e11c-abde-4315-a89a-2f76737462f0.png)
+
+Question:
+* What if we want to see the total sales per client.
+
+Answer:
+* That is where we need to **_GROUP_** data by 1 or more columns.
+
+### [example 1](#-)
+
+This query will show the **SUM** of each **client_id** (it is [GROUP BY](#-) **client_id**)
+
+```sql
+SELECT 
+	SUM(invoice_total) 
+FROM invoices
+GROUP BY client_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164091067-01549fe7-e2a2-45c1-8a72-9adca09e5503.png)
+
+Lets [GROUP BY](#-) by several columns :
+
+```sql
+SELECT 
+    client_id,
+    number,
+    SUM(invoice_total) 
+FROM invoices
+GROUP BY client_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164091474-6cb66c23-0c14-4b19-84c3-48953e4c2b78.png)
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
