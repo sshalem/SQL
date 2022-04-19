@@ -5,7 +5,7 @@
 
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
-|  1  |[AGGREGATE Functions](#1)   |		     |
+|  1  |[Aggregate Functions](#1)   |		     |
 |     |1.1               |[MAX()](#1-1)       |
 |     |1.2				 |[MIN()](#1-2)    |
 |     |1.3				 |[AVG()](#1-3)   |
@@ -32,7 +32,7 @@
 
 ###### 1
 
-<img src="https://img.shields.io/badge/-1. AGGREGATE Functions %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. Aggregate Functions %20-blue" height=40px>
 
 ```sql
 ```
