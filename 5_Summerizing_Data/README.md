@@ -6,11 +6,6 @@
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
 |  1  |[Aggregate Functions](#1)   |		     |
-|     |1.1               |[MAX()](#1-1)       |
-|     |1.2				 |[MIN()](#1-2)    |
-|     |1.3				 |[AVG()](#1-3)   |
-|     |1.4				 |[SUM()](#1-4)   | 
-|     |1.5				 |[COUNT()](#1-5)   | 
 |  2  |[OUTER JOIN](#3)   		 | 
 |     |3.1				 |[OUTER JOIN syntax with LEFT/RIGHT](#3-1)   | 
 |     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
