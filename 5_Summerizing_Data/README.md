@@ -111,7 +111,9 @@ WHERE invoice_date > '2019-07-01';
 ```
 
 we added a filter of **invoice_date > '2019-07-01'** thus we got only 7 records. <br>
-**SUM(invoice_total * 1.1)** :   first calc  **(invoice_total * 1.1)**  then makes the **SUM()**
+**SUM(invoice_total * 1.1)** :
+* first calc  **(invoice_total * 1.1)**  
+* then makes the **SUM()**
 
 ![image](https://user-images.githubusercontent.com/36256986/164084240-aa5625bb-6c3c-4f80-ba84-c1bc7cab397c.png)
 
