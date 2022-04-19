@@ -5,8 +5,8 @@
 
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
-|  1  |[Aggregate Functions](#1)   |		     |
-|  2  |[OUTER JOIN](#3)   		 | 
+|  1  |[Aggregate Functions](#1)   |[MAX() MIN() SUM() AVG() COUNT()](#-)    |
+|  2  |[GROUP BY clasue](#2)   		 | 
 |     |3.1				 |[OUTER JOIN syntax with LEFT/RIGHT](#3-1)   | 
 |     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
 |     |3.3				 |[LEFT JOIN](#3-3)   | 
