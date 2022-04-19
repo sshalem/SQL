@@ -34,6 +34,24 @@
 
 <img src="https://img.shields.io/badge/-1. Aggregate Functions %20-blue" height=40px>
 
+These are useful Aggregate functions:
+* MAX()
+* MIN()
+* AVG()
+* SUM()
+* COUNT()
+
+In this section I will use for the demo the DB of [sql_invoicing](#-)
+
+![image](https://user-images.githubusercontent.com/36256986/164080490-1e96f6b3-fdcb-43b3-adbf-4fea1278f318.png)
+
+We can use Aggregate functions on:
+	1. Numeric values
+	2. String
+	3. Dates
+
+
+
 ```sql
 ```
 
