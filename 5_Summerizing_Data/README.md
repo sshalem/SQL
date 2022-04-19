@@ -51,7 +51,17 @@ We can use Aggregate functions on:
 3. Dates
 4. They [only](#-) operate on [Non Null](#-) values
 
-### example 1:
+
+### [example 1](#-)
+
+```sql
+SELECT COUNT(*) AS total_records FROM invoices;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164083532-48fed5d5-ac0e-4233-b580-d0007286c55e.png)
+
+
+### [example 2](#-)
 
 I use Aggregate funtions on [Numeric values](#-):
 
@@ -67,7 +77,7 @@ FROM invoices;
 
 ![image](https://user-images.githubusercontent.com/36256986/164081022-34b8e487-d5d5-4631-9f91-763585cfe36f.png)
 
-### example 2
+### [example 3](#-)
 
 In this example I will show the use of Numeric values & Date. </br>
 The query count 2 things:
@@ -87,6 +97,23 @@ We can see we got COUNT(payment_date) is 7 because the rest are NULL values, bec
 
 ![image](https://user-images.githubusercontent.com/36256986/164082703-9dbeb9ec-8fba-4898-b257-292269dd32c5.png)
 
+### [example 4](#-)
+
+```sql
+SELECT 
+    MAX(invoice_total) AS highest,
+    MIN(invoice_total) AS lowest,
+    AVG(invoice_total) AS average,
+    SUM(invoice_total * 1.1) AS total,
+    COUNT(*) AS total_records   
+FROM invoices
+WHERE invoice_date > '2019-07-01';
+```
+
+we added a filter of **invoice_date > '2019-07-01'** thus we got only 7 records. <br>
+**SUM(invoice_total * 1.1)** :   first calc  **(invoice_total * 1.1)**  then makes the **SUM()**
+
+![image](https://user-images.githubusercontent.com/36256986/164084240-aa5625bb-6c3c-4f80-ba84-c1bc7cab397c.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
