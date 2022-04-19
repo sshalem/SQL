@@ -208,7 +208,7 @@ SELECT SUM(invoice_total) FROM invoices;
 [Answer](#-)
 * That is where we need to **_GROUP BY_** data, by 1 or more columns.
 
-### [example 1](#-)
+### [example 1](#-) [**_GROUP BY_** single column](#-)
 
 This query will show the **SUM** of each **client_id** (it is [GROUP BY](#-) **client_id**)
 
@@ -236,9 +236,32 @@ ORDER BY total_sales DESC;
 
 ![image](https://user-images.githubusercontent.com/36256986/164092730-8d0ec509-1b2c-4a96-af3d-c3760a060f8d.png)
 
-### [example 2](#-)
+### [example 2](#-) [**_GROUP BY_** multiple columns](#-)
+
+```sql
+SELECT 
+    state,
+    city,    
+    SUM(invoice_total) AS total_sales
+FROM invoices i
+JOIN clients USING(client_id)
+GROUP BY state, city;
+```
+
+we don't have multiple Cities for each state , so check for beter example to understand.
+
+![image](https://user-images.githubusercontent.com/36256986/164094365-23aca5ff-f6f2-4128-aa0d-f8eb2470bc49.png)
+
+### [example 3](#-) [**_GROUP BY_** Excersize](#-)
+
+WE have a query that generates this report:
 
 
+Write a query to generate the report.
+
+```sql
+
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
