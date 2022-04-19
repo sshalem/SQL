@@ -194,7 +194,7 @@ WHERE invoice_date
 
 <img src="https://img.shields.io/badge/-2. GROUP BY clasue %20-blue" height=40px>
 
-So far we saw 
+So far we saw we can have the invoice_total of the table. 
 
 ```sql
 SELECT SUM(invoice_total) FROM invoices;
@@ -202,11 +202,11 @@ SELECT SUM(invoice_total) FROM invoices;
 
 ![image](https://user-images.githubusercontent.com/36256986/164090238-4e67e11c-abde-4315-a89a-2f76737462f0.png)
 
-Question:
+[Question](#-)
 * What if we want to see the total sales per client.
 
-Answer:
-* That is where we need to **_GROUP_** data by 1 or more columns.
+[Answer](#-)
+* That is where we need to **_GROUP BY_** data, by 1 or more columns.
 
 ### [example 1](#-)
 
@@ -221,19 +221,22 @@ GROUP BY client_id;
 
 ![image](https://user-images.githubusercontent.com/36256986/164091067-01549fe7-e2a2-45c1-8a72-9adca09e5503.png)
 
-Lets [GROUP BY](#-) by several columns :
+Lets [GROUP BY](#-) by several columns , and **ORDER BY** **_DESC_** order:
 
 ```sql
 SELECT 
     client_id,
     number,
-    SUM(invoice_total) 
+    SUM(invoice_total) AS total_sales
 FROM invoices
-GROUP BY client_id;
+GROUP BY client_id
+ORDER BY total_sales DESC;
 ```
 
-![image](https://user-images.githubusercontent.com/36256986/164091474-6cb66c23-0c14-4b19-84c3-48953e4c2b78.png)
+![image](https://user-images.githubusercontent.com/36256986/164092218-90e865ea-93c9-4986-9408-e54e662865fa.png)
 
+
+### [example 2](#-)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
