@@ -221,7 +221,7 @@ GROUP BY client_id;
 
 ![image](https://user-images.githubusercontent.com/36256986/164091067-01549fe7-e2a2-45c1-8a72-9adca09e5503.png)
 
-Lets [GROUP BY](#-) by several columns , and **ORDER BY** **_DESC_** order:
+Lets [GROUP BY](#-) add columns of client_id and number, and **ORDER BY** **_DESC_** order:
 
 ```sql
 SELECT 
@@ -229,14 +229,16 @@ SELECT
     number,
     SUM(invoice_total) AS total_sales
 FROM invoices
+WHERE invoice_date >= '2019-07-01'
 GROUP BY client_id
 ORDER BY total_sales DESC;
 ```
 
-![image](https://user-images.githubusercontent.com/36256986/164092218-90e865ea-93c9-4986-9408-e54e662865fa.png)
-
+![image](https://user-images.githubusercontent.com/36256986/164092730-8d0ec509-1b2c-4a96-af3d-c3760a060f8d.png)
 
 ### [example 2](#-)
+
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
