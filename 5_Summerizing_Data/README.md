@@ -221,7 +221,7 @@ GROUP BY client_id;
 
 ![image](https://user-images.githubusercontent.com/36256986/164091067-01549fe7-e2a2-45c1-8a72-9adca09e5503.png)
 
-Lets [GROUP BY](#-) add columns of client_id and number, and **ORDER BY** **_DESC_** order:
+Lets add columns of client_id and number , and **ORDER BY** **_DESC_** order:
 
 ```sql
 SELECT 
