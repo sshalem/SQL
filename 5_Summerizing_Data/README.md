@@ -342,12 +342,22 @@ HAVING total_sales > 500;
 
 ![image](https://user-images.githubusercontent.com/36256986/164322103-cdc47845-76f1-41b0-b8c4-908ea3aa0b3f.png)
 
-### [Example 3 ]
+### [Example 3 using logical with HAVING clause]
 
+```sql
+SELECT 
+    client_id,
+    SUM(invoice_total) AS total_sales,
+    -- this line is same as line below :COUNT(*) AS number_of_invoices 
+    COUNT(invoice_total) AS number_of_invoices
+FROM invoices
+GROUP BY client_id
+HAVING total_sales > 500 AND number_of_invoices > 5;
+```
 
+![image](https://user-images.githubusercontent.com/36256986/164323394-c131dd09-eb88-4871-8500-e0386bbc1241.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
 
 --------------------------------------------------------------------------------------------------
 
