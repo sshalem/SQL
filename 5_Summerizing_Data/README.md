@@ -333,7 +333,7 @@ HAVING total_sales > 500;
 
 ![image](https://user-images.githubusercontent.com/36256986/164320638-b577321a-338f-4d11-88d5-d1f26e8cb38f.png)
 
-### [Example 2 using HAVING and WHERE]
+### [Example 2 using HAVING and WHERE](#-)
 
 ```sql
 SELECT 
@@ -347,7 +347,7 @@ HAVING total_sales > 500;
 
 ![image](https://user-images.githubusercontent.com/36256986/164322103-cdc47845-76f1-41b0-b8c4-908ea3aa0b3f.png)
 
-### [Example 3 using logical with HAVING clause]
+### [Example 3 using logical with HAVING clause](#-)
 
 ```sql
 SELECT 
