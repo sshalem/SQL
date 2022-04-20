@@ -185,7 +185,7 @@ WHERE invoice_date
 ###### 2
 
 <img src="https://img.shields.io/badge/-2. GROUP BY clasue %20-blue" height=40px>
-
+	
 So far we saw we can have the invoice_total of the table. 
 
 ```sql
@@ -199,6 +199,9 @@ SELECT SUM(invoice_total) FROM invoices;
 
 [Answer](#-)
 * That is where we need to **_GROUP BY_** data, by 1 or more columns.
+
+### [Rule:](#-)</br>
+If we have aggragate function and we GROUP our data , we always GROUP by the all the columns in the SLECT clause.
 
 ### [example 1](#-) [**_GROUP BY_** single column](#-)
 
@@ -278,9 +281,6 @@ With [WHERE](#-) clause we can filter names that are also not shown in the [SELE
 We cannot use [WHERE](#-) clause to filter a [GROUP](#-).
 We cannot use [WHERE](#-) clause to filter a [Aggregation Function](#-).
 
-### [Rule:](#-)</br>
-	If we have aggragate function and we GROUP our data , we always GROUP by the all the columns in the SLECT clause.
-	
 In simpler words, after [HAVING](#-), we can have a condition with an aggregate function, </br>
 while [WHERE](#-) cannot use aggregate functions within its conditions.
 
