@@ -359,6 +359,15 @@ HAVING total_sales > 500 AND number_of_invoices > 5;
 
 ![image](https://user-images.githubusercontent.com/36256986/164323394-c131dd09-eb88-4871-8500-e0386bbc1241.png)
 
+### [Exercise]
+
+* Get the Customers :
+	1. Located in Virginia
+	2. who have spent more than $100
+
+
+
+
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
