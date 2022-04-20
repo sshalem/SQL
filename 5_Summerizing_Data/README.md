@@ -272,6 +272,79 @@ ORDER BY date;
 
 <img src="https://img.shields.io/badge/-3. HAVING clause  %20-blue" height=40px>
 
+We use [HAVING](#-) clause to filter tata after we [GROUP](#-) our rows or on [Aggregation Function](#-). </br>
+We cannot use [WHERE](#-) clause to filter a [GROUP](#-).
+We cannot use [WHERE](#-) clause to filter a [Aggregation Function](#-).
+
+In simpler words, after [HAVING](#-), we can have a condition with an aggregate function, </br>
+while [WHERE](#-) cannot use aggregate functions within its conditions.
+
+let's look at the following query which have:
+1. tow columns (client_id, total_sales)
+2. GROUP BY client_id
+
+```sql
+SELECT 
+    client_id,
+    SUM(invoice_total) AS total_sales
+FROM invoices
+GROUP BY client_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164319401-809f30ae-cf4c-483a-b616-d676f1285dee.png)
+
+[Question](#-)
+	* what if we want to filter total_sales > 500? how to do it?
+
+[Answer](#-)
+	* by using [HAVING](#-) clause 
+
+### [Case 1 using WHERE clause](#-)
+
+if we use [WHERE](#-) clause to filter the **total_sales** we get error.
+We cannot use [WHERE](#-) clause 
+
+```sql
+SELECT 
+    client_id,
+    SUM(invoice_total) AS total_sales
+FROM invoices
+WHERE total_sales > 500
+GROUP BY client_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164320355-d26ef8d4-8df4-4da9-95cc-4c8f0e8182c1.png)
+
+This is how to do it using [HAVING](#-) clause to filter the **total_sales** 
+
+```sql
+SELECT 
+    client_id,
+    SUM(invoice_total) AS total_sales
+FROM invoices
+GROUP BY client_id
+HAVING total_sales > 500;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164320638-b577321a-338f-4d11-88d5-d1f26e8cb38f.png)
+
+### [Example 2 using HAVING and WHERE]
+
+```sql
+SELECT 
+    client_id,
+    SUM(invoice_total) AS total_sales
+FROM invoices
+WHERE client_id > 1
+GROUP BY client_id
+HAVING total_sales > 500;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164322103-cdc47845-76f1-41b0-b8c4-908ea3aa0b3f.png)
+
+### [Example 3 ]
+
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
