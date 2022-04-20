@@ -7,19 +7,11 @@
 |:---:|:------------------------------|:----------|  
 |  1  |[Aggregate Functions](#1)   |[MAX() MIN() SUM() AVG() COUNT()](#-)    |
 |  2  |[GROUP BY clasue](#2)   		 | 
-|     |3.1				 |[OUTER JOIN syntax with LEFT/RIGHT](#3-1)   | 
-|     |3.2				 |[LEFT JOIN best practice](#3-2)   | 
-|     |3.3				 |[LEFT JOIN](#3-3)   | 
-|     |3.4				 |[RIGHT JOIN](#3-4)   | 
-|     |3.5				 |[OUTER JOIN more than 2 tables](#3-5)   | 
-|     |3.6 				 |[SELF OUTER JOIN](#3-6)   |
-|  4  |[USING CLAUSE](#4)   |  
-|     |4.1				 |[USING clause on CK](#4-1)   |  
-|  5  |[NATURAL JOIN](#5)   |  
-|  6  |[CROSS JOIN](#6)   |  
-|  7  |[UNION](#7)   | 
-|     |7.1				  |[UNION same table](#7-1)   | 
-|     |7.2				  |[UNION different table](#7-2)   | 
+|  3  |[USING CLAUSE](#3)   |  
+|  4  |[NATURAL JOIN](#4)   |  
+|  5  |[CROSS JOIN](#5)   |  
+|  6  |[UNION](#6)   | 
+
 
 
 
