@@ -9,7 +9,7 @@
 |  2.1|[SELECT with Arithmetic *  /  +  -  %](#2-1)             |   |
 |  3  |[ALIAS](#3)   |           |
 |  4  |[DISTINCT](#4)   |        |
-|  5  |[WHERE](#5)   |     |
+|  5  |[WHERE clause](#5)   |     |
 |  6  |[Logical Operators AND, OR, NOT](#6)   |     |
 |  7  |[IN operator](#7)   |    |
 |  8  |[BETWEEN operator](#8)   |     |
@@ -218,7 +218,7 @@ SELECT DISTINCT state FROM customers;
 
 ###### 5
 
-<img src="https://img.shields.io/badge/-. WHERE  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-. WHERE clause %20-blue" height=40px>
 
 We use the WHERE clause to filter data.</br>
 Comparison operators: 
