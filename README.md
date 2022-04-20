@@ -6,6 +6,8 @@
 |  2  |[Operator Statements](https://github.com/sshalem/SQL/tree/main/2_Operator_Statements)   | 
 |  3  |[JOIN_UNION_USING_clause](https://github.com/sshalem/SQL/tree/main/3_JOIN__UNION__USING__clause)   | 
 |  4  |[DataBase and Table](https://github.com/sshalem/SQL/tree/main/4_DataBase_and_TABLE)   | 
+|  5  |[Summerizing_Data]()   | 
+
 
 
 
