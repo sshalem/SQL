@@ -273,6 +273,7 @@ ORDER BY date;
 <img src="https://img.shields.io/badge/-3. HAVING clause  %20-blue" height=40px>
 
 We use [HAVING](#-) clause to filter tata after we [GROUP](#-) our rows , or on [Aggregation Function](#-). </br>
+We can filter with [HAVING](#-) clause only nmaes that are shown in the [SELECT](#-) clause</br>
 We cannot use [WHERE](#-) clause to filter a [GROUP](#-).
 We cannot use [WHERE](#-) clause to filter a [Aggregation Function](#-).
 
