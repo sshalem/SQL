@@ -7,10 +7,10 @@
 |:---:|:------------------------------|:----------|  
 |  1  |[Aggregate Functions](#1)   |[MAX() MIN() SUM() AVG() COUNT()](#-)    |
 |  2  |[GROUP BY clasue](#2)   		 | 
-|  3  |[USING CLAUSE](#3)   |  
-|  4  |[NATURAL JOIN](#4)   |  
-|  5  |[CROSS JOIN](#5)   |  
-|  6  |[UNION](#6)   | 
+|  3  |[HAVING clause](#3)   |  difference between HAVING to WHERE |
+|  4  |[x](#4)   |  
+|  5  |[x](#5)   |  
+|  6  |[x](#6)   | 
 
 
 
@@ -268,9 +268,9 @@ ORDER BY date;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3. HAVING clause  %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
