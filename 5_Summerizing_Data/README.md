@@ -278,6 +278,9 @@ With [WHERE](#-) clause we can filter names that are also not shown in the [SELE
 We cannot use [WHERE](#-) clause to filter a [GROUP](#-).
 We cannot use [WHERE](#-) clause to filter a [Aggregation Function](#-).
 
+### [Rule:](#-)</br>
+	If we have aggragate function and we GROUP our data , we always GROUP by the all the columns in the SLECT clause.
+	
 In simpler words, after [HAVING](#-), we can have a condition with an aggregate function, </br>
 while [WHERE](#-) cannot use aggregate functions within its conditions.
 
