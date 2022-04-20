@@ -7,7 +7,7 @@
 |:---:|:------------------------------|:----------|  
 |  1  |[Aggregate Functions](#1)   |[MAX() MIN() SUM() AVG() COUNT()](#-)    |
 |  2  |[GROUP BY clasue](#2)   		 | 
-|  3  |[HAVING clause](#3)   |  difference between HAVING to WHERE |
+|  3  |[HAVING clause](#3)   |[difference between HAVING to WHERE](#-) |
 |  4  |[x](#4)   |  
 |  5  |[x](#5)   |  
 |  6  |[x](#6)   | 
