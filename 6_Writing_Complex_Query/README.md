@@ -6,7 +6,7 @@
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
 |  1  |[Sub Queries](#1)   |             |
-|  2  |[x](#2)   |  
+|  2  |[IN / NOT IN  (Sub Query)](#2)   |  
 |  3  |[x](#3)   | 
 
 
@@ -71,6 +71,40 @@ WHERE salary > (
 
 --------------------------------------------------------------------------------------------------
 
+###### 2
+
+<img src="https://img.shields.io/badge/-2. IN / NOT IN  (Sub Query) %20-blue" height=40px>
+
+Find the products that have NEVER been ordered.
+
+```sql
+SELECT *
+FROM products
+WHERE product_id NOT IN(
+	SELECT DISTINCT product_id
+	FROM order_items);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164947195-30ee4fc8-a4e1-4358-964c-76e9dc8defd2.png)
+
+#### [Exercise](#-) 
+
+Find clients without invoices.
+
+```sql
+SELECT * 
+FROM clients
+WHERE client_id NOT IN(
+	SELECT DISTINCT client_id 
+	FROM invoices);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164947326-a6ccf6ff-bee3-4054-bba1-d5815708bf47.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
 ###### 
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
@@ -78,4 +112,38 @@ WHERE salary > (
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
+--------------------------------------------------------------------------------------------------
 
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
