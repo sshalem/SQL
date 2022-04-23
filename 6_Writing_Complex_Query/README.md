@@ -7,7 +7,8 @@
 |:---:|:------------------------------|:----------|  
 |  1  |[Sub Queries](#1)   |             |
 |  2  |[IN / NOT IN  (Sub Query)](#2)   |  
-|  3  |[x](#3)   | 
+|  3  |[SubQuery VS JOIN](#3)   | 
+|  4  |[x](#4)   | 
 
 
 
@@ -105,9 +106,31 @@ WHERE client_id NOT IN(
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3. SubQuery VS JOIN  %20-blue" height=40px>
+
+Quite often we can write a JOIN instead of a SubQuery.
+We always need to take the better options for not making the query too complex. </br>
+Thus, always pay attention for the readability of the code.
+
+Both of these queries give same results.
+
+```sql
+SELECT * 
+FROM clients
+WHERE client_id NOT IN(
+	SELECT DISTINCT client_id 
+	FROM invoices);
+    
+SELECT * 
+FROM clients
+LEFT JOIN invoices USING(client_id)
+WHERE invoice_id IS NULL;
+```
+
+#### [Exercise](#-) 
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
