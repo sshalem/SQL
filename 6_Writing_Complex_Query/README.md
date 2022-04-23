@@ -53,7 +53,7 @@ WHERE unit_price > (
 
 ![image](https://user-images.githubusercontent.com/36256986/164946605-2305f4e0-b702-4d5f-9166-8ef507fc0bb3.png)
 
-#### [Exercise](#-) 
+### [Exercise](#-) 
 
 In **sql_hr** DB , find employees whose earn more than avg.
 
@@ -88,7 +88,7 @@ WHERE product_id NOT IN(
 
 ![image](https://user-images.githubusercontent.com/36256986/164947195-30ee4fc8-a4e1-4358-964c-76e9dc8defd2.png)
 
-#### [Exercise](#-) 
+### [Exercise](#-) 
 
 Find clients without invoices.
 
@@ -129,8 +129,38 @@ LEFT JOIN invoices USING(client_id)
 WHERE invoice_id IS NULL;
 ```
 
-#### [Exercise](#-) 
+### [Exercise](#-) 
 
+Find customers who order letucce (id=3). </br>
+Select customer_id, first_name, last_name.
+
+both queries give same results, but the one with JOIN's is more readable.
+
+```sql
+--  WIth JOIN's
+SELECT DISTINCT
+    customer_id,
+    first_name,
+    last_name
+FROM customers c
+JOIN orders o USING(customer_id)
+JOIN order_items oi USING(order_id)
+WHERE oi.product_id = 3;
+
+--  With SubQuery
+SELECT 
+    customer_id,
+    first_name,
+    last_name
+FROM customers
+WHERE customer_id IN(
+    SELECT o.customer_id
+    FROM orders o
+    JOIN order_items oi USING(order_id)
+    WHERE oi.product_id = 3);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164948067-56598e22-8715-4ca2-934e-071ce3e334c1.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
