@@ -456,7 +456,7 @@ SELECT
 FROM payments p
 JOIN payment_methods AS pm
 	ON p.payment_method = pm.payment_method_id
-GROUP BY name WITH ROLLUP;
+GROUP BY pm.name WITH ROLLUP;
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
