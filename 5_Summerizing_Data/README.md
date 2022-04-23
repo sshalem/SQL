@@ -8,7 +8,7 @@
 |  1  |[Aggregate Functions](#1)   |[MAX() MIN() SUM() AVG() COUNT()](#-)    |
 |  2  |[GROUP BY clasue](#2)   		 | 
 |  3  |[HAVING clause](#3)   |[difference between HAVING to WHERE](#-) |
-|  4  |[x](#4)   |  
+|  4  |[ROLLUP operator](#4)   |  
 |  5  |[x](#5)   |  
 |  6  |[x](#6)   | 
 
@@ -391,10 +391,73 @@ HAVING total_sales > 100;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 4
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-4. ROLLUP operator  %20-blue" height=40px>
 
+Let's see how to use  [ROLLUP](#-) operator. </br>
+It is only for [MySql](#-). </br>
+[ROLLUP](#-) is a powerful operator for summerizing data.
+It only apply's to column's that aggregate values
+
+Let's see the following SQL that gives the table below:
+
+```sql
+SELECT 
+    client_id,
+    SUM(invoice_total) AS total_sales
+FROM invoices
+GROUP BY client_id;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164945502-72d94968-abd6-42aa-9a64-436680680b34.png)
+
+### [Example 1](#-)
+
+Now let's add the ROLLUP operator :
+
+```sql
+SELECT 
+    client_id,
+    SUM(invoice_total) AS total_sales
+FROM invoices
+GROUP BY client_id WITH ROLLUP;
+```
+
+We got a new row with summerized data:
+
+![image](https://user-images.githubusercontent.com/36256986/164945583-109f9ab6-80a0-44d8-85f1-fdc95277a150.png)
+
+### [Example 2](#-)
+
+```sql
+SELECT 
+    state,
+    city,
+    SUM(invoice_total) AS total_sales
+FROM invoices i
+JOIN clients c USING(client_id)
+GROUP BY state,city WITH ROLLUP;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164945729-a9289e5b-77f7-4f5a-adff-a51dd3caff2e.png)
+
+
+### [Example 3](#-)
+
+Write a query that produces this report:
+
+![image](https://user-images.githubusercontent.com/36256986/164945783-8948265e-e23f-4c49-94e9-0bccb6d90a56.png)
+
+```sql
+SELECT
+    pm.name AS payment_method,
+    SUM(amount) AS total
+FROM payments p
+JOIN payment_methods AS pm
+	ON p.payment_method = pm.payment_method_id
+GROUP BY name WITH ROLLUP;
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
