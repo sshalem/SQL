@@ -380,9 +380,53 @@ WHERE NOT EXISTS (
 
 <img src="https://img.shields.io/badge/-8. Sub Queries in the SELECT clause %20-blue" height=40px>
 
+So far, in all examples above we used Sub Queries in the WHERE clause. </br>
+In this section I will show how we can use Sub Queries in the SELECT clause. </br>
+
+Let's say we want to generate a report that looks like this result:
+
+![image](https://user-images.githubusercontent.com/36256986/164977408-06e30d48-d01e-4d45-9595-65ffa6b85f7c.png)
+
+```sql
+SELECT 
+    invoice_id,
+    invoice_total,
+    (SELECT 
+        AVG(invoice_total) 
+	FROM invoices) AS invoice_average,
+    (invoice_total - (SELECT AVG(invoice_total) FROM invoices)) AS difference
+FROM invoices;
+
+-- Modify code to be shorter in the difference field
+SELECT 
+    invoice_id,
+    invoice_total,
+    (SELECT AVG(invoice_total) 
+        FROM invoices) AS invoice_average,
+    invoice_total - (SELECT invoice_average) AS difference
+FROM invoices;
+```
+
+### [Exercise](#-) 
+
+Write a Query to produce this result.
+
+![image](https://user-images.githubusercontent.com/36256986/164978064-9adac964-11a9-4107-b098-735714c5d0ac.png)
+
+```sql
+SELECT DISTINCT
+    c.client_id,
+    c.name,
+    (SELECT SUM(invoice_total) 
+     FROM invoices 
+     WHERE client_id = c.client_id) AS total_sales,
+    (SELECT AVG(invoice_total) FROM invoices) AS average,
+    (SELECT total_sales - average) AS difference
+FROM clients c
+LEFT JOIN invoices i USING(client_id);    
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
 
 --------------------------------------------------------------------------------------------------
 
