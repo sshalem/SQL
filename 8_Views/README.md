@@ -21,10 +21,10 @@
 <img src="https://img.shields.io/badge/-1. What are VIEWS  %20-blue" height=40px>
 
 [Question](#-)
-What are VIEWS?
+* What are VIEWS?
 
 [Answer](#-)
-VIEW are saved Querirs or SubQuerirs 
+* VIEW are saved Querirs or SubQuerirs 
 
 We can save Queries in a [VIEW](#-) , this will simplyfies our SELECT statement.
 
