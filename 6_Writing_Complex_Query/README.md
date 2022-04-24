@@ -347,7 +347,30 @@ WHERE EXISTS (
 
 ### [Exercise](#-) 
 
+Find products that have never been ordered.
 
+solution using the [IN](#-) operator 
+
+```sql
+SELECT * 
+FROM products 
+WHERE product_id NOT IN (
+    SELECT product_id
+    FROM order_items);
+```
+
+solution using the [EXISTS](#-) operator 
+
+```sql
+SELECT * 
+FROM products p
+WHERE NOT EXISTS (
+    SELECT product_id
+    FROM order_items
+    WHERE product_id = p.product_id);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164977057-3ee2f0b0-f064-4e44-be44-7a358cfb1d3e.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
