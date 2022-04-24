@@ -8,6 +8,8 @@
 |  4  |[DataBase and Table](https://github.com/sshalem/SQL/tree/main/4_DataBase_and_TABLE)   | 
 |  5  |[Summerizing_Data](https://github.com/sshalem/SQL/tree/main/5_Summerizing_Data)   | 
 |  6  |[Writing_Complex_Query](https://github.com/sshalem/SQL/tree/main/6_Writing_Complex_Query)   | 
+|  7  |[Essential_Built_in_MySql_Functions](https://github.com/sshalem/SQL/tree/main/7_Essential_Built_in_MySql_Functions)   | 
+
 
 
 
