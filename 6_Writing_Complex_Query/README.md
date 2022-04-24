@@ -13,7 +13,7 @@
 |  6  |[Correlated SubQueries](#6)   | 
 |  7  |[EXISTS operator](#7)   | 
 |  8  |[Sub Queries in the SELECT Clause](#8)   | 
-|  9  |[9](#9)   | 
+|  9  |[Sub Queries in the FROM Clause](#9)   | 
 
 
 
