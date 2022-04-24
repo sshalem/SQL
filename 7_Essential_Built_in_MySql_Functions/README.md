@@ -13,10 +13,10 @@
 |  2  |[String Functions](#2)   |
 |  3  |[Date and Time Functions](#3)   | 
 |  4  |[Formatting Dates and Times](#4)   | 
-|  5  |[Calculating Dates and TImes](#5)   | 
-|  6  |[The IFNULL and COALESCE Functions](#6)   | 
-|  7  |[The IF Function](#7)   | 
-|  8  |[The CASE Operator](#8)   | 
+|  5  |[Calculating Dates and Times](#5)   | 
+|  6  |[IFNULL and COALESCE Functions](#6)   | 
+|  7  |[IF Function](#7)   | 
+|  8  |[CASE Operator](#8)   | 
 
 
 
@@ -169,27 +169,62 @@ SELECT EXTRACT(YEAR FROM NOW());
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 4
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-4. Formatting Dates and Times %20-blue" height=40px>
 
+### Useful ways to format [**_Date and Time_**](#-) :
+
+```sql
+-- takes 2 arguments
+-- DATE_FORMAT(date value , format String)
+SELECT DATE_FORMAT(NOW(), '%D %M %Y');
+SELECT DATE_FORMAT(NOW(), '%d-%m-%y');
+
+-- takes 2 arguments
+-- TIME_FORMAT(date value , format String)
+SELECT TIME_FORMAT(NOW(), '%H:%i %p');
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 5
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-5. Calculating Dates and Times %20-blue" height=40px>
 
+### Most useful [**_Calculations on Date and Time_**](#-) functions:
+
+```sql
+-- ADD day
+SELECT DATE_ADD(NOW(), INTERVAL 1 DAY);
+
+-- ADD year
+SELECT DATE_ADD(NOW(), INTERVAL 1 YEAR);
+
+-- ADD year from past
+SELECT DATE_ADD(NOW(), INTERVAL -1 YEAR);
+
+-- Or we can use the Function of:
+SELECT DATE_SUB(NOW(), INTERVAL 1 YEAR);
+
+-- Calc the difference between 2 dates
+SELECT DATEDIFF('2019-01-05', '2019-01-01');
+SELECT DATEDIFF('2019-01-05 09:00', '2019-01-01 17:00');
+
+-- Calc the difference between 2 times
+SELECT TIME_TO_SEC('09:02')- TIME_TO_SEC('09:00');
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 6
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-6. IFNULL and COALESCE Functions %20-blue" height=40px>
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
