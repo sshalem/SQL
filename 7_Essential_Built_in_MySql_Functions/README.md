@@ -297,9 +297,27 @@ We can achive same results using the IF() function with less code</br>
 ![image](https://user-images.githubusercontent.com/36256986/164990799-d8da0578-810e-4e98-9a03-15aa78a6867c.png)
 
 
+```sql
+-- IF(expressionm , first, second)
+SELECT 
+    order_id,
+    order_date,
+    IF(YEAR(order_date) = YEAR(NOW()),
+	'Active',
+        'Archive') AS category
+FROM orders;
+```
 
+![image](https://user-images.githubusercontent.com/36256986/164990998-8cf6da8d-49c3-49ec-9fb9-b4c13d19f51a.png)
 
+### [Excerise](#-)
 
+Write a qury to get this result
+
+![image](https://user-images.githubusercontent.com/36256986/164991032-0bc85e64-05a5-45ce-8314-0d75b9d12c76.png)
+
+```sql
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
