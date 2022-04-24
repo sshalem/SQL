@@ -414,7 +414,7 @@ Write a Query to produce this result.
 ![image](https://user-images.githubusercontent.com/36256986/164978064-9adac964-11a9-4107-b098-735714c5d0ac.png)
 
 ```sql
-SELECT DISTINCT
+SELECT
     c.client_id,
     c.name,
     (SELECT SUM(invoice_total) 
@@ -422,8 +422,7 @@ SELECT DISTINCT
      WHERE client_id = c.client_id) AS total_sales,
     (SELECT AVG(invoice_total) FROM invoices) AS average,
     (SELECT total_sales - average) AS difference
-FROM clients c
-LEFT JOIN invoices i USING(client_id);    
+FROM clients c;  
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
