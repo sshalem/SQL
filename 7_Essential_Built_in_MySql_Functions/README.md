@@ -291,6 +291,9 @@ For example , let's take a look on orders table. </br>
 let's say we want to clasify orders into 2 categories ACTIVE and ARCHIVE.</br>
 If the orders are placed in the current year I want to put them in the ACTIVE category, otherwise put them in the ARCHIVE.</br>
 
+Earlier in the course we learned how to do this using the UNION operator.</br>
+We can achive same results using the IF() function with less code</br>
+
 ![image](https://user-images.githubusercontent.com/36256986/164990799-d8da0578-810e-4e98-9a03-15aa78a6867c.png)
 
 
