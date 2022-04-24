@@ -435,8 +435,23 @@ FROM clients c;
 
 Whenever we use SubQuery in the [**_FROM_**](#-) clause , we need to give it an ALIAS.
 
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+```sql
+SELECT * 
+FROM (SELECT
+	c.client_id,
+	c.name,
+	(SELECT SUM(invoice_total) 
+	 FROM invoices 
+	 WHERE client_id = c.client_id) AS total_sales,
+	(SELECT AVG(invoice_total) FROM invoices) AS average,
+	(SELECT total_sales - average) AS difference
+	FROM clients c) AS sales_summary
+WHERE total_sales IS NOT NULL;
+```
 
+![image](https://user-images.githubusercontent.com/36256986/164981142-41113589-69ce-416f-90f4-3db1542d985a.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
