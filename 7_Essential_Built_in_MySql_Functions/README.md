@@ -122,7 +122,7 @@ FROM customers;
 
 <img src="https://img.shields.io/badge/-3. Date and Time Functions %20-blue" height=40px>
 
-### Most useful [Date and Time](#-) functions:
+### Most useful [**_Date and Time_**](#-) functions:
 
 
 
