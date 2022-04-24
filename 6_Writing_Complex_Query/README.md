@@ -8,7 +8,10 @@
 |  1  |[Sub Queries](#1)   |             |
 |  2  |[IN / NOT IN  (Sub Query)](#2)   |  
 |  3  |[SubQuery VS JOIN](#3)   | 
-|  4  |[x](#4)   | 
+|  4  |[ALL keyword](#4)   | 
+|  5  |[5](#5)   | 
+|  6  |[6](#6)   | 
+|  7  |[7](#7)   | 
 
 
 
