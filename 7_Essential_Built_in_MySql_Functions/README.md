@@ -11,7 +11,7 @@
 |:---:|:------------------------------|:----------|  
 |  1  |[Numeric Functions](#1)   |             
 |  2  |[String Functions](#2)   |
-|  3  |[Date Functions](#3)   | 
+|  3  |[Date and Time Functions](#3)   | 
 |  4  |[Formatting Dates and Times](#4)   | 
 |  5  |[Calculating Dates and TImes](#5)   | 
 |  6  |[The IFNULL and COALESCE Functions](#6)   | 
@@ -61,6 +61,8 @@ SELECT RAND();
 ###### 2
 
 <img src="https://img.shields.io/badge/-2. String Functions %20-blue" height=40px>
+
+### Most useful [String](#-) functions:
 
 ```sql
 -- retruns the legth of the string
@@ -116,9 +118,12 @@ FROM customers;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 3
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3. Date and Time Functions %20-blue" height=40px>
+
+### Most useful [Date and Time](#-) functions:
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
