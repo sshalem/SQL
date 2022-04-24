@@ -273,7 +273,7 @@ Write a query t produe this result
 
 ```sql
 SELECT 
-	  CONCAT(first_name , ' ' , last_name) AS customer,
+    CONCAT(first_name , ' ' , last_name) AS customer,
     IFNULL(phone, 'Unknown') AS phone
 FROM customers;
 ```
