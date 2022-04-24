@@ -2,10 +2,10 @@
 
 <img src="https://img.shields.io/badge/-7. Essential Built in MySql Functions %20-blue" height=60px>
 
-Essential Built in MySql Functions for working with:
-1. Numeric
-2. Date time
-3. String values
+### Essential Built in MySql Functions for working with:
+1. [**_Numeric_**](#-)
+2. [**_Date time_**](#-)
+3. [**_String values_**](#-)
 
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
