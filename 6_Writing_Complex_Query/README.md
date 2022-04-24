@@ -429,9 +429,9 @@ FROM clients c;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 9
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-9. Sub Queries in the FROM Clause %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
