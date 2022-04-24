@@ -170,10 +170,49 @@ WHERE customer_id IN(
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 4
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-4. ALL keyword %20-blue" height=40px>
 
+Let's see how to find :
+* invoices larger than all invoices of client 3.
+
+```sql
+SELECT 
+    client_id,
+    invoice_id,
+    invoice_total
+FROM invoices 
+WHERE invoice_total > (    
+	SELECT 	
+	    MAX(invoice_total)
+	FROM invoices
+	WHERE client_id = 3);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164967658-d0211fd6-f6a0-4f95-a5e3-38a196a0bc81.png)
+
+Another Way to write this code is using the **_ALL_** keyword which will give same results.</br>
+[Question:](#-) </br>
+How it works with the ALL keyword?
+
+[Answer:](#-)</br>
+the SubQuery will return al invoices of client_id 3 (for example :150 ,163, 158 ...)</br>
+Since we have the ALL keyword, MySql will compare each invoice with the results in the subquery. </br>
+For example : if we get 165, the ALL keyword will compare 165 with (150 ,163, 158 ...) , and If ALL applys then the result will be shown in the report.</br>
+Then it will check the next invoice with ALL (150 ,163, 158 ...) etc...
+
+```sql
+SELECT 
+    client_id,
+    invoice_id,
+    invoice_total
+FROM invoices
+WHERE invoice_total > ALL (
+	SELECT invoice_total			
+	FROM invoices
+	WHERE client_id = 3);
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
