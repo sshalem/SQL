@@ -312,7 +312,7 @@ FROM orders;
 
 ### [Excerise](#-)
 
-Write a qury to get this result
+Write a query to get this result
 
 ![image](https://user-images.githubusercontent.com/36256986/164991032-0bc85e64-05a5-45ce-8314-0d75b9d12c76.png)
 
