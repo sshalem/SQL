@@ -317,6 +317,16 @@ Write a query to get this result
 ![image](https://user-images.githubusercontent.com/36256986/164991032-0bc85e64-05a5-45ce-8314-0d75b9d12c76.png)
 
 ```sql
+SELECT 
+    product_id,
+    name,
+    COUNT(*) AS orders,
+    IF(COUNT(*) > 1 ,
+       'Many times' , 
+       'Once') AS frequency
+FROM products p
+JOIN order_items oi USING(product_id)
+GROUP BY product_id, name;
 ```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
