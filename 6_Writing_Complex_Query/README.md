@@ -9,7 +9,7 @@
 |  2  |[IN / NOT IN  (Sub Query)](#2)   |  
 |  3  |[SubQuery VS JOIN](#3)   | 
 |  4  |[ALL keyword](#4)   | 
-|  5  |[5](#5)   | 
+|  5  |[ANY / SOME keyword](#5)   | 
 |  6  |[6](#6)   | 
 |  7  |[7](#7)   | 
 
@@ -222,9 +222,48 @@ Both implementations are good, both are readable.
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 5
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-5. ANY / SOME keyword %20-blue" height=40px>
+
+Let's see with an example how to use the [**_ANY_**](#-) keyword.
+
+Let's see how to find :
+* clients with at least 2 invoices.
+
+The inner Query will return :
+
+![image](https://user-images.githubusercontent.com/36256986/164969285-8c522ebb-094d-480a-8929-bb87db4152f8.png)
+
+
+```sql
+SELECT * 
+FROM invoices
+WHERE client_id IN (
+    SELECT client_id		 
+    FROM invoices
+    GROUP BY client_id
+    HAVING COUNT(*) >= 2)
+ORDER BY client_id;
+```
+
+We can see that [= ANY](#-) is same as [IN](#-) operator
+
+```sql
+SELECT * 
+FROM invoices
+WHERE client_id = ANY (
+    SELECT client_id		 
+    FROM invoices
+    GROUP BY client_id
+    HAVING COUNT(*) >= 2)
+ORDER BY client_id;;
+```
+
+For **ANY** client_id it will show the result.</br>
+If client_id=1 , the count=5, than for ANY of 5 row it will show results.
+
+![image](https://user-images.githubusercontent.com/36256986/164969330-c6c12f0a-ffe7-4bbb-81bb-4a11475e20bb.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
