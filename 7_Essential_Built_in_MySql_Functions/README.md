@@ -26,6 +26,8 @@
 
 <img src="https://img.shields.io/badge/-1.  %20-blue" height=40px>
 
+### Most useful [Numeric](#-) functions:
+
 ```sql
 -- will round to 5.2
 SELECT ROUND(5.24, 1);
