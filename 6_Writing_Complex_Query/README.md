@@ -349,7 +349,7 @@ WHERE EXISTS (
 
 Find products that have never been ordered.
 
-solution using the [IN](#-) operator 
+solution using the [**_IN_**](#-) operator 
 
 ```sql
 SELECT * 
@@ -359,7 +359,7 @@ WHERE product_id NOT IN (
     FROM order_items);
 ```
 
-solution using the [EXISTS](#-) operator 
+solution using the [**_EXISTS_**](#-)operator 
 
 ```sql
 SELECT * 
