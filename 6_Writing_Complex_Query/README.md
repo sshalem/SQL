@@ -10,8 +10,11 @@
 |  3  |[SubQuery VS JOIN](#3)   | 
 |  4  |[ALL keyword](#4)   | 
 |  5  |[ANY / SOME keyword](#5)   | 
-|  6  |[6](#6)   | 
-|  7  |[7](#7)   | 
+|  6  |[Correlated SubQueries](#6)   | 
+|  7  |[EXIST operator](#7)   | 
+|  8  |[8](#8)   | 
+|  9  |[9](#9)   | 
+
 
 
 
@@ -270,9 +273,52 @@ If client_id=1 , the count=5, than for ANY of 5 row it will show results.
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 6
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-6. Correlated SubQueries %20-blue" height=40px>
+
+Lets look at the following request:
+* Select employees whose salary is above the average in thier office.
+
+When we use a [Correlated SubQuery](#-), this SubQuery gets executed for each row in the main query.</br>
+For this reason [Correlated SubQuery](#-) can sometimes be slow.</br>
+[Correlated SubQuery](#-) are very powerfull
+
+```WHERE office_id = e.office_id``` using this line makes it a [Correlated SubQuery](#-).
+I didn't use GROUP BY .
+I can se [GROUP BY](#-) to find the AVG of each office, but I must use a [Correlated SubQuery](#-) to get this .
+
+```sql
+SELECT *
+FROM employees e
+WHERE salary > (
+	SELECT AVG(salary)
+	FROM employees
+	WHERE office_id = e.office_id);
+```
+
+### [Exercise](#-) 
+
+- Get invoices that are larger than the clients avg invoice amount.
+
+```sql
+SELECT *
+FROM invoices i
+WHERE invoice_total > (
+    SELECT AVG(invoice_total)
+    FROM invoices
+    WHERE client_id = i.client_id);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164970721-17b4530f-7a8d-49b2-a145-f7173c06fda2.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 7
+
+<img src="https://img.shields.io/badge/-7. EXIST operator %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
@@ -285,3 +331,24 @@ If client_id=1 , the count=5, than for ANY of 5 row it will show results.
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
