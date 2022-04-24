@@ -10,7 +10,7 @@
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
 |  1  |[Numeric Functions](#1)   |             |
-|  2  |[String Functions](#2)   |LENGTH(),   
+|  2  |[String Functions](#2)   |
 |  3  |[Date Functions](#3)   | 
 |  4  |[Formatting Dates and Times](#4)   | 
 |  5  |[Calculating Dates and TImes](#5)   | 
