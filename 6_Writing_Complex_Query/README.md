@@ -174,6 +174,8 @@ WHERE customer_id IN(
 
 <img src="https://img.shields.io/badge/-4. ALL keyword %20-blue" height=40px>
 
+Let's see with an example how to use the [**_ALL_**](#-) keyword.
+
 Let's see how to find :
 * invoices larger than all invoices of client 3.
 
@@ -213,6 +215,8 @@ WHERE invoice_total > ALL (
 	FROM invoices
 	WHERE client_id = 3);
 ```
+
+Both implementations are good, both are readable.
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
