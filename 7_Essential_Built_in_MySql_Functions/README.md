@@ -333,10 +333,50 @@ GROUP BY product_id, name;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 8
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-8. CASE Operator %20-blue" height=40px>
 
+[CASE](#-) operator is better to use if we have multiple IF expressions.</br>
+
+```sql
+SELECT 
+	order_id,
+    order_date,
+    IF(YEAR(order_date) = YEAR(NOW()),
+	'Active',
+        'Archive') AS category
+FROM orders;
+
+-- Let's see how to use CASE END
+SELECT 
+	order_id,
+    CASE
+	WHEN YEAR(order_date) = YEAR(NOW()) THEN 'Active'
+        WHEN YEAR(order_date) = YEAR(NOW()) - 1 THEN 'Last Year'
+        WHEN YEAR(order_date) < YEAR(NOW()) - 1 THEN 'Archived'
+        ELSE 'Future'
+	END AS category
+FROM orders;
+```
+
+### [Excerise](#-)
+
+Write a Query that gives the result.
+
+![image](https://user-images.githubusercontent.com/36256986/164997029-206df512-7038-42c4-b889-3d665aaf891d.png)
+
+```sql
+SELECT 
+    CONCAT(first_name , ' ' , last_name) AS customer,
+    points,
+    CASE
+	WHEN points > 3000 THEN 'Gold'
+        WHEN points >= 2000 THEN 'Silver'        
+	ELSE 'Bronze'
+    END AS category
+FROM customers;
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
