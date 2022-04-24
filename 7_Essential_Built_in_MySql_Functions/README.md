@@ -225,6 +225,67 @@ SELECT TIME_TO_SEC('09:02')- TIME_TO_SEC('09:00');
 
 <img src="https://img.shields.io/badge/-6. IFNULL and COALESCE Functions %20-blue" height=40px>
 
+[IFNULL()](#-) - with this function we can subtitute a null value with somethng else. </br>
+[COALESCE()](#-) - with this function we supply a list of values amd this function returns the first NONE NULL value in the list </br>
+
+### [Example IFNULL()](#-)
+
+```sql
+SELECT 
+	  order_id,
+    shipper_id
+FROM orders;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164990324-e536e915-21fa-4d68-930b-bdf7da3a0ff8.png)
+
+
+after adding the IFNULL() FUnction:
+
+```sql
+SELECT 
+	  order_id,
+    IFNULL(shipper_id, 'NOT assigned') AS shipper
+FROM orders;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164990334-530ad370-b73b-4212-a32d-35fe8da8bcf9.png)
+
+### [Example COALESCE()](#-)
+
+```sql
+SELECT 
+	  order_id,
+    shipper_id,
+    comments,    
+    -- If shipper_id is null & commnets also null put 'NOT assignes'
+    COALESCE(shipper_id, comments, 'NOT assigned') AS shipper
+FROM orders;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164990471-d89a8183-7673-472d-8b92-1ae476156332.png)
+
+### [Excerise](#-)
+
+Write a query t produe this result
+
+![image](https://user-images.githubusercontent.com/36256986/164990505-eca70079-c07a-43fb-a04c-184d92a4efe3.png)
+
+```sql
+SELECT 
+	  CONCAT(first_name , ' ' , last_name) AS customer,
+    IFNULL(phone, 'Unknown') AS phone
+FROM customers;
+```
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 7
+
+<img src="https://img.shields.io/badge/-7. IF Function %20-blue" height=40px>
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
@@ -247,6 +308,13 @@ SELECT TIME_TO_SEC('09:02')- TIME_TO_SEC('09:00');
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
+--------------------------------------------------------------------------------------------------
 
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 
