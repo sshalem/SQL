@@ -286,6 +286,16 @@ FROM customers;
 
 <img src="https://img.shields.io/badge/-7. IF Function %20-blue" height=40px>
 
+There are times we want tocheck a condition , and return a value if the condition is true or not.</br>
+For example , let's take a look on orders table. </br>
+let's say we want to clasify orders into 2 categories ACTIVE and ARCHIVE.</br>
+If the orders are placed in the current year I want to put them in the ACTIVE category, otherwise put them in the ARCHIVE.</br>
+
+![image](https://user-images.githubusercontent.com/36256986/164990799-d8da0578-810e-4e98-9a03-15aa78a6867c.png)
+
+
+
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
