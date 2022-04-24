@@ -433,6 +433,7 @@ FROM clients c;
 
 <img src="https://img.shields.io/badge/-9. Sub Queries in the FROM Clause %20-blue" height=40px>
 
+Whenever we use SubQuery in the [FROM](#-) clause , we need to give it an ALIAS.
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
