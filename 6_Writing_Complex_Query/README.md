@@ -11,7 +11,7 @@
 |  4  |[ALL keyword](#4)   | 
 |  5  |[ANY / SOME keyword](#5)   | 
 |  6  |[Correlated SubQueries](#6)   | 
-|  7  |[EXIST operator](#7)   | 
+|  7  |[EXISTS operator](#7)   | 
 |  8  |[8](#8)   | 
 |  9  |[9](#9)   | 
 
@@ -318,7 +318,35 @@ WHERE invoice_total > (
 
 ###### 7
 
-<img src="https://img.shields.io/badge/-7. EXIST operator %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. EXISTS operator %20-blue" height=40px>
+
+When we use the [**_IN_**](#-) operator , the SubQuery will retun a result from the WHERE clause.</br>
+If the SubQuery we wrote after the [**_IN_**](#-) operator produces a large result set , </br>
+It is more efficient to use the [**_EXISTS_**](#-) operator, because when we use the [**_EXISTS_**](#-) operator, the SubQuery doesn't actually return a result set to the outer query.
+
+We can we are using a [Correlated SubQuery](#-) SubQuery when using the [**_EXISTS_**](#-) operator.
+
+```sql
+SELECT *
+FROM clients
+WHERE client_id IN(
+    SELECT DISTINCT client_id
+    FROM invoices);
+```
+
+```sql
+SELECT *
+FROM clients c
+WHERE EXISTS (
+    SELECT client_id
+    FROM invoices
+    WHERE client_id = c.client_id);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/164971511-d59a2ba9-3835-401a-9d31-7336efc046ba.png)
+
+### [Exercise](#-) 
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
