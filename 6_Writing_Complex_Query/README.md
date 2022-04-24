@@ -5,14 +5,14 @@
 
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
-|  1  |[Sub Queries](#1)   |             |
+|  1  |[Sub Queries in the WHERE clause](#1)   |             |
 |  2  |[IN / NOT IN  (Sub Query)](#2)   |  
 |  3  |[SubQuery VS JOIN](#3)   | 
 |  4  |[ALL keyword](#4)   | 
 |  5  |[ANY / SOME keyword](#5)   | 
 |  6  |[Correlated SubQueries](#6)   | 
 |  7  |[EXISTS operator](#7)   | 
-|  8  |[8](#8)   | 
+|  8  |[Sub Queries in the SELECT Clause](#8)   | 
 |  9  |[9](#9)   | 
 
 
@@ -22,7 +22,7 @@
 
 ###### 1
 
-<img src="https://img.shields.io/badge/-1. Sub Queries %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. Sub Queries in the WHERE clause %20-blue" height=40px>
 
 This is how we use SubQueris. </br>
 We can use them in:
@@ -376,9 +376,9 @@ WHERE NOT EXISTS (
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 8
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-8. Sub Queries in the SELECT clause %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
