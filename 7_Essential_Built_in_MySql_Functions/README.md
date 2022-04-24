@@ -124,7 +124,46 @@ FROM customers;
 
 ### Most useful [**_Date and Time_**](#-) functions:
 
+### The following functions return  [**_Integers_**](#-):
 
+```sql
+-- Get current date & TIme
+SELECT NOW();
+
+-- Get only Current Date
+SELECT CURDATE();
+
+-- Get only current TIme
+SELECT CURTIME();
+
+-- ALl together will be presented in 3 columns
+SELECT NOW() , CURDATE(), CURTIME();
+
+-- Extract the year ,Month, Dayform NOW() Function
+SELECT YEAR(NOW());
+SELECT MONTH(NOW());
+SELECT DAY(NOW());
+
+-- Extract the Hour , Minute, Second form NOW() Function
+SELECT HOUR(NOW());
+SELECT MINUTE(NOW());
+SELECT SECOND(NOW());
+```
+
+### The following functions return [**_Strings_**](#-):
+
+```sql
+SELECT DAYNAME(NOW());
+SELECT MONTHNAME(NOW());
+```
+
+### The [**_EXTRACT()_**](#-) Function is part of the standard SQL language:
+
+```sql
+SELECT EXTRACT(DAY FROM NOW());
+SELECT EXTRACT(MONTH FROM NOW());
+SELECT EXTRACT(YEAR FROM NOW());
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
