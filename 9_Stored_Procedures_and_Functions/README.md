@@ -25,7 +25,7 @@ Let's say I have an application that has a DB. </br>
 Where are we going to write this SQL statements? </br>
 We are not going to write them in our application code for couple of reasons. </br>
 One reason , it will make the App code messy and hard to maintain. </br>
-For that reason we should put our SQL inside a [**_Stored Procedure_**](#-) or [**_Function_**](#-).
+For that reason we should put our SQL inside a [**_Stored Procedure_**](#-) or [**_Function_**](#-).</br>
 (In Spring Boot It's pretty Easy since we only use the Queries in one place which is **_the Repository Class_**.)
 
 ![image](https://user-images.githubusercontent.com/36256986/165103485-63703d50-702e-483a-804f-afa321204775.png)
