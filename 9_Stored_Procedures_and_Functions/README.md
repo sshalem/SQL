@@ -32,14 +32,13 @@ For that reason we should put our SQL inside a [**_Stored Procedure_**](#-) or [
 
 [**_Stored Procedure_**](#-) - Is a DataBase Object that contains a block of SQL code. I our App code we simply call these procedures, get or save the data. </br>
 
-[**_Store and organize SQL_**](#-) -  [**_Stored Procedure_**](#-) used for Store and organize SQL code.
+[**_Store and organize SQL_**](#-) -  **_Stored Procedure_** used for Store and organize SQL code.
 
-[**_Faster_execution_**](#-) - [**_Stored Procedure_**](#-) has other benefits , most DB management systems perform some kind of optimization to the code in [**_Stored Procedure_**](#-). So the SQL code in [**_Stored Procedure_**](#-) can sometimes be [**_executed faster_**](#-).
+[**_Faster_execution_**](#-) - **_Stored Procedure_** has other benefits , most DB management systems perform some kind of optimization to the code in **_Stored Procedure_**. So the SQL code in **_Stored Procedure_** can sometimes be **_executed faster_**.
 
-[**_Data Security_**](#-) - Also, just like [**_VIEWS_**](#-) , [**_Stored Procedure_**](#-) allow us to enforce data security. </br>
+[**_Data Security_**](#-) - Also, just like **_VIEWS_** , **_Stored Procedure_** allow us to enforce data security. </br>
 * For exmple: </br>
-you can remove direct access to the tables, and allow various operations like inserting, updating, adn deleting data to inform your [**_Stored Procedure_**](#-). Then we can decide who can execute which [**_Stored Procedure_**](#-) , and this will limit what user can do with our data.
-
+you can remove direct access to the tables, and allow various operations like inserting, updating, adn deleting data to inform your **_Stored Procedure_**. Then we can decide who can execute which **_Stored Procedure_** , and this will limit what user can do with our data.
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
