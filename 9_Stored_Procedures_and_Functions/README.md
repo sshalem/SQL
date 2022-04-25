@@ -78,9 +78,18 @@ Then execute the code , Refersh the DB, nnow we see the Stored procedure in the 
 
 ### [**Call store procedure as follows:**](#-)
 
+
+* Most of the time , calling a **Stored Procedure** is someting that we do in our App (like JAVA ,Python ,C#), But there are times where we want to call **Stored Procedure** in our SQL code.
+
 ```sql
 CALL get_clients();
 ```
+
+### [**Exercise**](#-)
+
+* Create Stored Procedure called **get_invoices_with_balance** </br>
+to return all the invoices with a balance > 0.
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
