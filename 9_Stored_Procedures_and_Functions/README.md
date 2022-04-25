@@ -8,7 +8,7 @@
 |     |[Introduction Stored Procedures](#Introduction)   |             
 |  1  |[Creating Stored Pocedure](#Creating_Stored_Pocedure)   |             
 |  2  |[Dropping Stored Pocedure](#Dropping_Stored_Pocedure)   |
-|  3  |[3](#3)   | 
+|  3  |[Parameters](#Parameters)   | 
 |  4  |[4](#4)   | 
 |  5  |[5](#5)   | 
 |  6  |[6](#6)   | 
@@ -129,9 +129,9 @@ DROP PROCEDURE IF EXISTS get_clients;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Parameters
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3. Parameters  %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
