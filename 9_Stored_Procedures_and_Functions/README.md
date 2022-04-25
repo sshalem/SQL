@@ -7,7 +7,7 @@
 |:---:|:------------------------------|:----------|  
 |     |[Introduction Stored Procedures](#Introduction)   |             
 |  1  |[Creating Stored Pocedure](#Creating_Stored_Pocedure)   |             
-|  2  |[2](#2)   |
+|  2  |[Dropping Stored Pocedure](#Dropping_Stored_Pocedure)   |
 |  3  |[3](#3)   | 
 |  4  |[4](#4)   | 
 |  5  |[5](#5)   | 
@@ -116,11 +116,15 @@ Just need to write our query and click on APply
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Dropping_Stored_Pocedure
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2. Dropping Stored Pocedure  %20-blue" height=40px>
 
+Use following command to DROP procedure
 
+```sql
+DROP PROCEDURE get_clients;
+```
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
