@@ -248,7 +248,7 @@ CALL get_clients_by_state('NY');
 
 ### [**Exercise**](#-)
 
-* Write a procedure called **get_payments** , wit two parameters:</br>
+* Write a procedure called **get_payments** , with two parameters:</br>
 client_id => INT , payment_method_id => TINYINT
 
 ```sql
