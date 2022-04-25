@@ -5,8 +5,8 @@
 
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
-|     |[Stored Procedures Background](#background)   |             
-|  1  |[1](#1)   |             
+|     |[Introduction Stored Procedures](#Introduction)   |             
+|  1  |[Creating Stored Pocedure](#Creating_Stored_Pocedure)   |             
 |  2  |[2](#2)   |
 |  3  |[3](#3)   | 
 |  4  |[4](#4)   | 
@@ -17,9 +17,9 @@
 
 --------------------------------------------------------------------------------------------------
 
-###### background
+###### Introduction
 
-<img src="https://img.shields.io/badge/- Stored Procedures Background  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/- Introduction Stored Procedures  %20-blue" height=40px>
 
 Let's say I have an application that has a DB. </br>
 Where are we going to write this SQL statements? </br>
@@ -44,9 +44,9 @@ you can remove direct access to the tables, and allow various operations like in
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Creating_Stored_Pocedure
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. Creating Stored Pocedure  %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
