@@ -90,7 +90,16 @@ CALL get_clients();
 * Create Stored Procedure called **get_invoices_with_balance** </br>
 to return all the invoices with a balance > 0.
 
-
+```sql
+DELIMITER $$
+CREATE PROCEDURE get_invoices_with_balance()
+BEGIN
+	SELECT * 
+	FROM invoices
+	WHERE invoice_total - payment_total > 0;
+END $$
+DELIMITER ;
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
