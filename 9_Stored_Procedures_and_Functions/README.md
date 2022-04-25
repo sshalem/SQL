@@ -53,9 +53,35 @@ We want to Store this Query in a **_Stored Procedre_**
 ```sql
 SELECT * FROM clients;
 ```
+### [**Create Stored Procedure**](#-)
 
-How to do that?
-We can create a **_Stored Procedre_** by adding the ```CREATE PROCEDURE```
+[Note](#-): With **MySql** we have to change the **DELIMITER**.
+
+```sql
+-- We have to change the default DELIMITER from (semicolon ;)
+-- to anything that MySql doesn't use
+-- The Convention is $$ (2 dollars sign)
+-- We have to Add a DELIMITER so the Stored Procedure will run as a single unit
+DELIMITER $$
+CREATE PROCEDURE get_clients()
+BEGIN
+  -- This is the Body of the Stored Procedure
+  SELECT * FROM clients;
+END$$
+-- We have to change the DELIMITER back to default (semicolon)
+DELIMITER ;
+```
+
+Then execute the code , Refersh the DB, nnow we see the Stored procedure in the DB.
+
+![image](https://user-images.githubusercontent.com/36256986/165128817-b2ab4025-e187-453a-befc-295c40799785.png)
+
+### [**Call store procedure as follows:**](#-)
+
+```sql
+CALL get_clients();
+```
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
