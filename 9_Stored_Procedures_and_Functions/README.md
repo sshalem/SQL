@@ -48,6 +48,14 @@ you can remove direct access to the tables, and allow various operations like in
 
 <img src="https://img.shields.io/badge/-1. Creating Stored Pocedure  %20-blue" height=40px>
 
+We want to Store this Query in a **_Stored Procedre_**
+
+```sql
+SELECT * FROM clients;
+```
+
+How to do that?
+We can create a **_Stored Procedre_** by adding the ```CREATE PROCEDURE```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
