@@ -184,7 +184,8 @@ DROP VIEW clients_balance;
 ```
 
 If we want to ALTER(Modify) a VIEW , there are few options:
-1. save the VIEW in a folder of VIEW that I create, then it will be easier to modify.
+*  is to save it 
+1. (Best practice) Save the VIEW as sql script in a folder of VIEW that I create, then it will be easier to modify.
 2. Type ```CREATE OR REPLACE VIEW clients_balance``` instead of ``CREATE VIEW ...```
 
 ```sql 
