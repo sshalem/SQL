@@ -8,7 +8,7 @@
 |  2  |[Creating VIEWS](#2)   |
 |  3  |[Using VIEWS](#3)   | 
 |  4  |[Altering or Dropping VIEWS](#4)   | 
-|  5  |[5](#5)   | 
+|  5  |[Updatable VIEWS](#5)   | 
 |  6  |[6](#6)   | 
 |  7  |[7](#7)   | 
 |  8  |[8](#8)   | 
@@ -217,12 +217,47 @@ You can modify the code the click on APPLY button on the bottom right
 
 --------------------------------------------------------------------------------------------------
 
+###### 5
+
+<img src="https://img.shields.io/badge/-5. Updatable VIEWS %20-blue" height=40px>
+
+[Updateable VIEWs](#-) are possible if we DONT use the following in the [VIEW](#-):
+* [DISTINCT](#-)
+* [Aggregate functions](#-)
+* [GROUP BY/ HAVING](#-)
+* [UNION](#-)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
 ###### 
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
 
 --------------------------------------------------------------------------------------------------
 
