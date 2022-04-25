@@ -7,7 +7,7 @@
 |  1  |[What are VIEWS](#1)   |             
 |  2  |[Creating VIEWS](#2)   |
 |  3  |[Using VIEWS](#3)   | 
-|  4  |[4](#4)   | 
+|  4  |[Altering or Dropping VIEWS](#4)   | 
 |  5  |[5](#5)   | 
 |  6  |[6](#6)   | 
 |  7  |[7](#7)   | 
@@ -173,10 +173,41 @@ GROUP BY client_id, name;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 4
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-4. Altering or Dropping VIEWS  %20-blue" height=40px>
 
+If we want to DROP a VIEW type following line:
+
+```sql
+DROP VIEW clients_balance;
+```
+
+If we want to ALTER(Modify) a VIEW , there are few options:
+1. save the VIEW in a folder of VIEW that I create, then it will be easier to modify.
+2. Type ```CREATE OR REPLACE VIEW clients_balance``` instead of ``CREATE VIEW ...```
+
+```sql 
+CREATE OR REPLACE VIEW clients_balance AS
+SELECT 
+     client_id,
+     name,
+     SUM(invoice_total - payment_total) AS balance
+FROM clients c
+JOIN invoices i USING(client_id)
+GROUP BY client_id, name
+ORDER BY balance;
+```
+
+3. CLick on the tool icon
+
+![image](https://user-images.githubusercontent.com/36256986/165055166-edf63c85-b6d3-4ce4-9255-f41c6326c01f.png)
+
+this opens the code this way:
+
+![image](https://user-images.githubusercontent.com/36256986/165055326-aa5416af-77f8-4aca-a24b-d7c591b05948.png)
+
+You can modify the code the click on APPLY button on the bottom right
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
