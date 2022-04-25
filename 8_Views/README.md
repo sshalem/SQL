@@ -206,6 +206,8 @@ ORDER BY balance;
 
 this opens the code this way:
 
+![image](https://user-images.githubusercontent.com/36256986/165056437-8b1636ce-4227-44e2-b820-6c330c01b84a.png)
+
 ![image](https://user-images.githubusercontent.com/36256986/165055326-aa5416af-77f8-4aca-a24b-d7c591b05948.png)
 
 You can modify the code the click on APPLY button on the bottom right
