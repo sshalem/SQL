@@ -101,6 +101,17 @@ END $$
 DELIMITER ;
 ```
 
+### [**CREATE PROCEDURE using MySql Workbench**](#-)
+
+This is how to create procedure With MySql 
+
+![image](https://user-images.githubusercontent.com/36256986/165173144-5724f5ce-cb2b-4fc8-83d5-20ed3f4d33dd.png)
+
+Following window is open with already a ready template for Creating Procedure.
+Just need to write our query and click on APply
+
+![image](https://user-images.githubusercontent.com/36256986/165173187-32791b63-2ac9-4c59-853a-9ac3cedac47d.png)
+
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
