@@ -123,7 +123,7 @@ Just need to write our query and click on APply
 Use following command to DROP procedure
 
 ```sql
-DROP PROCEDURE get_clients;
+DROP PROCEDURE IF EXISTS get_clients;
 ```
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
