@@ -9,9 +9,7 @@
 |  3  |[Using VIEWS](#3)   | 
 |  4  |[Altering or Dropping VIEWS](#4)   | 
 |  5  |[Updatable VIEWS](#5)   | 
-|  6  |[6](#6)   | 
-|  7  |[7](#7)   | 
-|  8  |[8](#8)   | 
+|  6  |[WITH OPTION CHECK clause](#6)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -231,19 +229,9 @@ You can modify the code the click on APPLY button on the bottom right
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### 6
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
-
-
---------------------------------------------------------------------------------------------------
-
-###### 
-
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-6. WITH OPTION CHECK clause %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
@@ -259,11 +247,3 @@ You can modify the code the click on APPLY button on the bottom right
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 
---------------------------------------------------------------------------------------------------
-
-###### 
-
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
-
-
-[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
