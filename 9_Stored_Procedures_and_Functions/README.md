@@ -179,7 +179,7 @@ CALL get_invoices_by_client(1);
 
 <img src="https://img.shields.io/badge/-4. Parameters with default values  %20-blue" height=40px>
 
-### [**Example 1](#-)
+### [**Example 1**](#-)
 
 In this example we create a procedure , with default value for NULL.</br>
 If NULL is entered it will serach for 'CA'
@@ -202,7 +202,7 @@ DELIMITER ;
 CALL get_clients_by_state(NULL);
 ```
 
-### [**Example 2](#-)
+### [**Example 2**](#-)
 
 In this example we create a procedure , with default value for NULL.</br>
 If NULL is entered it will query * from clients.
@@ -227,7 +227,7 @@ CALL get_clients_by_state(NULL);
 CALL get_clients_by_state('NY');
 ```
 
-### [**Example 3](#-)
+### [**Example 3**](#-)
 
 Let's modify the exapmle above to be less verbose. 
 
