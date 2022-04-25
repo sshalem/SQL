@@ -9,7 +9,7 @@
 |  1  |[Creating Stored Pocedure](#Creating_Stored_Pocedure)   |             
 |  2  |[Dropping Stored Pocedure](#Dropping_Stored_Pocedure)   |
 |  3  |[Parameters](#Parameters)   | 
-|  4  |[4](#4)   | 
+|  4  |[Parameters with default values](#Parameters_with_default_values)   | 
 |  5  |[5](#5)   | 
 |  6  |[6](#6)   | 
 |  7  |[7](#7)   | 
@@ -133,14 +133,51 @@ DROP PROCEDURE IF EXISTS get_clients;
 
 <img src="https://img.shields.io/badge/-3. Parameters  %20-blue" height=40px>
 
+We can create a **Stored Procedure** that get parameters.</br>
+See the example below where we pass only one parameter.
+
+```sql
+DROP PROCEDURE IF EXISTS get_clients_by_state;
+
+DELIMITER $$
+CREATE PROCEDURE get_clients_by_state(state CHAR(2))
+BEGIN
+	SELECT * 
+	FROM clients c
+	WHERE c.state = state;
+END$$
+DELIMITER ;
+
+CALL get_clients_by_state('NY');
+```
+
+### [**Exercise**](#-)
+
+Write a Stored Procedure to return invoices for a given client.</br>
+call it **get_invoices_by_client**, give it a client_id parameter.
+
+```sql
+DROP PROCEDURE IF EXISTS get_invoices_by_client;
+
+DELIMITER $$
+CREATE PROCEDURE get_invoices_by_client(client_id INT)
+BEGIN
+	SELECT * 
+	FROM invoices i    
+	WHERE i.client_id = client_id;
+END$$
+DELIMITER ;
+
+CALL get_invoices_by_client(1);
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Parameters_with_default_values
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-4. Parameters with default values  %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
