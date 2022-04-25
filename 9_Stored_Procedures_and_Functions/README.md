@@ -179,6 +179,73 @@ CALL get_invoices_by_client(1);
 
 <img src="https://img.shields.io/badge/-4. Parameters with default values  %20-blue" height=40px>
 
+### [**Example 1](#-)
+
+In this example we create a procedure , with default value for NULL.</br>
+If NULL is entered it will serach for 'CA'
+
+```sql
+DROP PROCEDURE IF EXISTS get_clients_by_state;
+
+DELIMITER $$
+CREATE PROCEDURE get_clients_by_state(state CHAR(2))
+BEGIN
+	-- Give a Default value
+        IF state IS NULL THEN
+		SET state = 'CA';
+	END IF;
+	SELECT * FROM clients c
+	WHERE c.state = state;
+END$$
+DELIMITER ;
+
+CALL get_clients_by_state(NULL);
+```
+
+### [**Example 2](#-)
+
+In this example we create a procedure , with default value for NULL.</br>
+If NULL is entered it will query * from clients.
+In this example I use the IF ELSE 
+
+```sql
+DELIMITER $$
+CREATE PROCEDURE get_clients_by_state(state CHAR(2))
+BEGIN
+	-- Give a Default value
+    	IF state IS NULL THEN
+		SELECT * FROM clients;
+	ELSE        
+		SELECT * FROM clients c
+		WHERE c.state = state;
+	END IF;	
+END$$
+DELIMITER ;
+
+-- Run both CALL's seperatly to check how IF ELSE is working
+CALL get_clients_by_state(NULL);
+CALL get_clients_by_state('NY');
+```
+
+### [**Example 3](#-)
+
+Let's modify the exapmle above to be less verbose. 
+
+```sql
+DROP PROCEDURE IF EXISTS get_clients_by_state;
+
+DELIMITER $$
+CREATE PROCEDURE get_clients_by_state(state CHAR(2))
+BEGIN
+	SELECT * FROM clients c
+	WHERE c.state = IFNULL(state, c.state);	
+END$$
+DELIMITER ;
+
+CALL get_clients_by_state(NULL);
+CALL get_clients_by_state('NY');
+```
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
