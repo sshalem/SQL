@@ -355,7 +355,7 @@ Let's run it , and update invoice_id=2 , payment=-100 and date 2019-01-01:
 Since payment is (-100) it should throw an exception error
 
 ```sql
-CALL make_payment(2, 100, '2019-01-01');
+CALL make_payment(2, -100, '2019-01-01');
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/165345850-9fa19edb-3468-43fa-8b4f-f35fbec781a5.png)
