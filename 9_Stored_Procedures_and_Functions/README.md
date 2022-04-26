@@ -288,6 +288,9 @@ We can also use Stored Procedures for [INSERT](#-) , [UPDATE](#-) or [DELETE](#-
 1. We are going to create a procedure that **_UPDATE_** data 
 2. We are going to do [Parameter Validation](#-) to ensure the Procedure doesn't accidently store BAD data in the DB.
 
+Let's do it in 2 steps.
+
+### [step 1 : UPDATE](#-)
 Let's create a simple procedure that gets 3 parameters and **UPDATE** the DB:
 
 ```sql
@@ -317,10 +320,45 @@ CALL make_payment(2, 100, '2019-01-01');
 
 ![image](https://user-images.githubusercontent.com/36256986/165340666-449c7d2e-b0b3-429a-aa35-d3f9fb386414.png)
 
+### [step 2: parameter validation](#-)
+
+Now let's add paramete validatino , for example to payment_amount.
+
 [SIGNAL](#-) - is like throwing an exceptin in JAVA. </br>
 [SQLSTATE](#-) - code error to be thrown :
-1. [ORCALE](https://docs.oracle.com/cd/E15817_01/appdev.111/b31228/appd.htm)
-2. [IBM](https://www.ibm.com/docs/en/db2-for-zos/11?topic=codes-sqlstate-values-common-error)
+1. error code from [ORCALE](https://docs.oracle.com/cd/E15817_01/appdev.111/b31228/appd.htm)
+2. error code from [IBM](https://www.ibm.com/docs/en/db2-for-zos/11?topic=codes-sqlstate-values-common-error)
+
+```sql
+DROP PROCEDURE IF EXISTS make_payment;
+
+DELIMITER $$
+CREATE PROCEDURE make_payment (
+    invoice_id INT,
+    payment_amount DECIMAL(9, 2),
+    payment_date DATE
+)
+BEGIN
+	IF payment_amount <=0 THEN
+		SIGNAL SQLSTATE '22003' SET MESSAGE_TEXT = 'Invalid payment_amount';
+	END IF;
+	UPDATE invoices i 
+    SET 
+	 i.payment_total = payment_amount,
+        i.payment_date = payment_date
+	WHERE i.invoice_id = invoice_id;
+END $$
+DELIMITER ;
+```
+
+Let's run it , and update invoice_id=2 , payment=-100 and date 2019-01-01:
+Since payment is (-100) it should throw an exception error
+
+```sql
+CALL make_payment(2, 100, '2019-01-01');
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165345850-9fa19edb-3468-43fa-8b4f-f35fbec781a5.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
