@@ -481,7 +481,11 @@ link to [Stack overflow for difference between Functions and Procedures](https:/
 5. Function can be embedded in a SELECT statement.
 6. Function can be used in the WHERE/HAVING/SELECT section
 
+Let's see how to CREATE Function
 
+```sql
+
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
