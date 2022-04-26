@@ -284,6 +284,29 @@ CALL get_payments(NULL , 2);
 
 <img src="https://img.shields.io/badge/-5. Parameters validation %20-blue" height=40px>
 
+We can also use Stored Procedures for [INSERT](#-) , [UPDATE](#-) or [DELETE](#-) data. </br>
+1. We are going to create a procedure that **_UPDATE_** data 
+2. We are going to do [Parameter Validation](#-) to ensure the Procedure doesn't accidently store BAD data in the DB.
+
+Let's create a simple procedure that gets 3 parameters:
+
+```sql
+DELIMITER $$
+CREATE PROCEDURE make_payment (
+    invoice_id INT,
+    payment_amount DECIMAL(9, 2),
+    payment_date DATE
+)
+BEGIN
+    UPDATE invoices i 
+    SET 
+	i.payment_total = payment_amount,
+        i.payment_date = payment_date
+	WHERE i.invoice_id = invoice_id;
+END $$
+DELIMITER ;
+```
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
