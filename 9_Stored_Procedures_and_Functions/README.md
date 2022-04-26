@@ -11,7 +11,7 @@
 |  3  |[Parameters](#Parameters)   | 
 |  4  |[Parameters with default values](#Parameters_with_default_values)   | 
 |  5  |[Parameters validation](#Parameters_validation)   | 
-|  6  |[6](#6)   | 
+|  6  |[Procedure Return OUT Parameters](#Procedure_Return_OUT_Parameters)   | 
 |  7  |[7](#7)   | 
 
 
@@ -364,9 +364,9 @@ CALL make_payment(2, -100, '2019-01-01');
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Procedure_Return_OUT_Parameters
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-6. Procedure Return OUT Parameters %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
