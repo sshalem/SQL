@@ -368,6 +368,46 @@ CALL make_payment(2, -100, '2019-01-01');
 
 <img src="https://img.shields.io/badge/-6. Procedure Return OUT Parameters %20-blue" height=40px>
 
+With Procedures we can also return vlaues to the calling program. </br>
+Lets see how to do it. </br>
+The parameters that I return I add the **OUT** keyword.</br>
+I need to assign each column to an **OUT PARAMETER** 
+
+
+```sql
+DROP PROCEDURE IF EXISTS get_unpaid_invoices_for_client;
+
+DELIMITER $$
+CREATE PROCEDURE get_unpaid_invoices_for_client (
+    client_id INT,
+    OUT invoices_count INT,
+    OUT invoices_total DECIMAL(9, 2)    
+)
+BEGIN
+    SELECT 
+	COUNT(*),
+       	SUM(invoice_total)
+    INTO 
+	invoices_count,
+       	invoices_total
+    FROM invoices i
+    WHERE i.client_id = client_id AND payment_total = 0;        
+END $$
+DELIMITER ;
+```
+
+To run the Procedure need to do the following:
+1. SET the OUT parameters with @ sign and assign 0 to them. (Since they are INT and DECIMAL) - Execute the SET @ lines
+	2. Run them
+3. CALL the procedure and add the SET @ parameters - Run the CALL 
+4. Execute the ```SELECT @invoices_count, @invoices_total``` 
+
+```sql
+SET @invoices_count = 0;
+SET @invoices_total = 0;
+CALL get_unpaid_invoices_for_client(3, @invoices_count, @invoices_total);
+SELECT @invoices_count, @invoices_total;
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
