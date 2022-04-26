@@ -13,8 +13,8 @@
 |  5  |[Parameters validation](#Parameters_validation)   | 
 |  6  |[Procedure Return OUT Parameters](#Procedure_Return_OUT_Parameters)   | 
 |  7  |[Variables](#Variables)   | 
-|  7  |[7](#7)   | 
-|  7  |[7](#7)   | 
+|  8  |[Functions](#Functions)   | 
+|  9  |[9](#9)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -467,9 +467,20 @@ CALL get_risk_factor();
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Functions
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-8. Functions %20-blue" height=40px>
+
+link to [Difference between Function to Stored Procedure](https://www.dotnettricks.com/learn/sqlserver/difference-between-stored-procedure-and-function-in-sql-server)
+link to [Stack overflow for difference between Functions and Procedures](https://stackoverflow.com/questions/2680745/whats-the-differences-between-stored-procedures-functions-and-routineshttps://stackoverflow.com/questions/2680745/whats-the-differences-between-stored-procedures-functions-and-routines)
+
+1. function must return a value 
+2. Functions can have only input parameters for it 
+3. Functions can be called from Procedure whereas Procedures cannot be called from a Function
+4. Function allows only SELECT statement in it (Not INSERT, UPDATE, DELETE)
+5. Function can be embedded in a SELECT statement.
+6. Function can be used in the WHERE/HAVING/SELECT section
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
