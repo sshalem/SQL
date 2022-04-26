@@ -12,6 +12,8 @@
 |  4  |[Parameters with default values](#Parameters_with_default_values)   | 
 |  5  |[Parameters validation](#Parameters_validation)   | 
 |  6  |[Procedure Return OUT Parameters](#Procedure_Return_OUT_Parameters)   | 
+|  7  |[Variables](#Variables)   | 
+|  7  |[7](#7)   | 
 |  7  |[7](#7)   | 
 
 
@@ -397,10 +399,9 @@ DELIMITER ;
 ```
 
 To run the Procedure need to do the following:
-1. SET the OUT parameters with @ sign and assign 0 to them. (Since they are INT and DECIMAL) - Execute the SET @ lines
-	2. Run them
-3. CALL the procedure and add the SET @ parameters - Run the CALL 
-4. Execute the ```SELECT @invoices_count, @invoices_total``` 
+1. SET the OUT parameters with @ sign and assign 0 to them. (Since they are INT and DECIMAL) - Execute the SET @ lines (see **Variables** Section SET @ Variables).
+2. CALL the procedure and add the SET @ parameters - Run the CALL  
+3. Execute the ```SELECT @invoices_count, @invoices_total``` 
 
 ```sql
 SET @invoices_count = 0;
@@ -413,10 +414,54 @@ SELECT @invoices_count, @invoices_total;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Variables
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. Variables %20-blue" height=40px>
 
+We have following types of variables :
+* [User or Session Variables](#-)  - for example ```SET @invoices_count = 0``` </br>
+This variables will be in memory for the entire clients SESSION. when client disconnects fromMySql this variables are FREE
+* [Local Varibales](#-) - this variable is defines inside a Function or Stored Procedure. Quiet often we use calculations in Store Procedures
+
+### [example](#-)
+
+Here I declare  LOcal variables. I can assign a DEFAULT value
+```sql
+DROP PROCEDURE IF EXISTS get_risk_factor;
+
+DELIMITER $$
+CREATE PROCEDURE get_risk_factor ()
+BEGIN
+    -- I give a DEFAULT value of 0 otherwise it will be NULL
+    DECLARE risk_factor DECIMAL(9,2) DEFAULT 0;
+    
+    -- I am not giving a DEFAULT value to invoices_total and invoices_count 
+    -- variable because we'll set it using a SELECT statement
+    DECLARE invoices_total DECIMAL(9,2) DEFAULT 0;
+    DECLARE invoices_count DECIMAL(9,2) DEFAULT 0;
+    
+    SELECT 
+	COUNT(*),
+        SUM(invoice_total)
+	INTO 
+		invoices_count,
+		invoices_total        
+	FROM invoices i;
+    
+    SET risk_factor = invoices_total / invoices_count * 5;
+    
+    SELECT risk_factor;
+END $$
+DELIMITER ;
+```
+
+Execute the Procedure:
+
+```sql
+CALL get_risk_factor();
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165377289-8bccb307-490d-4a03-8c00-3390295f4692.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
