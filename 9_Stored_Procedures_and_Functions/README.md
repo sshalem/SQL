@@ -471,7 +471,7 @@ CALL get_risk_factor();
 
 <img src="https://img.shields.io/badge/-8. Functions %20-blue" height=40px>
 
-link to [Difference between Function to Stored Procedure](https://www.dotnettricks.com/learn/sqlserver/difference-between-stored-procedure-and-function-in-sql-server)
+link to [Difference between Function to Stored Procedure](https://www.dotnettricks.com/learn/sqlserver/difference-between-stored-procedure-and-function-in-sql-server)</br>
 link to [Stack overflow for difference between Functions and Procedures](https://stackoverflow.com/questions/2680745/whats-the-differences-between-stored-procedures-functions-and-routineshttps://stackoverflow.com/questions/2680745/whats-the-differences-between-stored-procedures-functions-and-routines)
 
 1. function must return a value 
