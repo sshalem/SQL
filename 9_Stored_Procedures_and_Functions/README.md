@@ -288,9 +288,11 @@ We can also use Stored Procedures for [INSERT](#-) , [UPDATE](#-) or [DELETE](#-
 1. We are going to create a procedure that **_UPDATE_** data 
 2. We are going to do [Parameter Validation](#-) to ensure the Procedure doesn't accidently store BAD data in the DB.
 
-Let's create a simple procedure that gets 3 parameters:
+Let's create a simple procedure that gets 3 parameters and **UPDATE** the DB:
 
 ```sql
+DROP PROCEDURE IF EXISTS make_payment;
+
 DELIMITER $$
 CREATE PROCEDURE make_payment (
     invoice_id INT,
@@ -307,6 +309,18 @@ END $$
 DELIMITER ;
 ```
 
+Let's run it , and update invoice_id=2 , payment=100 and date 2019-01-01:
+
+```sql
+CALL make_payment(2, 100, '2019-01-01');
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165340666-449c7d2e-b0b3-429a-aa35-d3f9fb386414.png)
+
+[SIGNAL](#-) - is like throwing an exceptin in JAVA. </br>
+[SQLSTATE](#-) - code error to be thrown :
+1. [ORCALE](https://docs.oracle.com/cd/E15817_01/appdev.111/b31228/appd.htm)
+2. [IBM](https://www.ibm.com/docs/en/db2-for-zos/11?topic=codes-sqlstate-values-common-error)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
