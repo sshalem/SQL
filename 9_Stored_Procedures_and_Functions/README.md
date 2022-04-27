@@ -481,11 +481,147 @@ link to [Stack overflow for difference between Functions and Procedures](https:/
 5. Function can be embedded in a SELECT statement.
 6. Function can be used in the WHERE/HAVING/SELECT section
 
-Let's see how to CREATE Function
+Let's see how to CREATE Function.</br>
+The syntax for creating a Function is pretty similar for Stored Procedures.</br>
+The following is the syntax of CREATE FUNCTION statement :
+
+Link to how to create [**Functions**](https://www.mysqltutorial.org/mysql-stored-function/)
 
 ```sql
+DROP FUNCTION IF EXISTS name_of_function;
 
+DELIMITER $$
+CREATE FUNCTION name_of_function(
+	parameter1,
+	parameter2,…
+)
+RETURNS {datatype STRING|INTEGER|REAL|DECIMAL}
+	[NOT] DETERMINISTIC 
+	READS SQL DATA
+	MODIFIES SQL DATA
+BEGIN
+	-- code of statements to be executed
+END $$
+DELIMITER ;
 ```
+
+* [**RETURN Datatype**](#-)  – We can return any type of value from the execution of the function. The type of value that will be returned needs to be specified after the RETURN clause. Once, MySQL finds the RETURN statement while execution of the function, execution of the function is terminated and the value is returned.
+
+* [**DETERMINISTIC**](#-) – The function can be either deterministic or non-deterministic which needs to be specified here. When the function returns the same value for the same values of parameter then it is called deterministic. However, if the function returns a different value for the same values of functions then we can call that function to be nondeterministic. When none of the types of function is mentioned, then MySQL will consider function to be NON-DETERMINISTIC by default.
+
+### [Example 1](#-)
+
+```sql
+DROP FUNCTION IF EXISTS isEligible;
+
+DELIMITER $$
+CREATE FUNCTION isEligible(
+	age INTEGER
+)
+RETURNS VARCHAR(20)
+DETERMINISTIC
+BEGIN
+	IF age > 18 THEN
+		RETURN ("yes");
+	ELSE
+		RETURN ("No");
+	END IF;
+END$$
+DELIMITER ;
+```
+
+How to execute a function :
+
+```sql
+SELECT isEligible(20); 
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165621156-fa824081-902a-484e-af72-333468a69bdb.png)
+
+### [Example 2](#-)
+
+Let us consider some other example that involves returning the number of months between the current date and the supplied date. </br>
+Our function will be as follows –
+
+```sql
+DROP FUNCTION IF EXISTS getMonths;
+
+DELIMITER $$
+CREATE FUNCTION getMonths(sampledate date) 
+RETURNS INT DETERMINISTIC
+BEGIN
+	DECLARE currentDate DATE;
+	SELECT current_date() INTO currentDate;
+	RETURN (12 * (YEAR(currentDate) - YEAR(sampledate)) + (MONTH(currentDate) - MONTH(sampledate)));
+END
+$$
+DELIMITER ;
+```
+
+Let's run to execute a function :
+
+```sql
+SELECT getMonths("2021-12-01");
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165621995-9a404a1a-d52c-4847-801f-c2d7fa0c30ba.png)
+
+### [Example 3](#-)
+
+```sql
+DROP FUNCTION IF EXISTS calcIncome;
+
+DELIMITER //
+CREATE FUNCTION calcIncome ( starting_value INT )
+RETURNS INT
+DETERMINISTIC
+BEGIN
+
+   DECLARE income INT;
+   SET income = 0;
+
+   label1: 
+   WHILE income <= 3000 
+   DO
+     SET income = income + starting_value;
+   END WHILE label1;
+
+   RETURN income;
+END; //
+DELIMITER ;
+
+SELECT calcIncome(100);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165622887-b2bfd185-05bf-44cd-93ee-96b37f709f60.png)
+
+### [Example 4](#-)
+
+```sql
+DROP FUNCTION IF EXISTS CustomerLevel;
+
+DELIMITER $$
+CREATE FUNCTION CustomerLevel(credit DECIMAL(10,2)) 
+RETURNS VARCHAR(20) DETERMINISTIC
+BEGIN
+    DECLARE customerLevel VARCHAR(20);
+
+    IF credit > 50000 THEN
+		SET customerLevel = 'PLATINUM';
+    ELSEIF (credit <= 50000 AND credit >= 10000) THEN
+        SET customerLevel = 'GOLD';
+    ELSEIF credit < 10000 THEN
+        SET customerLevel = 'SILVER';
+    END IF;
+	-- return the customer level
+	RETURN customerLevel;
+END$$
+DELIMITER ;
+
+SELECT CustomerLevel(15445.16);
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165624820-904b2529-7818-4b52-91b2-c19c4a1300ae.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
