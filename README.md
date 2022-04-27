@@ -11,7 +11,7 @@
 |  7  |[Essential_Built_in_MySql_Functions](https://github.com/sshalem/SQL/tree/main/7_Essential_Built_in_MySql_Functions)   | 
 |  8  |[Views](https://github.com/sshalem/SQL/tree/main/8_Views)   | 
 |  9  |[Stored Procedures and Functions](https://github.com/sshalem/SQL/tree/main/9_Stored_Procedures_and_Functions)   | 
-|  10 |[Indexing for high performance](#-)   | 
+|  10 |[Indexing for high performance](https://github.com/sshalem/SQL/tree/main/A_10_Indexing_for_high_performance)   | 
 
 
 
