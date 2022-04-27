@@ -504,5 +504,20 @@ Let's see how to CREATE Function
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
 
+```sql
+DELIMITER $$
+CREATE PROCEDURE InitializeDB(startNumber INT, endNumber INT)
+BEGIN   
+    
+    DECLARE counter INT DEFAULT startNumber;
+    DECLARE en INT DEFAULT endNumber;
 
+    WHILE counter <= en DO
+        insert into books_tb(bookname, author, book_image_url) values('בראשית', 'משה רבנו', 'book_bereshit');
+        SET counter = counter + 1;
+    END WHILE;
+
+END$$
+DELIMITER ;
+```
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
