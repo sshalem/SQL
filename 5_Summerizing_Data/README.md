@@ -9,8 +9,10 @@
 |  2  |[GROUP BY clasue](#2)   		 | 
 |  3  |[HAVING clause](#3)   |[difference between HAVING to WHERE](#-) |
 |  4  |[ROLLUP operator](#4)   |  
-|  5  |[Additional Build in Functions](#5)   |  
-|  6  |[x](#6)   | 
+|  5  |[Additional Build in Functions](#5)    | 
+|     |                        |  [ROW_NUMBER() Function](#5-1)  |
+|     |                        |  [INSERT multiple rows](#5-2)  |
+|     |                        |  [INSERT hierarchical rows](#5-3)  |
 
 
 
@@ -463,6 +465,64 @@ GROUP BY pm.name WITH ROLLUP;
 
 --------------------------------------------------------------------------------------------------
 
+###### 5
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+Additional usable Functions:
+1. [ROW_NUMBER() Function](#5-1)
+2. 
+
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 5-1
+
+<img src="https://img.shields.io/badge/-5.1. ROW_NUMBER() Function %20-blue" height=40px>
+
+SQL ROW_NUMBER() Function Overview
+The ROW_NUMBER() is a window function that assigns a sequential integer number to each row in the query’s result set.
+
+Let's look on the table **order_items:
+
+```sql
+SELECT 
+    order_id,
+    product_id,
+    quantity,
+    unit_price
+FROM order_items;
+```
+
+We don't know how many rows this table has:
+
+![image](https://user-images.githubusercontent.com/36256986/165839860-030647b7-d8b7-4e4d-b429-62da35192d93.png)
+
+to know how many rows ```SELECT COUNT(*) FROM order_items```
+
+![image](https://user-images.githubusercontent.com/36256986/165840090-249e0a82-31c4-4c33-b328-c1c111989a56.png)
+
+Let's assigns a sequential integer number to each row in the query’s result set.
+
+```sql
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY order_id) ID,
+    order_id,
+    product_id,
+    quantity,
+    unit_price    
+FROM order_items;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165840684-325ce604-80b2-4583-8d97-9a89549e1974.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
 ###### 
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
@@ -479,4 +539,38 @@ GROUP BY pm.name WITH ROLLUP;
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
+--------------------------------------------------------------------------------------------------
 
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
