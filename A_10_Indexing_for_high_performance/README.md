@@ -6,7 +6,8 @@
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
 |     |[Introduction](#Introduction)   |             
-|  1  |[Creating Indexes](#Creating_Indexes)   |             
+|  1  |[Creating Indexes](#Creating_Indexes)   |   
+|  2  |[Viewing Indexes](#Viewing_Indexes)   |   
 
 
 
@@ -109,9 +110,41 @@ We can see following changes : </br>
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Viewing_Indexes
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-2. Viewing Indexes  %20-blue" height=40px>
+
+To view the INDEXES we have run both lines (ANALYZE kind of refresh the data so it will be real).
+
+```sql
+ANALYZE TABLE customers;
+SHOW INDEXES IN customers;
+```
+
+following columns shown:
+1. [**Key_name**](#-) -  the name of our index
+  * **PRIMARY** - this is also called the **Clustered Index**. whenever we add a PK to a table MySql creates automatically an INDEX so we can quickly look up for records by their ID. </br>
+  we can see that **PRIMARY** is place at the **customer_id** column.</br>
+  Every table can have a max of 1 **Clustered Index**.
+  * **secondary_indexes** : **idx_state** and **idx_points** . Technically, whenever we make a **secondary_index** , MySql automatically includes the id or the **PK** column in the **secondary_index**
+2. [**Collation**](#-) - represents how data is sorted (A-Ascend, D-Descend)
+3. [**Cardinality**](#-) - Represents an estimated number of unique values inthe **INDEX**. we use ANALZYE statement to get Real values.
+4.  [**Index_type**](#-) -  BTREE : Binary Tree (Most INDEXES are stored as Binary Tree)
+
+![image](https://user-images.githubusercontent.com/36256986/165847061-3f67adaa-ee1c-43d2-8c97-aafc72aa4b65.png)
+
+### [Example 2] Show order INDEXES
+
+
+
+```sql
+SHOW INDEXES IN orders;
+```
+
+The **secondary_index** shows we have 3 FK columns.
+SO Whenever we create a Relationship between 2 tables , MySql automatically creates an INDEX on the Forein Key so we can quickly join our tables/
+
+![image](https://user-images.githubusercontent.com/36256986/165849752-1c00b3ae-b042-4a54-b530-fc6fa55e897a.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
