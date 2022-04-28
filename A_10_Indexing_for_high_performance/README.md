@@ -41,6 +41,18 @@ Because the whole point of [Indexes](#-) is to speed up a Slow Query.
 
 <img src="https://img.shields.io/badge/-1. Creating Indexes %20-blue" height=40px>
 
+### Before starting , run the sql script [**_load_1000_customers.sql_**.](#-)
+
+Run the following query:
+
+```sql
+SELECT customer_id FROM customers WHERE state = 'CA';
+```
+
+Let's see how MySql actually runs the above query:
+
+
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
