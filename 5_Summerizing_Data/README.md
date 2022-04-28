@@ -505,6 +505,7 @@ to know how many rows ```SELECT COUNT(*) FROM order_items```
 
 ![image](https://user-images.githubusercontent.com/36256986/165840090-249e0a82-31c4-4c33-b328-c1c111989a56.png)
 
+### [ROW_NUMBER()](#-)
 Let's assigns a sequential integer number to each row in the query’s result set.
 
 ```sql
