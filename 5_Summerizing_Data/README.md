@@ -9,7 +9,7 @@
 |  2  |[GROUP BY clasue](#2)   		 | 
 |  3  |[HAVING clause](#3)   |[difference between HAVING to WHERE](#-) |
 |  4  |[ROLLUP operator](#4)   |  
-|  5  |[x](#5)   |  
+|  5  |[Additional Build in Functions](#5)   |  
 |  6  |[x](#6)   | 
 
 
