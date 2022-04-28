@@ -49,9 +49,40 @@ Run the following query:
 SELECT customer_id FROM customers WHERE state = 'CA';
 ```
 
-Let's see how MySql actually runs the above query:
+Let's see how MySql actually runs the above query. </br>
+Run the following QUery (new keyword EXPLAIN is used)
 
+```sql
+EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA';
+```
+we will the see use of each column later in the section, but for now pay attention to our :
+1. type
+2. rows
 
+When we see a **type = all** , MySql will do a full table scan , which means it's going to read every single record in the table.</br>
+In the **rows** column , we see the number that it scanned **rows=1010**.
+
+![image](https://user-images.githubusercontent.com/36256986/165841137-a90aacdc-3529-4af4-83e9-6e5d30ec5d06.png)
+
+Because we don't have an **_INDEX_** on our table , MySql will have to scan every single record in the table. (Imgaine we have millions of records).
+This is where we add **_INDEX_** to our table.</br>
+
+SO we will add an **_INDEX_** on our **_state_** column to which speed up the query.
+
+```sql
+CREATE INDEX idx_state ON customers (state);
+EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA';
+```
+
+**type = ref** </br>
+**possible_keys=idx_state** </br>
+**key=idx_state** </br>
+**key_len=8**</br>
+[**rows=112**](#-)</br>
+**filtered=100**</br>
+**extra=Using index**</br>
+
+![image](https://user-images.githubusercontent.com/36256986/165843556-62a13144-de83-41bf-874b-7c37be201553.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
