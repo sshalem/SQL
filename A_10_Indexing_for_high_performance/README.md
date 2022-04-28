@@ -6,15 +6,9 @@
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
 |     |[Introduction](#Introduction)   |             
-|  1  |[Creating Stored Pocedure](#Creating_Stored_Pocedure)   |             
-|  2  |[Dropping Stored Pocedure](#Dropping_Stored_Pocedure)   |
-|  3  |[Parameters](#Parameters)   | 
-|  4  |[Parameters with default values](#Parameters_with_default_values)   | 
-|  5  |[Parameters validation](#Parameters_validation)   | 
-|  6  |[Procedure Return OUT Parameters](#Procedure_Return_OUT_Parameters)   | 
-|  7  |[Variables](#Variables)   | 
-|  8  |[Functions](#Functions)   | 
-|  9  |[9](#9)   | 
+|  1  |[Creating Indexes](#Creating_Indexes)   |             
+
+
 
 
 --------------------------------------------------------------------------------------------------
@@ -43,9 +37,9 @@ Because the whole point of [Indexes](#-) is to speed up a Slow Query.
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Creating_Indexes
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. Creating Indexes %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
