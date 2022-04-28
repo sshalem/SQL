@@ -142,7 +142,7 @@ SHOW INDEXES IN orders;
 ```
 
 The **secondary_index** shows we have 3 FK columns.
-SO Whenever we create a Relationship between 2 tables , MySql automatically creates an INDEX on the Forein Key so we can quickly join our tables/
+SO Whenever we create a Relationship between 2 tables , MySql automatically creates an INDEX on the Forein Key so we can quickly join our tables.
 
 ![image](https://user-images.githubusercontent.com/36256986/165849752-1c00b3ae-b042-4a54-b530-fc6fa55e897a.png)
 
