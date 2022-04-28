@@ -96,6 +96,13 @@ EXPLAIN SELECT customer_id FROM customers WHERE points > 1000;
 SELECT * FROM customers WHERE points > 1000;
 ```
 
+We can see following changes : </br>
+* **type = range** 
+* **possible_keys=idx_points**
+* **key=idx_points**
+* **key_len=4**
+* [**rows=529**](#-)
+* 
 ![image](https://user-images.githubusercontent.com/36256986/165845771-8c91dac8-d568-42f0-8df0-2ef55eef073e.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
