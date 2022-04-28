@@ -43,6 +43,7 @@ Because the whole point of [Indexes](#-) is to speed up a Slow Query.
 
 ### Before starting , run the sql script [**_load_1000_customers.sql_**.](#-)
 
+When doing INDEX, we cannot use ``SELECT *``` we must specify the columns name. </br>
 Run the following query:
 
 ```sql
@@ -74,16 +75,28 @@ CREATE INDEX idx_state ON customers (state);
 EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA';
 ```
 
-**type = ref** </br>
-**possible_keys=idx_state** </br>
-**key=idx_state** </br>
-**key_len=8**</br>
-[**rows=112**](#-)</br>
-**filtered=100**</br>
-**extra=Using index**</br>
+We can see following changes : </br>
+* **type = ref** 
+* **possible_keys=idx_state**
+* **key=idx_state**
+* **key_len=8**
+* [**rows=112**](#-)
+* **filtered=100**
+* **extra=Using index**
 
 ![image](https://user-images.githubusercontent.com/36256986/165843556-62a13144-de83-41bf-874b-7c37be201553.png)
 
+### [Exercise](#-)
+
+Write a query to find customers with more than 1000 points.
+
+```sql
+CREATE INDEX idx_points ON customers (points);
+EXPLAIN SELECT customer_id FROM customers WHERE points > 1000;
+SELECT * FROM customers WHERE points > 1000;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/165845771-8c91dac8-d568-42f0-8df0-2ef55eef073e.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
