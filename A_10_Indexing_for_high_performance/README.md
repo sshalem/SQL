@@ -180,19 +180,26 @@ Answer:
 * 20 is the number of characters we want to include in the INDEX.
 * This includes only the first 20 caharacters of the INDEX.
 
-THis is how we decide the number of 20.
-Let's try a few prefix length and see how many unique values we get.
+THis is how we decide the number of 20. </br>
+Let's try a few prefix length and see how many unique values we get.</br>
+Our goal here, is to maximize the number of unique values is our INDEX.</br>
+So we try different length number.
 
 ```sql
 SELECT 
     -- The first Character of last_name 
  	  COUNT(DISTINCT LEFT(last_name,1)),
+    -- The first 5 Character of last_name 
     COUNT(DISTINCT LEFT(last_name,5)) ,
+    -- The first 10 Character of last_name 
     COUNT(DISTINCT LEFT(last_name,10))
 FROM customers;
 ```
 
-![image](https://user-images.githubusercontent.com/36256986/166122825-f100da7a-5b2b-4f86-897e-3ac991c96e1c.png)
+5 has 966 unique values.
+10 has 996 unique values.
+
+![image](https://user-images.githubusercontent.com/36256986/166123337-394a4349-6b8c-4a9f-a106-5b7444a18e7f.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
