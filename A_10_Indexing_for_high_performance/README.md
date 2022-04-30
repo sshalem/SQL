@@ -156,7 +156,43 @@ SO Whenever we create a Relationship between 2 tables , MySql automatically crea
 
 <img src="https://img.shields.io/badge/-3. Prefix Indexes %20-blue" height=40px>
 
+If the column we want to put an INDEX on is a String column (CHAR, VARCHAR, TEXT, BLOB) our INDEX :
+1. may consume a lot of space 
+2. Won't perfrom well
 
+Smaller INDEXES are better because they can fit in memmory and this :
+* makes our search faster
+
+When IDEXING String columns we don't want to include the entire column in the INDEX, we only want to include the first few characters or the [PREFIX](#-) of the column so our INDEX will be smaller.</br>
+
+### [Example](#-)
+
+Let's say we want to create an INDEX on the last_name column in customers table.
+
+```sql
+CREATE INDEX idx_lastname ON customers (last_name(20));
+```
+
+Question
+* Why (last_name(20)) ? 
+
+Answer:
+* 20 is the number of characters we want to include in the INDEX.
+* This includes only the first 20 caharacters of the INDEX.
+
+THis is how we decide the number of 20.
+Let's try a few prefix length and see how many unique values we get.
+
+```sql
+SELECT 
+    -- The first Character of last_name 
+ 	  COUNT(DISTINCT LEFT(last_name,1)),
+    COUNT(DISTINCT LEFT(last_name,5)) ,
+    COUNT(DISTINCT LEFT(last_name,10))
+FROM customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/166122825-f100da7a-5b2b-4f86-897e-3ac991c96e1c.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
