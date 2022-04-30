@@ -9,7 +9,7 @@
 |  1  |[Creating Indexes](#Creating_Indexes)   |   
 |  2  |[Viewing Indexes](#Viewing_Indexes)   |   
 |  3  |[Prefix Indexes](#Prefix_Indexes)   |   
-
+|  4  |[Full text Indexes](#Full_text_Indexes)   |   
 
 
 
@@ -205,9 +205,13 @@ FROM customers;
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Full_text_Indexes
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-4. Full_text_Indexes %20-blue" height=40px>
+
+A full-text index in MySQL is an index of type FULLTEXT . Full-text indexes can be used only with InnoDB or MyISAM tables, and can be created only for CHAR , VARCHAR , or TEXT columns. </br>
+
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
