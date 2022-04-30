@@ -8,6 +8,7 @@
 |     |[Introduction](#Introduction)   |             
 |  1  |[Creating Indexes](#Creating_Indexes)   |   
 |  2  |[Viewing Indexes](#Viewing_Indexes)   |   
+|  3  |[Prefix Indexes](#Prefix_Indexes)   |   
 
 
 
@@ -151,9 +152,10 @@ SO Whenever we create a Relationship between 2 tables , MySql automatically crea
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Prefix_Indexes
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-3. Prefix Indexes %20-blue" height=40px>
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
