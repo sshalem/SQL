@@ -415,32 +415,31 @@ WHERE state = 'CA' AND last_name LIKE 'A%';
 
 ```sql
 SELECT 
-	COUNT(*)
-FROM (SELECT			
-	state,
-	count(*)
-     from customers
-     group by state) as states;
-
--- This query does the same with fewer code line
-SELECT 
-	COUNT(DISTINCT state)
+	COUNT(DISTINCT state) AS states,
+	COUNT(DISTINCT last_name) AS last_names
 FROM customers;
 ```
 
-![image](https://user-images.githubusercontent.com/36256986/166159884-25aa296d-da0c-4013-86f4-1509508354f4.png)
+states has cardinality of 48, last_names has 996.
+
+![image](https://user-images.githubusercontent.com/36256986/166163910-432d3fe3-5c32-4fbc-a27c-30dabab34917.png)
+
+Let's create 2 INDEXES as follows:
 
 ```sql
-SELECT 
-	COUNT(*)
-FROM (SELECT			
-	last_name,
-	COUNT(*)
-     FROM customers
-     GROUP BY last_name
-     HAVING last_name LIKE 'A%') AS last_name;
+CREATE INDEX idx_lastname_state ON customers(last_name, state);
+CREATE INDEX idx_state_lastname ON customers(state, last_name);
+```
 
+Now lets run the following SQL to see how the first column can affect the search :
 
+```sql
+EXPLAIN SELECT 
+	ROW_NUMBER() OVER() AS Id,
+	customer_id
+FROM customers 
+USE INDEX(idx_lastname_state)
+WHERE state = 'CA' AND last_name LIKE 'A%';
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/166159945-4e55e012-57dd-43e6-9c46-4c648e31b10b.png)
