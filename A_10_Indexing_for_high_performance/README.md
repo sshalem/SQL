@@ -397,7 +397,7 @@ The CARDINLITY of Primary key is 1010. (So 1010 unique values)
 
 * So , as a basic RULE , better put the columns with higher carinality first , BUT don't take this as a hard and FAST rule . This is just a starting point, you should always take your query and the date time into account.
 
-### [Example 1](#-)
+### [Example to show that NOT always the first column should be with higher Cardinallity](#-)
 
 We have the following query.
 
@@ -431,7 +431,7 @@ CREATE INDEX idx_lastname_state ON customers(last_name, state);
 CREATE INDEX idx_state_lastname ON customers(state, last_name);
 ```
 
-Now lets run the following SQL to see how the first column can affect the search :
+Now lets run the following SQL with INDEX of **idx_lastname_state**:
 
 ```sql
 EXPLAIN SELECT 
@@ -442,9 +442,29 @@ USE INDEX(idx_lastname_state)
 WHERE state = 'CA' AND last_name LIKE 'A%';
 ```
 
+When using INDEX of idx_lastname_state we get 40 rows:
+
+![image](https://user-images.githubusercontent.com/36256986/166164421-c18480a7-a264-4a16-9ace-3753d744f9ab.png)
+
+Lets use the INDEX of **idx_state_lastname**
+
+```sql
+EXPLAIN SELECT 
+	ROW_NUMBER() OVER() AS Id,
+	customer_id
+FROM customers 
+USE INDEX(idx_state_lastname)
+WHERE state = 'CA' AND last_name LIKE 'A%';
+```
+
+When using INDEX of idx_lastname_state we get 7 rows:
+
+![image](https://user-images.githubusercontent.com/36256986/166164475-26ed77f2-b0a9-4e4b-b241-c2b08b846bc5.png)
+
+
 ![image](https://user-images.githubusercontent.com/36256986/166159945-4e55e012-57dd-43e6-9c46-4c648e31b10b.png)
 
-### [Example 2](#-)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
