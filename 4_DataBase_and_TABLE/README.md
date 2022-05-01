@@ -29,7 +29,7 @@
 Command for **_creating DB_**:
 
 ```sql
-CREATE DATABASE orders_tb;
+CREATE DATABASE IF NOT EXISTS orders_tb;
 ```
 
 
@@ -64,21 +64,23 @@ USE orders_tb;
 <img src="https://user-images.githubusercontent.com/36256986/158580714-9527a8a7-efd6-4cb7-9f9a-d0ac62c6203f.png" width=300px height=150px>
 
 ```sql
-CREATE TABLE student(
-    student_id INT PRIMARY KEY,
-    name VARCHAR(20),
-    major VARCHAR(20)    
+DROP TABLE IF EXISTS student;
+CREATE TABLE IF NOT EXISTS student(
+    student_id  INT PRIMARY KEY,
+    name 	VARCHAR(20),
+    major 	VARCHAR(20)    
 );
 ```
 
 ### Another way to define the [PRIMARY KEY](#-):
 
 ```sql
+DROP TABLE IF EXISTS student;
 CREATE TABLE student(
-    student_id INT,
-    name VARCHAR(20),
-    major VARCHAR(20),
-    PRIMARY KEY (student_id)
+    student_id 	INT,
+    name 	VARCHAR(20),
+    major 	VARCHAR(20),
+    PRIMARY 	KEY (student_id)
 );
 ```
 
@@ -94,13 +96,14 @@ CREATE TABLE student(
 Let's see the following table without constraints: </br>
 
 ```sql
+DROP TABLE IF EXISTS student;
 CREATE TABLE student(
-    student_id INT,
-    name VARCHAR(20),
-    city VARCHAR(20),
-    address VARCHAR(20),
-    major VARCHAR(20),
-    PRIMARY KEY (student_id)
+    student_id 	INT,
+    name 	VARCHAR(20),
+    city 	VARCHAR(20),
+    address 	VARCHAR(20),
+    major 	VARCHAR(20),
+    PRIMARY 	KEY (student_id)
 );
 ```
 
@@ -113,13 +116,14 @@ Constraints words are:
 - DEFAULT
 
 ```sql
+DROP TABLE IF EXISTS student;
 CREATE TABLE student(
-    student_id INT AUTO_INCREMENT,
-    name VARCHAR(20) NOT NULL,
-    city VARCHAR(20),
-    address VARCHAR(20) UNIQUE,
-    major VARCHAR(20) DEFAULT 'undecided',
-    PRIMARY KEY (student_id)
+    student_id 	INT AUTO_INCREMENT,
+    name 	VARCHAR(20) NOT NULL,
+    city 	VARCHAR(20),
+    address 	VARCHAR(20) UNIQUE,
+    major 	VARCHAR(20) DEFAULT 'undecided',
+    PRIMARY 	KEY (student_id)
 );
 ```
 
@@ -137,11 +141,12 @@ With **DESCRIBE** command we can see the definition of each column .
 Let's look at the table we created:
 
 ```sql
+DROP TABLE IF EXISTS student;
 CREATE TABLE student(
-    student_id INT,
-    name VARCHAR(20),
-    major VARCHAR(20),
-    PRIMARY KEY (student_id)
+    student_id 	INT,
+    name 	VARCHAR(20),
+    major 	VARCHAR(20),
+    PRIMARY 	KEY (student_id)
 )
 ```
 
@@ -173,6 +178,10 @@ DROP command is actually deleting the table.
 
 ```sql
 DROP TABLE student;
+
+-- OR better to write it this way 
+
+DROP TABLE IF EXISTS student;
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/162806657-55d36206-98cc-430e-9e40-5a9227e06330.png)
@@ -190,11 +199,12 @@ With **ALTER** command we can add a new field to an existing table. </br>
 Let say we created the following table:
 
 ```sql
+DROP TABLE IF EXISTS student;
 CREATE TABLE student(
-    student_id INT,
-    name VARCHAR(20),
-    major VARCHAR(20),
-    PRIMARY KEY (student_id)
+    student_id 	INT,
+    name 	VARCHAR(20),
+    major 	VARCHAR(20),
+    PRIMARY 	KEY (student_id)
 );
 ```
 
