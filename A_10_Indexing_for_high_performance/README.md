@@ -6,7 +6,7 @@
 |     |  Subject           |		|
 |:---:|:------------------------------|:----------|  
 |     |[Introduction](#Introduction)   |             
-|  1  |[Creating Indexes](#Creating_Indexes)   |   
+|  1  |[CREATE DROP SHOW Indexes](#CREATE_DROP_SHOW_Indexes)   |   
 |  2  |[Viewing Indexes](#Viewing_Indexes)   |   
 |  3  |[Prefix Indexes](#Prefix_Indexes)   |   
 |  4  |[Full text Indexes](#Full_text_Indexes)   |   
@@ -41,9 +41,9 @@ Because the whole point of [Indexes](#-) is to speed up a Slow Query.
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 --------------------------------------------------------------------------------------------------
 
-###### Creating_Indexes
+###### CREATE_DROP_SHOW_Indexes
 
-<img src="https://img.shields.io/badge/-1. Creating Indexes %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-1. CREATE DROP SHOW Indexes %20-blue" height=40px>
 
 ### Before starting , run the sql script [**_load_1000_customers.sql_**.](#-)
 
@@ -60,6 +60,7 @@ Run the following QUery (new keyword EXPLAIN is used)
 ```sql
 EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA';
 ```
+
 we will the see use of each column later in the section, but for now pay attention to our :
 1. type
 2. rows
@@ -73,6 +74,8 @@ Because we don't have an **_INDEX_** on our table , MySql will have to scan ever
 This is where we add **_INDEX_** to our table.</br>
 
 SO we will add an **_INDEX_** on our **_state_** column to which speed up the query.
+
+### [CREATE INDEX and EXPLAIN](#-)
 
 ```sql
 CREATE INDEX idx_state ON customers (state);
@@ -89,6 +92,21 @@ We can see following changes : </br>
 * **extra=Using index**
 
 ![image](https://user-images.githubusercontent.com/36256986/165843556-62a13144-de83-41bf-874b-7c37be201553.png)
+
+### [Command to SHOW INDEXES](#-)
+
+```sql
+SHOW INDEXES IN customers;
+```
+
+### [Command to DROP INDEXES](#-)
+
+```sql
+DROP INDEX idx_points ON customers;
+DROP INDEX idx_state ON customers;
+SHOW INDEXES IN customers;
+```
+
 
 ### [Exercise](#-)
 
