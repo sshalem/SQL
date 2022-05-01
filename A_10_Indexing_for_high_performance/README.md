@@ -10,6 +10,7 @@
 |  2  |[Viewing Indexes](#Viewing_Indexes)   |   
 |  3  |[Prefix Indexes](#Prefix_Indexes)   |   
 |  4  |[Full text Indexes](#Full_text_Indexes)   |   
+|  5  |[Composite Indexes](#Composite_Indexes)   |   
 
 
 
@@ -217,6 +218,13 @@ For the lecture ,Download the new script ```create-db-blog.sql``` and run it.</b
 Let's say we're gong to build a blog web site and give our users the abilit to search for blog posts.</br>
 Let's say someone searches for 'react redux' , how we can find posts that are about 'react redux'?</br>
 
+Create FULL TEXT INDEX
+
+```sql
+CREATE FULLTEXT INDEX idx_title_body ON posts (title, body);
+```
+
+
 ### [First way](#-)
 
 ```sql
@@ -227,7 +235,7 @@ WHERE
     OR body LIKE '%react%' OR body LIKE '%redux%';
 ```
 
-Ths gives following result:
+This gives following result:
 
 ![image](https://user-images.githubusercontent.com/36256986/166130794-7573589c-725c-4a00-987d-5abc6080d471.png)
 
@@ -240,19 +248,70 @@ In this SQL query the words 'react redux' can be together or be seperated by wor
 SELECT *
 FROM posts
 WHERE MATCH(title, body) AGAINST('react redux');
+
+EXPLAIN SELECT * FROM posts WHERE MATCH(title, body) AGAINST('react redux');
 ```
 
+Gives same result as in Fisrt way above.
+
+![image](https://user-images.githubusercontent.com/36256986/166130794-7573589c-725c-4a00-987d-5abc6080d471.png)
+
+```sql
+EXPLAIN SELECT * FROM posts WHERE MATCH(title, body) AGAINST('react redux');
+```
+
+![image](https://user-images.githubusercontent.com/36256986/166131377-5135c77c-4087-47f0-8f20-417d67d6f5a3.png)
+
+### [Third way with **_RELEVENCY SCORE_** in default mode](#-)
+
 One of the benfits they include relevence score. So based on anumber of factors ,MySql calculates the relevency score for each row ,that calculates the search phrase. </br>
-The relevency SCore is afloting point number between 0 to 1.</br>
+The relevency score is afloting point number between 0 to 1.</br>
 0 - means no relevence
+
+Full Text search has 2 modes.
+1. default mode - natural language mode (which is default mode) , this is what we used in the example above.
+2. Boolean mode - with this mode we can include/exclude certain words just like hw we use google.
+
+```sql
+SELECT * , MATCH(title, body) AGAINST('react redux')
+FROM posts
+WHERE MATCH(title, body) AGAINST('react redux');
+```
+
+We have 2 columns added , date published, Relevency_score.</br>
+The results are sorted by relevency score in descending order.</br>
+This isvery powerful , just like search engines like google. 
+
+![image](https://user-images.githubusercontent.com/36256986/166131066-595ab87e-f2ca-43ca-ab9e-b4f801b4c826.png)
+
+
+### [Third way with **_RELEVENCY SCORE_** in BOOLEAN mode](#-)
+
+```sql
+SELECT * , MATCH(title, body) AGAINST('react redux')
+FROM posts
+WHERE MATCH(title, body) AGAINST('react -redux' IN BOOLEAN MODE);
+```
+
+```sql
+SELECT * , MATCH(title, body) AGAINST('react redux')
+FROM posts
+WHERE MATCH(title, body) AGAINST('react -redux +form' IN BOOLEAN MODE);
+```
+
+```sql
+SELECT * , MATCH(title, body) AGAINST('react redux')
+FROM posts
+WHERE MATCH(title, body) AGAINST('"handling a form"' IN BOOLEAN MODE);
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Composite_Indexes
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-5. Composite_Indexes %20-blue" height=40px>
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
