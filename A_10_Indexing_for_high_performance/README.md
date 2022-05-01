@@ -13,7 +13,7 @@
 |  5  |[Composite Indexes](#Composite_Indexes)   |   
 |  6  |[Order of Columns in Composite Indexes](#Order_of_Columns_in_Composite_Indexes)   |  
 |  7  |[When INDEXES are ignored](#When_INDEXES_are_ignored)   |   
-
+|  8  |[Using Indexes for Sorting](#Using_Indexes_for_Sorting)   |   
 
 --------------------------------------------------------------------------------------------------
 
@@ -23,6 +23,8 @@
 
 [Indexes](#-) speed up our queries dramatically.</br>
 [Indexes](#-) are basically data structures , that Database engine use to quickly find data.</br>
+
+https://www.guru99.com/indexing-in-database.html
 
 ### Cost of [Indexes](#-)
 
@@ -571,6 +573,57 @@ Now we get 4 rows .
 
 --------------------------------------------------------------------------------------------------
 
+###### Using_Indexes_for_Sorting
+
+<img src="https://img.shields.io/badge/-8. Using Indexes for Sorting  %20-blue" height=40px>
+
+So far we used INDEXES for filtering data. </br>
+We can also use INDEXES for sorting data. </br>
+
+These are the INDEXES we have now:
+
+```sql
+SHOW INDEXES IN customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/166165876-1b4c131d-2239-4df5-9037-4047c9e62e69.png)
+
+### [Write Query to sort customers by their state](#-)
+
+```sql
+EXPLAIN 
+	SELECT customer_id FROM customers ORDER BY state;
+```
+
+type  - index </br>
+key   - idx_state_points </br>
+rows  - 1010  </br>
+extra - Using index
+
+![image](https://user-images.githubusercontent.com/36256986/166166290-45fe5d70-2f01-42a0-b4b1-31feb39b6ab0.png)
+
+Let's see what happens if we SORT by different column that is not in our INDEX:
+
+```sql
+EXPLAIN 
+    SELECT customer_id 
+    FROM customers 
+    ORDER BY first_name;
+```
+
+type  - all (Full table scan) </br>
+key   - null </br>
+rows  - 1010  </br>
+extra - Using filesort (filesort - is the name of the algorithm that MySql uses to sort data in a table) </br>
+
+filesort - is very expensive operation.
+
+![image](https://user-images.githubusercontent.com/36256986/166166396-4d240846-3ba2-4f32-9b8b-dd7ff0ca7070.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
 ###### 
 
 <img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
@@ -578,3 +631,11 @@ Now we get 4 rows .
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
