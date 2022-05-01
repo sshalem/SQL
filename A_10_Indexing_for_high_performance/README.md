@@ -11,6 +11,7 @@
 |  3  |[Prefix Indexes](#Prefix_Indexes)   |   
 |  4  |[Full text Indexes](#Full_text_Indexes)   |   
 |  5  |[Composite Indexes](#Composite_Indexes)   |   
+|  6  |[Order of Columns in Composite Indexes](#Order_of_Columns_in_Composite_Indexes)   |  
 
 
 
@@ -331,7 +332,7 @@ EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA' AND points > 1000;
 ```
 
 MySql take the **idx_state** column, so no matter how many INDEXSES I have , MySql will take the maximum of 1 INDEX.</br>
-Number of ROWS is 112. this means it scans 112 times the table for points. 
+Number of [**ROWS is 112**](#-). this means it scans 112 times the table for points. 
 
 ![image](https://user-images.githubusercontent.com/36256986/166142273-30455ab0-0f72-40d1-bf29-c67e75d1eeba.png)
 
@@ -346,9 +347,22 @@ CREATE INDEX idx_state_points ON customers (state,points);
 EXPLAIN SELECT customer_id FROM customers WHERE state = 'CA' AND points > 1000;
 ```
 
-Number of ROWS is 58. 
+Number of [**ROWS is 58**](#-). 
 
 ![image](https://user-images.githubusercontent.com/36256986/166142596-bda86ccd-d64f-4bdb-9bf1-38b655bcc61d.png)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
+###### Order_of_Columns_in_Composite_Indexes
+
+<img src="https://img.shields.io/badge/-6. Order_of_Columns_in_Composite_Indexes %20-blue" height=40px>
+
+* Put the most frequently columns used first
+* Put the columns with a higher cardinality first
+* 
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
@@ -360,3 +374,14 @@ Number of ROWS is 58.
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+###### 
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
