@@ -351,6 +351,16 @@ Number of [**ROWS is 58**](#-).
 
 ![image](https://user-images.githubusercontent.com/36256986/166142596-bda86ccd-d64f-4bdb-9bf1-38b655bcc61d.png)
 
+* Most of the time we should use composite INDEXES because a query can have multiple filters.
+* INDEXES can help us store data faster, so if we have multiple columns in an INDEX , we can also speed up **SORTING** of our data
+* Need to know ,the more INDEXES we have the slower the write operations are going to be.
+* MySql Automativally includes the PRIMARY key of the table , in each secondary INDEX. 
+* If we have a lot of Single column INDEXES ,they are going to waste a lot of space. and That's why it's better to [**Composite INDEXES**](#-).
+
+[How many columns should we include in our INDEXES?](#-) </br>
+In MySql an INDEX can have a maximum of 16 columns. (4 to 6 columns perform well But don't take it as  a rule or best practice) .
+
+
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
