@@ -397,7 +397,21 @@ The CARDINLITY of Primary key is 1010. (So 1010 unique values)
 
 * So , as a basic RULE , better put the columns with higher carinality first , BUT don't take this as a hard and FAST rule . This is just a starting point, you should always take your query and the date time into account.
 
-### [**Example 1**](#-)
+### [Example 1](#-)
+
+We have the following query.
+
+[Question](#-)
+* which columns should come first in our INDEX?
+
+```sql
+SELECT customer_id
+FROM customers 
+WHERE state = 'CA' AND last_name LIKE 'A%';
+```
+
+[Answer](#-)
+* 
 
 ### [Example 2](#-)
 
