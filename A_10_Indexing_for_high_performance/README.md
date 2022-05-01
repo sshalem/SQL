@@ -381,9 +381,25 @@ SHOW INDEXES IN customers;
 <img src="https://img.shields.io/badge/-6. Order_of_Columns_in_Composite_Indexes %20-blue" height=40px>
 
 * Put the most frequently columns used first
-* Put the columns with a higher cardinality first
-* 
+* Put the columns with a higher CARDINALITY first(CARDINALITY  means The number of unique values in the INDEX) 
 
+```sql
+SHOW INDEXES IN cusotmers;
+```
+
+The CARDINLITY of Primary key is 1010. (So 1010 unique values)
+
+![image](https://user-images.githubusercontent.com/36256986/166158642-91d84e41-5166-4ca7-81b0-c57d13014df1.png)
+
+### [Case study](#-)
+* If we have for example a table with column of gender (which have 2 options male/female, The Cardinality will be 2) and a million row. So in our Composite INDEX , if we put our gender first , this column can narrow down our searches from 1 million to 500K. 
+* Now, what if we put our state column first. In our customers table we have 48 unique states. Assume we have 1 million records in the table an even distibution of customers across states , we are going to have 1 million / 48 ~ 20K Roughly 20K customers in each state). SO if we put our state column first this can nrrow down our searches to fewer records.
+
+* So , as a basic RULE , better put the columns with higher carinality first , BUT don't take this as a hard and FAST rule . This is just a starting point, you should always take your query and the date time into account.
+
+### [**Example 1**](#-)
+
+### [Example 2](#-)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
