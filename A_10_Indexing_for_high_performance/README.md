@@ -499,9 +499,8 @@ EXPLAIN SELECT customer_id FROM customers
 WHERE state = 'CA' OR points > 1000;
 ```
 
-type - index
-key  - idx_state_points 
-rows - 1010
+type - index </br>
+key  - idx_state_points </br>
 
 It looks like we have a full table sacn (because row is 1010) BUT actually we don't. </br>
 Because the value of the **_type = index_** which means we have a full index scan. </br>
@@ -529,9 +528,9 @@ EXPLAIN
 
 The EXPLAIN gives :
 
-for idx_state_points 112 rows
-for idx_points 529 rows
-together it will search in 641 rows
+for idx_state_points 112 rows  </br>
+for idx_points 529 rows  </br>
+together it will search in 641 rows  </br>
 
 ![image](https://user-images.githubusercontent.com/36256986/166165365-180bb28f-4151-465b-8b84-47da0ca05050.png)
 
@@ -545,9 +544,9 @@ EXPLAIN
 	WHERE points + 10 > 2010;
 ```
 
-type - index
-key  - idx_points
-rows - 1010
+type - index   </br>
+key  - idx_points  </br>
+rows - 1010  </br>
 
 ![image](https://user-images.githubusercontent.com/36256986/166165472-1fb4f20e-1f17-4978-81b4-cbd6968801d8.png)
 
