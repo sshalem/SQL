@@ -8,7 +8,7 @@
 |  3  |[CREATE TABLE](#3)      | 
 |     |                        |  [TABLE constraints](#3-1)  |
 |  4  |[DESCRIBE command](#4)  |  
-|  5  |[DROP (delete)](#5)    | 
+|  5  |[DROP (delete) and TRUNCATE (empty) ](#5)    | 
 |  6  |[ALTER TABLE … ADD/DROP](#6)    | 
 |  7  |[Keys - Tables with MySql](#7)    | 
 |  8  |[INSERT](#8)    | 
