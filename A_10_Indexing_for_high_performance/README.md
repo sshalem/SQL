@@ -360,6 +360,15 @@ Number of [**ROWS is 58**](#-).
 [How many columns should we include in our INDEXES?](#-) </br>
 In MySql an INDEX can have a maximum of 16 columns. (4 to 6 columns perform well But don't take it as  a rule or best practice) .
 
+```sql
+-- Lets' drop the unnecesseray indexes
+DROP INDEX idx_points ON customers;
+DROP INDEX idx_state ON customers;
+
+SHOW INDEXES IN customers;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/166158420-bf3d43ca-3e31-46a0-8b79-42bcb7f413a3.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
