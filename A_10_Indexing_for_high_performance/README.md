@@ -462,10 +462,6 @@ When using INDEX of idx_lastname_state we get 7 rows:
 ![image](https://user-images.githubusercontent.com/36256986/166164475-26ed77f2-b0a9-4e4b-b241-c2b08b846bc5.png)
 
 
-![image](https://user-images.githubusercontent.com/36256986/166159945-4e55e012-57dd-43e6-9c46-4c648e31b10b.png)
-
-
-
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
