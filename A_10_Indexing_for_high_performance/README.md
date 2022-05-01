@@ -414,14 +414,29 @@ WHERE state = 'CA' AND last_name LIKE 'A%';
 * Lets look at the cardinality of these columns.
 
 ```sql
-SELECT
-	row_number() over() AS ID,
-	last_name,
+SELECT 
+	COUNT(*)
+FROM (SELECT			
+	state,
 	count(*)
-from customers
-group by last_name
-having last_name LIKE 'A%';
+     from customers
+     group by state) as states;
 ```
+
+![image](https://user-images.githubusercontent.com/36256986/166159884-25aa296d-da0c-4013-86f4-1509508354f4.png)
+
+```sql
+SELECT 
+	COUNT(*)
+FROM (SELECT			
+	last_name,
+	COUNT(*)
+     FROM customers
+     GROUP BY last_name
+     HAVING last_name LIKE 'A%') AS last_name;
+```
+
+![image](https://user-images.githubusercontent.com/36256986/166159945-4e55e012-57dd-43e6-9c46-4c648e31b10b.png)
 
 ### [Example 2](#-)
 
