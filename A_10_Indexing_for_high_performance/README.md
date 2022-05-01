@@ -421,6 +421,11 @@ FROM (SELECT
 	count(*)
      from customers
      group by state) as states;
+
+-- This query does the same with fewer code line
+SELECT 
+	COUNT(DISTINCT state)
+FROM customers;
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/166159884-25aa296d-da0c-4013-86f4-1509508354f4.png)
@@ -434,6 +439,8 @@ FROM (SELECT
      FROM customers
      GROUP BY last_name
      HAVING last_name LIKE 'A%') AS last_name;
+
+
 ```
 
 ![image](https://user-images.githubusercontent.com/36256986/166159945-4e55e012-57dd-43e6-9c46-4c648e31b10b.png)
