@@ -12,7 +12,7 @@
 |  4  |[Full text Indexes](#Full_text_Indexes)   |   
 |  5  |[Composite Indexes](#Composite_Indexes)   |   
 |  6  |[Order of Columns in Composite Indexes](#Order_of_Columns_in_Composite_Indexes)   |  
-
+|  7  |[When INDEXES are ignored](#When_INDEXES_are_ignored)   |   
 
 
 --------------------------------------------------------------------------------------------------
@@ -479,14 +479,92 @@ When using INDEX of idx_lastname_state we get 7 rows:
 
 ![image](https://user-images.githubusercontent.com/36256986/166164475-26ed77f2-b0a9-4e4b-b241-c2b08b846bc5.png)
 
-
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### When_INDEXES_are_ignored
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-7. When INDEXES are ignored  %20-blue" height=40px>
+
+There are situations where we have an IDEX but we still expirience performance problems.
+Let's look at some of the common scenarios.
+
+### [Example 1](#-)
+
+Lets EXPLAIN the following Query:
+
+```sql
+EXPLAIN SELECT customer_id FROM customers
+WHERE state = 'CA' OR points > 1000;
+```
+
+type - index
+key  - idx_state_points 
+rows - 1010
+
+It looks like we have a full table sacn (because row is 1010) BUT actually we don't. </br>
+Because the value of the **_type = index_** which means we have a full index scan. </br>
+this is faster than a table scan because it doesn't envolve reading every record from the disk. Having said that we still have to sacn 1010 rows.</br>
+
+![image](https://user-images.githubusercontent.com/36256986/166164918-ac768c1a-b8a1-4e78-93ac-29abdb6a7fa9.png)
+
+SO how can we optimze this query further? </br>
+This is one of the situations where we have to re-write our query to utilize the INDEXES in the best possible way.</br>
+In this case we're going to chop up this query into two smaller queries. </br>
+First, we're going to select  allcustomers located in the state of CA , the we're going to UNION that with another query that picks customers that have more than a 1000 points.
+
+We create a new INDEX idx_points as well for better performance.
+
+```sql
+CREATE INDEX idx_points ON customers(points);
+
+EXPLAIN 
+    SELECT customer_id FROM customers
+    WHERE state = 'CA' 
+    UNION
+    SELECT customer_id FROM customers
+    WHERE points > 1000;
+```
+
+The EXPLAIN gives :
+
+for idx_state_points 112 rows
+for idx_points 529 rows
+together it will search in 641 rows
+
+![image](https://user-images.githubusercontent.com/36256986/166165365-180bb28f-4151-465b-8b84-47da0ca05050.png)
+
+### [Example 2](#-)
+
+Let's EXPLAIN the following query:
+
+```sql
+EXPLAIN 
+	SELECT customer_id FROM customers
+	WHERE points + 10 > 2010;
+```
+
+type - index
+key  - idx_points
+rows - 1010
+
+![image](https://user-images.githubusercontent.com/36256986/166165472-1fb4f20e-1f17-4978-81b4-cbd6968801d8.png)
+
+* What is the reason we have a full scan?
+* That is because of the Expression **points + 10 > 2010**
+
+to improve it lets query like this:
+
+```sql
+EXPLAIN 
+	SELECT customer_id FROM customers
+	WHERE points > 2000;
+```
+
+Now we get 4 rows .
+
+![image](https://user-images.githubusercontent.com/36256986/166165588-948943d9-8b4e-4006-b5de-744d94343c6e.png)
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
