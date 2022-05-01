@@ -411,7 +411,17 @@ WHERE state = 'CA' AND last_name LIKE 'A%';
 ```
 
 [Answer](#-)
-* 
+* Lets look at the cardinality of these columns.
+
+```sql
+SELECT
+	row_number() over() AS ID,
+	last_name,
+	count(*)
+from customers
+group by last_name
+having last_name LIKE 'A%';
+```
 
 ### [Example 2](#-)
 
