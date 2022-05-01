@@ -399,8 +399,8 @@ SELECT * FROM customers WHERE birth_date BETWEEN '1970-01-01' AND '1980-01-01';
 
 LIKE Operator (we use it as if a value contains the description we looking for) </br>
 
-* %b       :   any number of characters before first letter b
-* b%       :   any number of characters after last letter b
+* %b       :   any number of characters before letter b
+* b%       :   any number of characters after letter b
 * %b%    :   any number of characters before letter b and after
 			Doesn't matter if b is in the beginning or at the end of the string
 * _       :   one underscore means exactly one character 
