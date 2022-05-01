@@ -209,10 +209,42 @@ FROM customers;
 
 <img src="https://img.shields.io/badge/-4. Full_text_Indexes %20-blue" height=40px>
 
+We use [FULL TEXT INDEX](#-) to build fast and felxible apps in our search engines.
 A full-text index in MySQL is an index of type FULLTEXT . Full-text indexes can be used only with InnoDB or MyISAM tables, and can be created only for CHAR , VARCHAR , or TEXT columns. </br>
 
+For the lecture ,Download the new script ```create-db-blog.sql``` and run it.</br>
 
+Let's say we're gong to build a blog web site and give our users the abilit to search for blog posts.</br>
+Let's say someone searches for 'react redux' , how we can find posts that are about 'react redux'?</br>
 
+### [First way](#-)
+
+```sql
+SELECT * 
+FROM posts
+WHERE 
+	title LIKE '%react%' OR title LIKE '%Redux%'
+    OR body LIKE '%react%' OR body LIKE '%redux%';
+```
+
+Ths gives following result:
+
+![image](https://user-images.githubusercontent.com/36256986/166130794-7573589c-725c-4a00-987d-5abc6080d471.png)
+
+### [Second way](#-)
+
+By creating a [FULL TEXT INDEX](#-)
+
+In this SQL query the words 'react redux' can be together or be seperated by words between them.
+```sql
+SELECT *
+FROM posts
+WHERE MATCH(title, body) AGAINST('react redux');
+```
+
+One of the benfits they include relevence score. So based on anumber of factors ,MySql calculates the relevency score for each row ,that calculates the search phrase. </br>
+The relevency SCore is afloting point number between 0 to 1.</br>
+0 - means no relevence
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
