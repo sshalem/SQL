@@ -14,6 +14,7 @@
 |  6  |[Order of Columns in Composite Indexes](#Order_of_Columns_in_Composite_Indexes)   |  
 |  7  |[When INDEXES are ignored](#When_INDEXES_are_ignored)   |   
 |  8  |[Using Indexes for Sorting](#Using_Indexes_for_Sorting)   |   
+|     |8.1							 |[Show_status](#Show_status)   |  
 
 --------------------------------------------------------------------------------------------------
 
@@ -620,14 +621,43 @@ filesort - is very expensive operation.
 
 ![image](https://user-images.githubusercontent.com/36256986/166166396-4d240846-3ba2-4f32-9b8b-dd7ff0ca7070.png)
 
+Lets see how cost it's worth:
+
+```sql
+SHOW STATUS LIKE 'last_query_cost';
+```
+
+![image](https://user-images.githubusercontent.com/36256986/166166684-1324c643-6f09-4559-9b67-ee3f923195f3.png)
+
+Let's sort with column that is our INDEX:
+
+```sql
+EXPLAIN 
+    SELECT customer_id FROM customers 
+    ORDER BY state;
+
+SHOW STATUS LIKE 'last_query_cost';	
+```
+
+![image](https://user-images.githubusercontent.com/36256986/166166730-fc29a2d5-9856-4fb5-882a-a00108d558a2.png)
+
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
-###### 
+###### Show_status
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/-8.1. Show Status %20-blue" height=40px>
 
+the SHOW STATUS statement , to look at the server variables.
+
+```sql
+SHOW STATUS;
+```
+
+These are the variables used by MySql server. See usage in section 8.
+
+![image](https://user-images.githubusercontent.com/36256986/166166603-4edf4426-5968-45eb-86ac-ed56ee04a845.png)
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
