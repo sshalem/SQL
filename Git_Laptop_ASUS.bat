@@ -43,14 +43,13 @@ git status
 pause
 ::cls
 @echo off
-echo _
 echo 		*********************************************
 echo 		*	%DATE% , %TIME%							*
 echo 		*********************************************
-echo 		* step 4 : git commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~10,4% %TIME:~0,2%:%TIME:~3,2%" *
+echo 		* step 4 : git commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~12,4% %TIME:~0,2%:%TIME:~3,2%" *
 echo 		********************************************* 
 @echo on
-git commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~10,4% %TIME:~0,2%:%TIME:~3,2%"
+git commit -m "%DATE:~7,2%-%DATE:~4,2%-%DATE:~12,4% %TIME:~0,2%:%TIME:~3,2%"
 @echo off
 ::pause
 
