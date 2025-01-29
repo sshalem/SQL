@@ -769,7 +769,7 @@ SELECT add_em(1, 2) AS answer;
 
 ###### 9_1_plpgsql_functions
 
-<img src="https://img.shields.io/badge/- 9.1. plpgsql functions  %20-green" height=30px>
+<img src="https://img.shields.io/badge/- 9.1. plpgsql functions  %20- green" height=30px>
 
 - In previous section I use the [`LANGUAGE SQL`](#-)
 - In order to be able to use FUnctions in more en hanced way I will use [`LANGUAGE plpgsql`](#-)
@@ -809,7 +809,7 @@ SELECT fn_add_them(1, 2) AS answer;
 
 ###### 9_2_plpgsql_function_return_table
 
-<img src="https://img.shields.io/badge/- 9.2. plpgsql function return table  %20-green" height=30px>
+<img src="https://img.shields.io/badge/- 9.2. plpgsql function return table  %20- green" height=30px>
 
 
 ```sql
