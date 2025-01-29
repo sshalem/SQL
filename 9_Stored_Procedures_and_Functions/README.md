@@ -682,7 +682,75 @@ link : https://www.youtube.com/watch?v=yLR1w4tZ36I&ab_channel=techTFQ
 6. Exception handling
 7. ETC...
 
+### [Syntax to create a procedure in postgreSQL](#-)
 
+Basic syntax w/n varable passed:
+
+```sql
+create or replace procedure pr_name()
+language plpgsql
+as $$
+begin
+    procedure body - all logics occur;
+end;
+$$
+```
+
+
+Basic syntax w/n varable passed:
+
+```sql
+create procedure raise_notice() 
+language plpgsql 
+as $$
+begin 
+    raise notice 'shabtay shalem';
+end;
+$$;
+
+call raise_notice();
+```
+
+
+Basic syntax with varable passed:
+
+```sql
+create procedure raise_notice(s text) 
+language plpgsql 
+as $$
+begin 
+    raise notice '%', s;
+end;
+$$
+
+call raise_notice('shalem');
+
+
+
+create procedure show_msg(s text ,e text) 
+language plpgsql 
+as $$
+begin 
+    raise notice '% %', s;
+end;
+$$
+
+call show_msg('my first name is', 'karin');
+```
+
+For some reason thihs also works:
+
+```sql
+create procedure show_msg(s text ,e text) 
+language plpgsql 
+as $$
+begin 
+    raise notice;
+end;
+$$
+
+call show_msg('my first name is', 'karin');
+```
 
 
 
