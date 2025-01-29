@@ -16,7 +16,8 @@
 |  8  |[Functions](#Functions)   | 
 |  9  |[Postgresql Functions](#9_postgresql_functions)   | 
 |     |9.1. [plpgsql Functions](#9_1_plpgsql_functions)   | 
-|  10  |[Postgresql Stored Procedures](#9_postgresql_stored_procedures)   | 
+|     |9.1. [plpgsql Functions return table](#9_2_plpgsql_function_return_table)   | 
+|  10  |[Postgresql Stored Procedures](#10_postgresql_stored_procedures)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -801,6 +802,28 @@ SELECT fn_add_them(1, 2) AS answer;
 
 ![image](https://github.com/user-attachments/assets/307b0b09-c66c-40cb-b9d9-d33d76bd0c71)
 
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+###### 9_2_plpgsql_function_return_table
+
+<img src="https://img.shields.io/badge/- 9.2. plpgsql function return table  %20-green" height=30px>
+
+
+```sql
+DROP FUNCTION fn_return_table();
+
+CREATE OR REPLACE FUNCTION fn_return_table() RETURNS TABLE (admin_id bigint , admin_uuid "varchar" , email VARCHAR, password VARCHAR, role VARCHAR, username VARCHAR) AS 
+$$
+BEGIN
+	RETURN QUERY SELECT * FROM admin;
+END
+$$ LANGUAGE plpgsql;
+
+SELECT * from fn_return_table();
+```
 
 
 
