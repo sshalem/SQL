@@ -665,7 +665,7 @@ DELIMITER ;
 
 ###### 9_postgresql_stored_procedures
 
-<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/- 9. postgresql stored procedures  %20-blue" height=40px>
 
 In the previous sections , I used MySql for stored procedures. </br>
 Now I will use `Postgresql` for it. </br>
