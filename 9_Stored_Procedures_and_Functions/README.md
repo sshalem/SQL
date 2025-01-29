@@ -787,7 +787,7 @@ END
 $$ LANGUAGE plpgsql;
 ```
 
-Usage with `plpgsql` , see how I use the RETURN key instead of the SELECT key
+- Usage with `plpgsql` , see how I use the `RETURN` key instead of the `SELECT` key
 
 ```sql
 CREATE OR REPLACE FUNCTION fn_add_them(x integer, y integer) RETURNS integer AS 
