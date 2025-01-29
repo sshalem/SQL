@@ -671,6 +671,7 @@ In the previous sections , I used MySql for stored procedures. </br>
 Now I will use `Postgresql` for it. </br>
 
 link : https://www.youtube.com/watch?v=yLR1w4tZ36I&ab_channel=techTFQ
+link Derek Banas  : https://www.youtube.com/watch?v=85pG_pDkITY&ab_channel=DerekBanas 
 
 - Procedures can do things which SQL queries cannot.
 - Procedure can include:
@@ -715,7 +716,7 @@ call raise_notice();
 Basic syntax with varable passed:
 
 ```sql
-create procedure raise_notice(s text) 
+create or replace procedure raise_notice(s text) 
 language plpgsql 
 as $$
 begin 
@@ -727,7 +728,7 @@ call raise_notice('shalem');
 
 
 
-create procedure show_msg(s text ,e text) 
+create or replace procedure show_msg(s text ,e text) 
 language plpgsql 
 as $$
 begin 
@@ -741,7 +742,7 @@ call show_msg('my first name is', 'karin');
 For some reason thihs also works:
 
 ```sql
-create procedure show_msg(s text ,e text) 
+create or replace procedure show_msg(s text ,e text) 
 language plpgsql 
 as $$
 begin 
