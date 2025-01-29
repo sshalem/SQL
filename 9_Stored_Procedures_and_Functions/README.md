@@ -14,7 +14,7 @@
 |  6  |[Procedure Return OUT Parameters](#Procedure_Return_OUT_Parameters)   | 
 |  7  |[Variables](#Variables)   | 
 |  8  |[Functions](#Functions)   | 
-|  9  |[9](#9)   | 
+|  9  |[Postgresql Stored Procedures](#9_postgresql_stored_procedures)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -657,3 +657,37 @@ END$$
 DELIMITER ;
 ```
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+--------------------------------------------------------------------------------------------------
+
+
+
+###### 9_postgresql_stored_procedures
+
+<img src="https://img.shields.io/badge/-X.  %20-blue" height=40px>
+
+In the previous sections , I used MySql for stored procedures. </br>
+Now I will use `Postgresql` for it. </br>
+
+link : https://www.youtube.com/watch?v=yLR1w4tZ36I&ab_channel=techTFQ
+
+- Procedures can do things which SQL queries cannot.
+- Procedure can include:
+1. SQL queries
+2. DML, DDL, DCL, and TCL commands
+3. Collection types
+4. LOOP &  IF ELSE statements
+5. Variables
+6. Exception handling
+7. ETC...
+
+
+
+
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+--------------------------------------------------------------------------------------------------
+
