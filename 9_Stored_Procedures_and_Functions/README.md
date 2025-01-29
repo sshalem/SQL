@@ -678,11 +678,6 @@ DELIMITER ;
 3. Unless the function is declared to return void, the last statement must be a SELECT.
 4. The syntax of the CREATE FUNCTION command requires the function body to be written as a string constant.
 5. It is usually most convenient to use dollar quoting [`$$`](#-) (see Section 4.1.2.2) for the string constant
-6. `BEGIN\END` - It is important not to confuse the use of BEGIN/END for grouping statements in PL/pgSQL with the similarly-named SQL commands for transaction control. PL/pgSQL's BEGIN/END are only for grouping.
-7. 
-
-
-
 
 
 ### [1_Function](#-)
@@ -695,6 +690,7 @@ DELIMITER ;
 - `CREATE OR REPLACE FUNCTION` - keywords for a function
 - `fn_add_ints(int,int)` - function name, see convention where I use `fn` prefix , then have 2 paramters of `int`
 - `Return int` - The return value that the function returns
+- `LANGUAGE SQL` - In next section (9.1) I will use a more robust language  `LANGUAGE plpgsql` 
 
 ```sql
 CREATE OR REPLACE FUNCTION fn_add_ints(int,int) RETURNS int as
