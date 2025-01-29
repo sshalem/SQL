@@ -15,6 +15,7 @@
 |  7  |[Variables](#Variables)   | 
 |  8  |[Functions](#Functions)   | 
 |  9  |[Postgresql Functions](#9_postgresql_functions)   | 
+|     |9.1. [plpgsql Functions](#9_1_plpgsql_functions)   | 
 |  10  |[Postgresql Stored Procedures](#9_postgresql_stored_procedures)   | 
 
 
@@ -764,7 +765,45 @@ SELECT add_em(1, 2) AS answer;
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
+###### 9_1_plpgsql_functions
 
+<img src="https://img.shields.io/badge/- 9.1. plpgsql functions  %20-green" height=30px>
+
+- In previous section I use the [`LANGUAGE SQL`](#-)
+- In order to be able to use FUnctions in more en hanced way I will use [`LANGUAGE plpgsql`](#-)
+- I also add `BEGIN\END` , and inside them I write the logic
+- We can No longer use `SELECT` in the BEGIN/ END , instead we use `RETURN`
+
+![image](https://github.com/user-attachments/assets/83b70e4b-eccc-4847-9d30-6566c9b79740)
+
+```sql
+CREATE OR REPLACE FUNCTION fn_name(parameter par_type) RETURNS ret_type AS 
+$$
+BEGIN
+	-- LOGIC written here
+END
+$$ LANGUAGE plpgsql;
+```
+
+Usage with `plpgsql` , see how I use the RETURN key instead of the SELECT key
+
+```sql
+CREATE OR REPLACE FUNCTION fn_add_them(x integer, y integer) RETURNS integer AS 
+$$
+BEGIN
+	RETURN x + y;
+END
+$$ LANGUAGE plpgsql;
+
+SELECT fn_add_them(1, 2) AS answer;
+```
+
+![image](https://github.com/user-attachments/assets/307b0b09-c66c-40cb-b9d9-d33d76bd0c71)
+
+
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 --------------------------------------------------------------------------------------------------
 
