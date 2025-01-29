@@ -670,14 +670,17 @@ DELIMITER ;
 - link from postgresql : https://www.postgresql.org/docs/current/xfunc-sql.html#XFUNC-SQL-FUNCTION-ARGUMENTS
 - In this tutorial I will show how to use [Functions](#-) in postgresql
 - Rules of QUery FUnctions :  https://www.postgresql.org/docs/8.3/xfunc-sql.html
-- 
+- `BEGIN\END` - see link https://www.postgresql.org/docs/current/plpgsql-structure.html
 
 1. The body of an SQL function must be a list of SQL statements separated by semicolons.
 2. A semicolon after the last statement is optional.
 3. Unless the function is declared to return void, the last statement must be a SELECT.
 4. The syntax of the CREATE FUNCTION command requires the function body to be written as a string constant.
 5. It is usually most convenient to use dollar quoting [`$$`](#-) (see Section 4.1.2.2) for the string constant
-6. 
+6. `BEGIN\END` - It is important not to confuse the use of BEGIN/END for grouping statements in PL/pgSQL with the similarly-named SQL commands for transaction control. PL/pgSQL's BEGIN/END are only for grouping.
+7. 
+
+
 
 
 
