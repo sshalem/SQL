@@ -16,7 +16,7 @@
 |  8  |[Functions](#Functions)   | 
 |  9  |[Postgresql Functions](#9_postgresql_functions)   | 
 |     |9.1. [plpgsql Functions](#9_1_plpgsql_functions)   | 
-|     |9.1. [plpgsql Functions return table](#9_2_plpgsql_function_return_table)   | 
+|     |9.2. [plpgsql Functions return table](#9_2_plpgsql_function_return_table)   | 
 |  10  |[Postgresql Stored Procedures](#10_postgresql_stored_procedures)   | 
 
 
