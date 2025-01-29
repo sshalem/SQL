@@ -667,11 +667,16 @@ DELIMITER ;
 
 <img src="https://img.shields.io/badge/- 9. postgresql functions  %20-blue" height=40px>
 
+### [`Links`](#-)
+
 - link Derek Banas  : https://www.youtube.com/watch?v=85pG_pDkITY&ab_channel=DerekBanas
 - link from postgresql : https://www.postgresql.org/docs/current/xfunc-sql.html#XFUNC-SQL-FUNCTION-ARGUMENTS
 - In this tutorial I will show how to use [Functions](#-) in postgresql
 - Rules of QUery FUnctions :  https://www.postgresql.org/docs/8.3/xfunc-sql.html
 - `BEGIN\END` - see link https://www.postgresql.org/docs/current/plpgsql-structure.html
+- YouTube link : https://www.youtube.com/watch?v=GNTap3iVg3c&t=11s&ab_channel=SoftwareNuggets
+
+
 
 1. The body of an SQL function must be a list of SQL statements separated by semicolons.
 2. A semicolon after the last statement is optional.
