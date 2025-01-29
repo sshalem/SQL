@@ -906,11 +906,11 @@ CREATE TABLE PAST_DUE (
 ```sql
 INSERT INTO past_due(cust_id, balance) 
 VALUES 
-(1, 123.45),
-(2, 321.78);
+(22, 123.45),
+(56, 321.78);
 ```
 
-![image](https://github.com/user-attachments/assets/c9e39d76-d2d6-4fed-9982-405605ae1e2b)
+![image](https://github.com/user-attachments/assets/eef61405-60fc-4f7b-8f15-38e960d0282a)
 
 
 ### [Step 3 - Create Stored procedure to Insert new record](#-)
@@ -939,7 +939,8 @@ SELECT * from past_due;
 
 We can see new record in table
 
-![image](https://github.com/user-attachments/assets/b680f19f-318b-48c5-8c33-8576e71b0c3b)
+![image](https://github.com/user-attachments/assets/a857638e-b659-45cd-8781-ab2e1dcf1d6b)
+
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
@@ -949,24 +950,27 @@ We can see new record in table
 
 <img src="https://img.shields.io/badge/- 10.2. update - postgresql stored procedures  %20- green" height=30px>
 
-Let's see how I can UPDATE a field in a row
+- Let's see how I can UPDATE a field in a row
+- Write  the UPDATE SET command
+- Must `COMMIT` to save changes
 
 ```sql
-CREATE OR REPLACE PROCEDURE pr_insert_record(
-	cust_id int,
-	balance numeric	
+CREATE OR REPLACE PROCEDURE pr_debt_paid(
+	customer_id int,
+	debt numeric	
 )
 AS
 $body$
 DECLARE
 BEGIN
-	INSERT INTO past_due(cust_id, balance) VALUES (cust_id, balance);
+	UPDATE past_due SET balance = balance - debt WHERE cust_id = customer_id;
+	COMMIT;
 END;
 $body$ LANGUAGE plpgsql;
 ```
 
 ```sql
-CALL pr_insert_record(9, 59.68);
+CALL pr_debt_paid(56, 200);
 ```
 
 ```sql
@@ -974,6 +978,8 @@ SELECT * from past_due;
 ```
 
 We can see new record in table
+
+![image](https://github.com/user-attachments/assets/608d7a23-14f8-4684-b77d-57de7bb22995)
 
 
 
