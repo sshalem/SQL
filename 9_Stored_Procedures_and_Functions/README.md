@@ -14,7 +14,8 @@
 |  6  |[Procedure Return OUT Parameters](#Procedure_Return_OUT_Parameters)   | 
 |  7  |[Variables](#Variables)   | 
 |  8  |[Functions](#Functions)   | 
-|  9  |[Postgresql Stored Procedures](#9_postgresql_stored_procedures)   | 
+|  9  |[Postgresql Functions](#9_postgresql_functions)   | 
+|  10  |[Postgresql Stored Procedures](#9_postgresql_stored_procedures)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -661,9 +662,52 @@ DELIMITER ;
 
 --------------------------------------------------------------------------------------------------
 
+###### 9_postgresql_functions
+
+<img src="https://img.shields.io/badge/- 9. postgresql functions  %20-blue" height=40px>
+
+- link Derek Banas  : https://www.youtube.com/watch?v=85pG_pDkITY&ab_channel=DerekBanas 
+- In this tutorial I will show how to use [Functions](#-) in postgresql
+
+### [1_Function](#-)
+
+Open SQL editor , and type the following code below
+
+```sql
+CREATE OR REPLACE FUNCTION fn_add_ints(int,int) RETURNS int as
+$body$
+	SELECT $1 + $2;
+$body$
+LANGUAGE SQL
+
+select fn_add_ints(5,7);
+```
 
 
-###### 9_postgresql_stored_procedures
+
+
+
+
+Returns Int
+```sql
+CREATE OR REPLACE FUNCTION fn_add_ints(int,int) RETURNS int as
+$body$
+	SELECT $1 + $2;
+$body$
+LANGUAGE SQL
+
+select fn_add_ints(5,7);
+```
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+###### 10_postgresql_stored_procedures
 
 <img src="https://img.shields.io/badge/- 9. postgresql stored procedures  %20-blue" height=40px>
 
@@ -671,7 +715,7 @@ In the previous sections , I used MySql for stored procedures. </br>
 Now I will use `Postgresql` for it. </br>
 
 link : https://www.youtube.com/watch?v=yLR1w4tZ36I&ab_channel=techTFQ
-link Derek Banas  : https://www.youtube.com/watch?v=85pG_pDkITY&ab_channel=DerekBanas 
+
 
 - Procedures can do things which SQL queries cannot.
 - Procedure can include:
