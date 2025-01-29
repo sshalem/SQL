@@ -18,6 +18,7 @@
 |     |9.1. [plpgsql Functions](#9_1_plpgsql_functions)   | 
 |     |9.2. [plpgsql Functions return table](#9_2_plpgsql_function_return_table)   | 
 |  10  |[Postgresql Stored Procedures](#10_postgresql_stored_procedures)   | 
+|      |10.1 [Postgresql Stored Procedures Update](#10_1_postgresql_stored_procedures_update)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -776,8 +777,6 @@ SELECT add_em(1, 2) AS answer;
 - I also add `BEGIN\END` , and inside them I write the logic
 - We can No longer use `SELECT` in the BEGIN/ END , instead we use `RETURN`
 
-![image](https://github.com/user-attachments/assets/83b70e4b-eccc-4847-9d30-6566c9b79740)
-
 ```sql
 CREATE OR REPLACE FUNCTION fn_name(parameter par_type) RETURNS ret_type AS 
 $$
@@ -787,7 +786,8 @@ END
 $$ LANGUAGE plpgsql;
 ```
 
-- Usage with `plpgsql` , see how I use the `RETURN` key instead of the `SELECT` key
+- Usage with `plpgsql` ,
+- see how I use the `RETURN` key instead of the `SELECT` key
 
 ```sql
 CREATE OR REPLACE FUNCTION fn_add_them(x integer, y integer) RETURNS integer AS 
@@ -800,7 +800,7 @@ $$ LANGUAGE plpgsql;
 SELECT fn_add_them(1, 2) AS answer;
 ```
 
-![image](https://github.com/user-attachments/assets/307b0b09-c66c-40cb-b9d9-d33d76bd0c71)
+
 
 
 
@@ -834,7 +834,7 @@ SELECT * from fn_return_table();
 
 ###### 10_postgresql_stored_procedures
 
-<img src="https://img.shields.io/badge/- 9. postgresql stored procedures  %20-blue" height=40px>
+<img src="https://img.shields.io/badge/- 10. postgresql stored procedures  %20-blue" height=40px>
 
 In the previous sections , I used MySql for stored procedures. </br>
 Now I will use `Postgresql` for it. </br>
@@ -844,7 +844,7 @@ link : https://www.youtube.com/watch?v=yLR1w4tZ36I&ab_channel=techTFQ
 
 - Procedures can do things which SQL queries cannot.
 - Procedure can include:
-1. SQL queries
+1. SQL queries UPDATE INSERT DELETE (WIth  function we can only get tables)
 2. DML, DDL, DCL, and TCL commands
 3. Collection types
 4. LOOP &  IF ELSE statements
@@ -858,74 +858,36 @@ Basic syntax w/n varable passed:
 
 ```sql
 create or replace procedure pr_name()
-language plpgsql
 as $$
 begin
     procedure body - all logics occur;
 end;
-$$
+$$ language plpgsql;
 ```
 
 
-Basic syntax w/n varable passed:
 
-```sql
-create procedure raise_notice() 
-language plpgsql 
-as $$
-begin 
-    raise notice 'shabtay shalem';
-end;
-$$;
-
-call raise_notice();
-```
-
-
-Basic syntax with varable passed:
-
-```sql
-create or replace procedure raise_notice(s text) 
-language plpgsql 
-as $$
-begin 
-    raise notice '%', s;
-end;
-$$
-
-call raise_notice('shalem');
-
-
-
-create or replace procedure show_msg(s text ,e text) 
-language plpgsql 
-as $$
-begin 
-    raise notice '% %', s;
-end;
-$$
-
-call show_msg('my first name is', 'karin');
-```
-
-For some reason thihs also works:
-
-```sql
-create or replace procedure show_msg(s text ,e text) 
-language plpgsql 
-as $$
-begin 
-    raise notice;
-end;
-$$
-
-call show_msg('my first name is', 'karin');
-```
 
 
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+###### 10_1_postgresql_stored_procedures_update
+
+<img src="https://img.shields.io/badge/- 10.1. update-  postgresql stored procedures  %20- green" height=30px>
+
+### [Links](#-)
+
+link : https://www.youtube.com/watch?v=EcYtm4TIimg
+
+
+
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
 
 --------------------------------------------------------------------------------------------------
 
