@@ -669,6 +669,17 @@ DELIMITER ;
 - link Derek Banas  : https://www.youtube.com/watch?v=85pG_pDkITY&ab_channel=DerekBanas
 - link from postgresql : https://www.postgresql.org/docs/current/xfunc-sql.html#XFUNC-SQL-FUNCTION-ARGUMENTS
 - In this tutorial I will show how to use [Functions](#-) in postgresql
+- Rules of QUery FUnctions :  https://www.postgresql.org/docs/8.3/xfunc-sql.html
+- 
+
+1. The body of an SQL function must be a list of SQL statements separated by semicolons.
+2. A semicolon after the last statement is optional.
+3. Unless the function is declared to return void, the last statement must be a SELECT.
+4. The syntax of the CREATE FUNCTION command requires the function body to be written as a string constant.
+5. It is usually most convenient to use dollar quoting [`$$`](#-) (see Section 4.1.2.2) for the string constant
+6. 
+
+
 
 ### [1_Function](#-)
 
@@ -716,16 +727,36 @@ select fn_add_ints(5,7);
 
 
 
-Returns Int
-```sql
-CREATE OR REPLACE FUNCTION fn_add_ints(int,int) RETURNS int as
-$body$
-	SELECT $1 + $2;
-$body$
-LANGUAGE SQL
+- Lets look on another code with with different syntax , that does the same.
+- See that now I define the variables x, y as integers , wherease in prev example I used `$` with the position of the varaibale to assign it.
 
-select fn_add_ints(5,7);
+```sql
+CREATE OR REPLACE FUNCTION fn_add_em(x integer, y integer) RETURNS integer AS 
+$$
+    SELECT x + y;
+$$ LANGUAGE SQL;
+
+SELECT add_em(1, 2) AS answer;
 ```
+
+- I execute only the Function to have it in the FUnctions folder 
+
+![image](https://github.com/user-attachments/assets/5a69de65-8a18-4e8e-a710-dfb9e0df3b5a)
+
+- Execute the FUnction
+
+```sql
+SELECT add_em(1, 2) AS answer;
+```
+
+![image](https://github.com/user-attachments/assets/523e29e4-21db-4422-8f7d-8aa3eca1a8a5)
+
+
+
+
+
+
+
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
