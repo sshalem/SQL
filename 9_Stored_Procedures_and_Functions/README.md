@@ -666,12 +666,20 @@ DELIMITER ;
 
 <img src="https://img.shields.io/badge/- 9. postgresql functions  %20-blue" height=40px>
 
-- link Derek Banas  : https://www.youtube.com/watch?v=85pG_pDkITY&ab_channel=DerekBanas 
+- link Derek Banas  : https://www.youtube.com/watch?v=85pG_pDkITY&ab_channel=DerekBanas
+- link from postgresql : https://www.postgresql.org/docs/current/xfunc-sql.html#XFUNC-SQL-FUNCTION-ARGUMENTS
 - In this tutorial I will show how to use [Functions](#-) in postgresql
 
 ### [1_Function](#-)
 
-Open SQL editor , and type the following code below
+1. Open SQL editor , and type the following code below
+2. Open the Functions folder and see it's empty since we didn't add any finction yet
+
+![image](https://github.com/user-attachments/assets/7a7d8243-2008-4122-9935-bbaeb040f9f0)
+
+- `CREATE OR REPLACE FUNCTION` - keywords for a function
+- `fn_add_ints(int,int)` - function name, see convention where I use `fn` prefix , then have 2 paramters of `int`
+- `Return int` - The return value that the function returns
 
 ```sql
 CREATE OR REPLACE FUNCTION fn_add_ints(int,int) RETURNS int as
@@ -683,8 +691,28 @@ LANGUAGE SQL
 select fn_add_ints(5,7);
 ```
 
+3. Select only the code of the function , and click on the [execute query](#-) button (this store the function in the [Functions](#-) folder)
+
+![image](https://github.com/user-attachments/assets/07d873b3-4cbb-42af-83cb-f4de83f649a1)
+
+- Messsage shows FUnction created
+
+![image](https://github.com/user-attachments/assets/67fd0b87-8d6f-4b26-ab82-80936a1039ea)
 
 
+4. Refresh the DB, Check the [Functions](#-) folder , see that function [fn_add_ints](#-) is added to it
+
+![image](https://github.com/user-attachments/assets/f395cc82-0738-4c32-8d7e-095c726250b1)
+
+5. Now lets call the function and run it, to call a function we use the [select[(#-) command
+
+```sql
+select fn_add_ints(5,7);
+```
+
+- Result :
+
+![image](https://github.com/user-attachments/assets/9f2f7463-51b7-407b-8cce-9e517ae2ae19)
 
 
 
