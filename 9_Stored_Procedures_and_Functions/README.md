@@ -18,7 +18,8 @@
 |     |9.1. [plpgsql Functions](#9_1_plpgsql_functions)   | 
 |     |9.2. [plpgsql Functions return table](#9_2_plpgsql_function_return_table)   | 
 |  10  |[Postgresql Stored Procedures](#10_postgresql_stored_procedures)   | 
-|      |10.1 [Postgresql Stored Procedures Update](#10_1_postgresql_stored_procedures_update)   | 
+|      |10.1 [Postgresql Stored Procedures INSERT](#10_1_postgresql_stored_procedures_insert)   | 
+|      |10.2 [Postgresql Stored Procedures Update](#10_2_postgresql_stored_procedures_update)   | 
 
 
 --------------------------------------------------------------------------------------------------
@@ -815,8 +816,14 @@ SELECT fn_add_them(1, 2) AS answer;
 ```sql
 DROP FUNCTION fn_return_table();
 
-CREATE OR REPLACE FUNCTION fn_return_table() RETURNS TABLE (admin_id bigint , admin_uuid "varchar" , email VARCHAR, password VARCHAR, role VARCHAR, username VARCHAR) AS 
-$$
+CREATE OR REPLACE FUNCTION fn_return_table() RETURNS TABLE (
+	admin_id bigint ,
+	admin_uuid "varchar" ,
+	email VARCHAR,
+	password VARCHAR,
+	role VARCHAR,
+	username VARCHAR)
+AS $$
 BEGIN
 	RETURN QUERY SELECT * FROM admin;
 END
@@ -857,7 +864,7 @@ link : https://www.youtube.com/watch?v=yLR1w4tZ36I&ab_channel=techTFQ
 Basic syntax w/n varable passed:
 
 ```sql
-create or replace procedure pr_name()
+create or replace procedure pr_name(parameters)
 as $$
 begin
     procedure body - all logics occur;
@@ -874,15 +881,99 @@ $$ language plpgsql;
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 
-###### 10_1_postgresql_stored_procedures_update
+###### 10_1_postgresql_stored_procedures_insert
 
-<img src="https://img.shields.io/badge/- 10.1. update-  postgresql stored procedures  %20- green" height=30px>
+<img src="https://img.shields.io/badge/- 10.1. insert - postgresql stored procedures  %20- green" height=30px>
 
 ### [Links](#-)
 
 link : https://www.youtube.com/watch?v=EcYtm4TIimg
 
+Let's see how I can insert a new record to a table using Stored Procedure.
 
+### [Step 1 - create a demo table](#-)
+
+```sql
+CREATE TABLE PAST_DUE (
+	ID SERIAL PRIMARY KEY,
+	CUST_ID INTEGER NOT NULL,
+	BALANCE NUMERIC(6, 2) NOT NULL
+);
+```
+
+### [Step 2 - Insert values to table](#-)
+
+```sql
+INSERT INTO past_due(cust_id, balance) 
+VALUES 
+(1, 123.45),
+(2, 321.78);
+```
+
+![image](https://github.com/user-attachments/assets/c9e39d76-d2d6-4fed-9982-405605ae1e2b)
+
+
+### [Step 3 - Create Stored procedure to Insert new record](#-)
+
+```sql
+CREATE OR REPLACE PROCEDURE pr_insert_record(
+	cust_id int,
+	balance numeric	
+)
+AS
+$body$
+DECLARE
+BEGIN
+	INSERT INTO past_due(cust_id, balance) VALUES (cust_id, balance);
+END;
+$body$ LANGUAGE plpgsql;
+```
+
+```sql
+CALL pr_insert_record(9, 59.68);
+```
+
+```sql
+SELECT * from past_due;
+```
+
+We can see new record in table
+
+![image](https://github.com/user-attachments/assets/b680f19f-318b-48c5-8c33-8576e71b0c3b)
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+
+###### 10_2_postgresql_stored_procedures_update
+
+<img src="https://img.shields.io/badge/- 10.2. update - postgresql stored procedures  %20- green" height=30px>
+
+Let's see how I can UPDATE a field in a row
+
+```sql
+CREATE OR REPLACE PROCEDURE pr_insert_record(
+	cust_id int,
+	balance numeric	
+)
+AS
+$body$
+DECLARE
+BEGIN
+	INSERT INTO past_due(cust_id, balance) VALUES (cust_id, balance);
+END;
+$body$ LANGUAGE plpgsql;
+```
+
+```sql
+CALL pr_insert_record(9, 59.68);
+```
+
+```sql
+SELECT * from past_due;
+```
+
+We can see new record in table
 
 
 
