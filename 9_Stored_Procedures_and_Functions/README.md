@@ -16,7 +16,9 @@
 |  8  |[Functions](#Functions)   | 
 |  9  |[Postgresql Functions](#9_postgresql_functions)   | 
 |     |9.1. [plpgsql Functions](#9_1_plpgsql_functions)   | 
-|     |9.2. [plpgsql Functions return table](#9_2_plpgsql_function_return_table)   | 
+|     |9.2. [Functions return table](#9_2_plpgsql_function_return_table)   | 
+|     |9.6. [LOOP](#9_6_loop)   | 
+|     |9.7. [FOR](#9_7_for)   | 
 |  10  |[Postgresql Stored Procedures](#10_postgresql_stored_procedures)   | 
 |      |10.1 [Postgresql Stored Procedures INSERT](#10_1_postgresql_stored_procedures_insert)   | 
 |      |10.2 [Postgresql Stored Procedures Update](#10_2_postgresql_stored_procedures_update)   | 
@@ -832,6 +834,74 @@ $$ LANGUAGE plpgsql;
 SELECT * from fn_return_table();
 ```
 
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+###### 9_6_loop
+
+<img src="https://img.shields.io/badge/- 9.6. LOOP  %20- green" height=30px>
+
+
+- Let's see how we can loop in a Faunction using
+-  `LOOP` and `END LOOP` way
+
+```sql
+CREATE OR REPLACE FUNCTION fn_loop_test(max_num int)
+RETURNS int AS 
+$$
+DECLARE
+	j int DEFAULT 1;
+	tot_sum int DEFAULT 0;
+BEGIN
+	LOOP
+		tot_sum := tot_sum + j;
+		j := j + 1;
+		EXIT WHEN j > max_num;
+	END LOOP;
+	RAISE NOTICE  'tot_sum = %' , tot_sum;
+	RETURN tot_sum;
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT fn_loop_test(10);
+```
+
+![image](https://github.com/user-attachments/assets/a057f58f-373f-4ec7-8acb-ca263e3e022c)
+
+![image](https://github.com/user-attachments/assets/694f628d-c419-4a6f-81ac-bf4de406436e)
+
+
+[<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
+
+
+
+
+
+###### 9_7_for
+
+<img src="https://img.shields.io/badge/- 9.7. FOR  %20- green" height=30px>
+
+- We saw how we can loop using the `LOOP` statement.
+- Let's see how we can loop using a `FOR` statment
+
+```sql
+CREATE OR REPLACE FUNCTION fn_for_test(max_num int)
+RETURNS int AS 
+$$
+DECLARE	
+	tot_sum int DEFAULT 0;
+BEGIN
+	-- FOR counter IN start_value .. end_value By stepping
+	FOR i IN 1 .. max_num BY 2
+	LOOP
+		tot_sum := tot_sum + i;
+		RAISE NOTICE 'tot_sum = %' , tot_sum;
+	END LOOP;
+
+	RETURN tot_sum;
+END;
+$$ LANGUAGE plpgsql;
+```
 
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
