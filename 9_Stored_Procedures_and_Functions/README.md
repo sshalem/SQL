@@ -1088,6 +1088,31 @@ We can see new record in table
 ![image](https://github.com/user-attachments/assets/608d7a23-14f8-4684-b77d-57de7bb22995)
 
 
+### [Example 2](#-)
+
+In this example I will show how I can LOOP thru a table and UPDATE the coulmn of `last_name` in every row
+
+```sql
+CREATE OR REPLACE PROCEDURE pr_update_lastname()
+AS 
+$body$
+DECLARE
+	record RECORD;	
+BEGIN		
+	FOR record IN SELECT last_name FROM customers
+	LOOP		
+		UPDATE customers SET last_name = 'שלם';
+		COMMIT;
+	END LOOP;
+END;
+$body$ LANGUAGE plpgsql;
+
+-- Call the Procereu
+CALL pr_update_lastname();
+
+-- Check customers table
+SELECT * FROM customers;
+```
 
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
