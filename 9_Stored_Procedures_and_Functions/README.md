@@ -1088,7 +1088,7 @@ We can see new record in table
 ![image](https://github.com/user-attachments/assets/608d7a23-14f8-4684-b77d-57de7bb22995)
 
 
-### [Example 2](#-)
+### [Example 2 - LOOP a TABLE and UPDATE a COLUMN `last_name`](#-)
 
 In this example I will show how I can LOOP thru a table and UPDATE the coulmn of `last_name` in every row
 
