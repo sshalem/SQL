@@ -885,6 +885,22 @@ SELECT fn_loop_test(10);
 - Let's see how we can loop using a `FOR` statment
 
 ```sql
+CREATE OR REPLACE PROCEDURE pr_for()
+AS 
+$body$
+DECLARE
+BEGIN
+	FOR i IN 1 .. 10 BY 3
+	LOOP
+		RAISE NOTICE '%', i;		
+	END LOOP;
+END;
+$body$ LANGUAGE plpgsql;
+```
+
+- Another example by passing argument to procedure.
+
+```sql
 CREATE OR REPLACE FUNCTION fn_for_test(max_num int)
 RETURNS int AS 
 $$
