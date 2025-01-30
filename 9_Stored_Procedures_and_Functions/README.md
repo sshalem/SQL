@@ -834,6 +834,26 @@ $$ LANGUAGE plpgsql;
 SELECT * from fn_return_table();
 ```
 
+- In this example I return a QUERY
+- But , now I return the number of rows I have in a Table
+- Instead of returning a Table with all fields
+- I return a Table with only 1 column which is the count of num_of_rows
+
+```sql
+CREATE OR REPLACE FUNCTION fn_count() RETURNS table(
+	num_of_rows bigint
+	)
+AS
+$body$
+BEGIN
+	RETURN QUERY SELECT COUNT(*) FROM admin;
+END;
+$body$ LANGUAGE plpgsql;
+
+
+SELECT fn_count() AS num_of_rows;
+```
+
 [<img src="https://img.shields.io/badge/-Back to top%20-brown" height=22px>](#_)
 
 
